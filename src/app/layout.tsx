@@ -1,52 +1,53 @@
 import type { Metadata } from "next";
-import { Sora, Inter } from "next/font/google";
+import { Cormorant_Garamond, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const display = Sora({
+const display = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700"],
   variable: "--font-display-active",
   display: "swap",
 });
 
-const body = Inter({
+const body = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-body-active",
   display: "swap",
 });
 
-// === MEGA TAG CONFIG === (real QBC values — QBC opted out of Meta, so NO pixelId)
-const SITE_KEY = "5rn5f8eze80jvipf";
-const SITE_ID = "a6d7ae94-3574-4c2a-9642-4385d223e4e7";
-const GTM_ID = "GTM-5PN93D";
+// === MEGA TAG CONFIG === (real Diamond Banc values , Meta Pixel is ON)
+const SITE_KEY = "ae75ylrmfqweqelx";
+const SITE_ID = "75a85d64-2685-47a6-82e4-6010397e3ddb";
+const GTM_ID = "GTM-WBLZ2J9";
+const PIXEL_ID = "1344125387527189";
 
 export const metadata: Metadata = {
-  title:
-    "TireServ ERP — Free Demo for Tire & Automotive Wholesale Distributors | QBC Systems",
+  metadataBase: new URL("https://quote.diamondbanc.com"),
+  title: "Sell or Borrow Using Your Jewelry | Free Quote | Diamond Banc",
   description:
-    "TireServ is the ERP built exclusively for tire & automotive wholesale distributors. POS, inventory, purchasing, AR, AP, GL, and reporting in one cloud system with real-time wholesale integration. Purpose-built over 48 years. Get a free demo.",
+    "Get a free, no-obligation quote on your jewelry, diamonds, gold or luxury watch. Free insured overnight shipping, 24-hour evaluation by GIA-certified gemologists, same-day funding.",
   openGraph: {
-    title: "TireServ ERP — Built Exclusively for Tire Wholesale Distributors",
+    title: "Sell or Borrow Using Your Jewelry | Diamond Banc",
     description:
-      "One cloud system for POS, inventory, purchasing, and accounting — with real-time wholesale integration and mobile order entry. Purpose-built over 48 years by QBC Systems.",
-    images: ["/images/hero-warehouse.jpg"],
+      "Get a free, no-obligation quote in 24 hours. Sell your jewelry, diamonds, gold or luxury watch, or use it to get a loan. Free insured overnight shipping both ways.",
+    images: ["/images/hero-jewelry.jpg"],
     type: "website",
   },
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
   },
-  robots: { index: false, follow: false }, // ads LP — not indexed
+  robots: { index: false, follow: false }, // ads LP , not indexed
 };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
-  const megaTagConfig = `window.MEGA_TAG_CONFIG={siteKey:"${SITE_KEY}",siteId:"${SITE_ID}",gtmId:"${GTM_ID}"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";`;
+}): React.ReactElement {
+  const megaTagConfig = `window.MEGA_TAG_CONFIG={siteKey:"${SITE_KEY}",siteId:"${SITE_ID}",gtmId:"${GTM_ID}",pixelId:"${PIXEL_ID}"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";`;
 
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
@@ -65,11 +66,8 @@ export default function RootLayout({
       </head>
       <body className="bg-[var(--color-bg)] text-[var(--color-text)] antialiased">
         {children}
-        {/* CallTrackingMetrics — universal Mega account (never remove) */}
-        <Script
-          src="https://572388.tctm.co/t.js"
-          strategy="afterInteractive"
-        />
+        {/* CallTrackingMetrics , universal Mega account (never remove) */}
+        <Script src="https://572388.tctm.co/t.js" strategy="afterInteractive" />
       </body>
     </html>
   );

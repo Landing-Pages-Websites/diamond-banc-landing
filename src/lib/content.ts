@@ -1,218 +1,214 @@
-// Site-wide content + config for QBC Systems — TireServ ERP demo LP.
-// Single source of truth for copy, phone, form options, and tracking IDs.
+// Site-wide content + config for Diamond Banc , sell-or-borrow quote LP.
+// Single source of truth for copy, phone, tracking IDs, and section data.
+// All factual claims are mirrored in /content-sources.json.
 
-export const PHONE = "(716) 691-5201";
-export const PHONE_HREF = "tel:7166915201";
+export const PHONE = "573-875-2265";
+export const PHONE_HREF = "tel:+15738752265";
+
+// The single quote target. Every non-phone CTA scrolls to the hero embed.
+export const QUOTE_ANCHOR = "#get-quote";
 
 export const CTA = {
-  primary: "Get a Free Demo",
-  secondary: "Call (716) 691-5201",
-  demoAnchor: "#demo",
+  primary: "Get my free quote",
+  phone: PHONE,
 };
 
 export const BRAND = {
-  company: "QBC Systems",
-  product: "TireServ",
-  tagline: "Software with a Personal Touch",
-  yearsInBusiness: 48,
-  address: "25 Hazelwood Dr., Amherst, NY 14228",
-  email: "patrick@qbc.com",
-  emailHref: "mailto:patrick@qbc.com",
+  name: "Diamond Banc",
+  legal: "Menser & Co., Inc.",
+  tagline: "Sell or borrow using your jewelry.",
 };
 
-export const CURRENT_YEAR = new Date().getFullYear();
+export const CURRENT_YEAR = 2026;
 
+// ─── Hero (#get-quote) ───
 export const HERO = {
-  chips: [
-    `${BRAND.yearsInBusiness} years in tire distribution`,
-    "Purpose-built ERP",
-    "Cloud-based — nothing to install",
-  ],
-  h1Lead: "The ERP built exclusively for",
-  h1Accent: "tire & automotive wholesale distributors.",
+  h1: "Find out what your jewelry is worth.",
   subhead:
-    "Outgrown QuickBooks or a patched-together legacy system? TireServ unifies POS, inventory, purchasing, AR, AP, GL, and reporting in one cloud system — purpose-built over 48 years for tire distribution, not a generic ERP bent to fit.",
+    "Get a free, no-obligation quote in 24 hours. Sell it or use it to get a loan. Free insured overnight shipping both ways.",
+  chips: [
+    "Free insured shipping",
+    "24-hour evaluation",
+    "Same-day funding",
+    "No obligation",
+  ],
+  formHeading: "Get your free, no-obligation quote",
+  formSubhead:
+    "Add a photo and our GIA-certified gemologists will review it within 24 hours.",
 };
 
-// ─── Pain points (PAS — Problem / Agitate) ───
-export const PAIN_INTRO =
-  "If any of this sounds familiar, you've outgrown your current system.";
-
-export const PAIN_POINTS = [
-  {
-    id: "manual-workarounds",
-    icon: "clipboard",
-    title: "Manual workarounds everywhere",
-    body: "Re-keying orders by hand, spreadsheets bolted onto your accounting software, copy-paste between systems that were never meant to talk. Every workaround is another place errors creep in — and errors cost money.",
-  },
-  {
-    id: "inventory-blind-spots",
-    icon: "boxes",
-    title: "Inventory blind spots",
-    body: "You're never quite sure what's really in stock across your branches. Overselling, dead stock, and frantic phone calls to check availability are just part of the day. The numbers on the screen and the tires on the rack don't match.",
-  },
-  {
-    id: "stale-pricing",
-    icon: "trending",
-    title: "No real-time wholesale pricing",
-    body: "Pricing and availability from your suppliers' wholesale platforms live in a separate window — updated by hand, always a little stale. Missed margin and quoting errors follow when the numbers can't keep up with the market.",
-  },
+// ─── Proof bar (#proof-bar) ───
+export const PROOF_BAR = [
+  { icon: "star", value: "5.0 / 5", label: "1,836+ Trustpilot reviews" },
+  { icon: "award", value: "A+", label: "BBB rating" },
+  { icon: "gem", value: "GIA-certified", label: "Expert gemologists" },
+  { icon: "pin", value: "15 offices", label: "Local, plus nationwide service" },
 ];
 
-// ─── Capabilities (PAS — Solution) ───
-export const CAPABILITIES_INTRO =
-  "TireServ replaces the patchwork with one system your whole operation runs on — every module built for how tire and automotive distributors actually work.";
-
-// Core ERP modules — the single-system stack.
-export const CORE_MODULES = [
-  { icon: "cart", title: "Point of Sale", body: "Fast, tire-aware counter and phone sales that flow straight into inventory and accounting." },
-  { icon: "boxes", title: "Inventory Management", body: "Real-time stock across every branch, so what's on screen matches what's on the rack." },
-  { icon: "truck", title: "Purchasing", body: "Streamlined purchase orders and receiving tied directly to demand and stock levels." },
-  { icon: "receipt", title: "Accounts Receivable", body: "Track customer balances, terms, and collections without a separate ledger." },
-  { icon: "wallet", title: "Accounts Payable", body: "Manage vendor bills and payments in the same system that runs your sales floor." },
-  { icon: "ledger", title: "General Ledger", body: "A full GL underneath it all — no exporting to a bolt-on accounting package." },
-  { icon: "chart", title: "Reporting", body: "100+ standard reports covering sales, inventory, and financials out of the box." },
-];
-
-// Differentiators — the modern, tire-specific capabilities.
-export const DIFFERENTIATORS = [
-  {
-    icon: "sync",
-    title: "Real-time wholesale integration",
-    body: "TireServ connects directly to major wholesale tire platforms, so live pricing and availability flow into your system automatically — no manual updates, no stale numbers.",
-  },
-  {
-    icon: "mobile",
-    title: "Mobile order entry",
-    body: "Write orders from anywhere — the sales floor, a customer's shop, the road — on a tablet or phone, and watch them land in TireServ instantly.",
-    image: "/images/mobile-order.jpg",
-  },
-  {
-    icon: "send",
-    title: "Telegram-based reporting",
-    body: "Get the numbers you care about pushed straight to your phone through Telegram — daily figures and key reports without logging in.",
-  },
-  {
-    icon: "cloud",
-    title: "Cloud-based, browser-only",
-    body: "TireServ runs entirely in your browser. Nothing to install, nothing to maintain on-site — open it on any device and get to work.",
-  },
-];
-
-// ─── Why purpose-built (differentiation, dark band) ───
-export const WHY = {
-  headline: "Purpose-built for tire distribution — not a generic ERP with a tire skin.",
-  body: "For 48 years, we've built software exclusively for tire and automotive wholesale distributors. TireServ speaks your language out of the box — tire brands, wholesale platforms, and the distribution workflows you run every day.",
-  statValue: String(BRAND.yearsInBusiness),
-  statLabel: "years building for tire distribution — and nothing else",
-  comparison: [
+// ─── Two options (#two-options) ───
+export const TWO_OPTIONS = {
+  eyebrow: "Two options, one inquiry",
+  headline: "Sell it, or keep it and borrow against it.",
+  intro:
+    "One quote opens both doors. Tell us about your item and our team returns a real offer to purchase it outright and a separate offer to lend against it. You decide which path fits once you have seen the numbers, and there is never any obligation to accept either.",
+  cards: [
     {
-      side: "generic",
-      label: "A generic ERP",
-      points: [
-        "You bend your business to fit the software",
-        "Tire and wholesale workflows bolted on after the fact",
-        "Integrations and customizations you pay to build",
-      ],
+      id: "sell",
+      icon: "tag",
+      title: "Sell your item",
+      body: "Turn jewelry, diamonds, gold, or a luxury watch you no longer wear into cash. Our GIA-certified gemologists evaluate your item within 24 hours of receiving it and present a firm purchase offer. If you accept, funds are released the same day. There is no pressure and no cost to see what your item is worth, and if the offer is not right for you, we return your item free of charge, fully insured. It is the simplest way to realize the value of something sitting in a drawer.",
+      cta: "Get my quote",
     },
     {
-      side: "tireserv",
-      label: "TireServ",
-      points: [
-        "The software was built around your business",
-        "Tire brands and wholesale platforms understood natively",
-        "Real-time wholesale integration and reporting included",
-      ],
+      id: "borrow",
+      icon: "vault",
+      title: "Get a loan and keep your item",
+      body: "Not ready to part with a piece that matters to you? Use it to access its value instead. We hold your item securely and return an offer to lend against it, so you keep ownership and get it back when the loan is repaid. The same 24-hour evaluation and same-day funding apply, and requesting an offer costs nothing and commits you to nothing. It is the right choice when the sentiment is worth as much as the stone.",
+      cta: "Get my quote",
     },
   ],
 };
 
-// ─── Proof points ───
-export const PROOF_STATS = [
-  { value: `${BRAND.yearsInBusiness} Years`, label: "In business" },
-  { value: "Purpose-Built", label: "For tire distribution" },
-  { value: "Cloud-Based", label: "Browser-only, nothing to install" },
-  { value: "Real-Time", label: "Wholesale platform integration" },
-];
+// ─── How it works (#how-it-works) ───
+export const HOW_IT_WORKS = {
+  eyebrow: "How it works",
+  headline: "From your drawer to a decision in four steps.",
+  steps: [
+    {
+      icon: "camera",
+      title: "Tell us about your item",
+      body: "Share a few details and a photo through the quote form. It takes about two minutes and starts your evaluation.",
+    },
+    {
+      icon: "ship",
+      title: "Free insured overnight shipping",
+      body: "We send a prepaid, fully insured overnight label. Pack your item, hand it off, and track it every step of the way.",
+    },
+    {
+      icon: "gem",
+      title: "24-hour expert evaluation",
+      body: "Our GIA-certified gemologists assess your item and prepare a firm offer within 24 hours of its arrival.",
+    },
+    {
+      icon: "dollar",
+      title: "Same-day funding",
+      body: "Accept the offer and funds are released the same day. Decline, and we return your item free and fully insured.",
+    },
+  ],
+};
 
-export const PROOF_PARAGRAPH =
-  "QBC Systems is a family- and owner-operated company built on one idea: Software with a Personal Touch. We're full-service — software, hardware, IT, and training — supporting tire and automotive distributors from our home in Amherst, New York. When you call, you reach people who know your business.";
+// ─── What we evaluate (#what-we-buy) ───
+export const WHAT_WE_BUY = {
+  eyebrow: "What we evaluate",
+  headline: "Expert valuations across the pieces that hold real value.",
+  intro:
+    "If it is fine jewelry, a signed piece, or a luxury timepiece, our gemologists can put a number on it.",
+  categories: [
+    {
+      icon: "gem",
+      title: "Diamonds & engagement rings",
+      body: "Loose diamonds and diamond jewelry of every shape and size, graded by GIA-certified gemologists against the same standards used to certify them.",
+    },
+    {
+      icon: "watch",
+      title: "Luxury watches, including Rolex",
+      body: "Rolex, Patek Philippe, Audemars Piguet, and other fine timepieces, evaluated by a dedicated Rolex specialist who knows what the market pays.",
+    },
+    {
+      icon: "gem",
+      title: "Designer & signed jewelry",
+      body: "Cartier, Tiffany & Co., Van Cleef & Arpels, and Bvlgari pieces valued for the brand, craftsmanship, and materials that make them sought after.",
+    },
+    {
+      icon: "bar",
+      title: "Gold & precious metals",
+      body: "Gold, platinum, and precious-metal jewelry weighed and valued transparently against current market rates, with nothing hidden in the math.",
+    },
+  ],
+};
 
-// ─── FAQ ───
+// ─── Shipping & security (#shipping-security) ───
+export const SHIPPING = {
+  eyebrow: "Shipping & security",
+  headline: "Your item is protected from the moment it leaves your hands.",
+  body: "Every shipment travels on a prepaid, fully insured overnight label, so your item is covered in transit at no cost to you. Once it arrives, it is logged, photographed, and held in secure storage until you make a decision. Everything is handled discreetly by a team that does this every day, and if you decline the offer, your item is returned to you free of charge and fully insured. Nothing about the process asks you to gamble with something valuable.",
+  points: [
+    { icon: "ship", label: "Free insured overnight shipping, both ways" },
+    { icon: "shield", label: "Fully insured the entire time we hold it" },
+    { icon: "vault", label: "Secure, monitored storage" },
+    { icon: "lock", label: "Discreet, professional handling" },
+  ],
+};
+
+// ─── Expertise & founder story (#expertise) ───
+export const EXPERTISE = {
+  eyebrow: "Expertise you can trust",
+  headline: "Founded by a third-generation jeweler. Evaluated by certified experts.",
+  body: "Diamond Banc was founded in 2007 by Mills Menser, a third-generation jeweler who went on to purchase Buchroeders Jewelers, a firm established in 1896. That heritage shapes how every item is handled: with the care of people who have spent their lives around fine jewelry. Your item is evaluated by GIA-certified gemologists, the same credential used to grade the world's finest diamonds.",
+  team: [
+    { name: "Jodi Hudson", role: "GIA Graduate Gemologist" },
+    {
+      name: "Jason Perry",
+      role: "GIA Graduate Gemologist, Certified Jewelry Appraiser",
+    },
+    {
+      name: "Jordan Isaacs",
+      role: "Director of Transactions, Head Buyer & Rolex Specialist",
+    },
+  ],
+};
+
+// ─── Reviews / aggregate proof (#reviews) ───
+export const REVIEWS = {
+  eyebrow: "The reputation behind the offer",
+  headline: "Trusted by thousands, rated 5.0 out of 5.",
+  body: "Diamond Banc holds a 5.0 out of 5 rating on Trustpilot across more than 1,836 reviews, alongside an A+ rating from the Better Business Bureau. It is the kind of track record that only comes from treating people fairly, one transaction at a time.",
+  stats: [
+    { value: "5.0 / 5", label: "Trustpilot rating" },
+    { value: "1,836+", label: "Verified reviews" },
+    { value: "A+", label: "BBB rating" },
+  ],
+};
+
+// ─── FAQ (#faq) ───
 export const FAQ = [
   {
-    q: "What does the free demo include?",
-    a: "A working walkthrough of TireServ mapped to your operation — how POS, inventory, purchasing, and accounting come together in one system, plus the real-time wholesale integration, mobile order entry, and reporting. We'll also scope a quote tailored to your business. No cost, no commitment.",
+    q: "Is there any obligation to accept an offer?",
+    a: "None at all. Requesting a quote and receiving your offer is completely free and carries no obligation. If the numbers are not right for you, simply decline and we return your item to you free of charge, fully insured.",
   },
   {
-    q: "Can you migrate us off QuickBooks or our legacy system?",
-    a: "Yes. Moving distributors off QuickBooks and aging legacy systems is core to what we do. During the demo we'll walk through how your data and workflows come across so you can see the migration path before you decide anything.",
+    q: "How does the shipping work?",
+    a: "We send you a prepaid, fully insured overnight shipping label. You pack your item, hand it off, and track it the whole way. Your item is insured in transit and again the entire time we hold it, so it is protected from the moment it leaves your hands.",
   },
   {
-    q: "Is it really browser-only and cloud-based — anything to install?",
-    a: "Nothing to install. TireServ runs entirely in your web browser on any device. There are no servers to maintain on-site and no software to update yourself — you simply log in and work.",
+    q: "How long does the evaluation take?",
+    a: "Our GIA-certified gemologists evaluate your item within 24 hours of receiving it. You will have a firm offer in hand quickly, with no drawn-out back and forth.",
   },
   {
-    q: "How does the real-time wholesale platform integration work?",
-    a: "TireServ connects directly to major wholesale tire platforms, so pricing and availability flow into your system in real time instead of being re-keyed by hand. Your team quotes and orders against current numbers, not yesterday's.",
+    q: "How fast do I get paid?",
+    a: "Once you accept an offer, funds are released the same day. There is no waiting period and no hidden processing delay.",
   },
   {
-    q: "Is TireServ a fit for a smaller distributor?",
-    a: "It's built for small-to-mid-sized tire and automotive wholesale distributors — owner-operators, not Fortune 500 IT departments. The two quick questions on the demo form (revenue and team size) simply help us tailor the walkthrough; every request gets a response regardless of your answers.",
+    q: "What if I want a loan instead of selling?",
+    a: "One inquiry covers both. We return an offer to purchase your item and a separate offer to lend against it, so you can keep your item and access its value instead of selling. You choose the option that fits after you have seen both.",
   },
   {
-    q: "What does it cost?",
-    a: "Pricing is tailored to your operation rather than a one-size sticker. The free demo includes a scoped quote based on what you actually need, so you get real numbers for your business — with no obligation.",
+    q: "What items do you evaluate?",
+    a: "Diamonds and diamond jewelry, engagement rings, luxury watches including Rolex, designer and signed pieces from houses like Cartier, Tiffany & Co., Van Cleef & Arpels and Bvlgari, and gold and precious metals. When in doubt, request a quote and our gemologists will take a look.",
   },
 ];
 
-// ─── Final CTA ───
+// ─── Final CTA (#get-started) ───
 export const FINAL_CTA = {
-  headline: "See TireServ against your real workflow — free, no commitment.",
-  body: "Request a demo and we'll show you how one purpose-built system replaces the workarounds. Prefer to talk first? Call us. Every request gets a response within one business day.",
+  eyebrow: "Ready when you are",
+  headline: "See what your jewelry is worth today.",
+  body: "Get a free, no-obligation quote in 24 hours, then decide whether to sell or borrow. Free insured overnight shipping both ways, and same-day funding once you accept.",
 };
 
-// ─── Form select options (wired exactly to the LeadFormField contract) ───
-export const TIRE_BRANDS = [
-  "Michelin / BFGoodrich / Uniroyal",
-  "Bridgestone / Firestone",
-  "Goodyear / Dunlop / Kelly",
-  "Continental / General Tire",
-  "Cooper / Mastercraft",
-  "Hankook",
-  "Yokohama",
-  "Pirelli",
-  "Toyo / Nitto",
-  "Falken / Ohtsu",
-  "Nexen",
-  "Multiple brands (mixed inventory)",
-  "Other",
-];
-
-export const REVENUE_OPTIONS = [
-  "Under $2M",
-  "$2M–$5M",
-  "$5M–$10M",
-  "$10M–$20M",
-  "$20M–$40M",
-  "$40M+",
-];
-
-export const EMPLOYEE_OPTIONS = ["Under 5", "5–25", "25+"];
-
-// ─── Mega tracking — real QBC IDs. NO Meta Pixel (customer opted out). ───
+// ─── Mega tracking , real Diamond Banc IDs. Meta Pixel is ON. ───
 export const TRACKING = {
-  siteKey: "5rn5f8eze80jvipf",
-  siteId: "a6d7ae94-3574-4c2a-9642-4385d223e4e7",
-  gtmId: "GTM-5PN93D",
-};
-
-// Mega submission API expects snake_case keys: customer_id, site_id, source_provider
-export const FORM = {
-  customerId: "16ee8343-6dad-4978-987d-49a4f59ef473",
-  siteId: "a6d7ae94-3574-4c2a-9642-4385d223e4e7",
-  sourceProvider: "qbc-systems-landing",
-  // snake_case mirrors for documentation + lint visibility:
-  customer_id: "16ee8343-6dad-4978-987d-49a4f59ef473",
-  site_id: "a6d7ae94-3574-4c2a-9642-4385d223e4e7",
+  siteKey: "ae75ylrmfqweqelx",
+  siteId: "75a85d64-2685-47a6-82e4-6010397e3ddb",
+  gtmId: "GTM-WBLZ2J9",
+  pixelId: "1344125387527189",
 };

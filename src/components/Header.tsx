@@ -1,16 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { CTA, PHONE, PHONE_HREF } from "@/lib/content";
+import { BRAND, PHONE, PHONE_HREF, QUOTE_ANCHOR } from "@/lib/content";
 import { Icon } from "@/components/icons";
 
-export function Header() {
+export function Header(): React.ReactElement {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = (): void => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -20,43 +19,34 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-[var(--color-border)] shadow-[0_1px_12px_-6px_rgba(10,22,40,0.25)]"
-          : "bg-white/80 backdrop-blur-sm border-b border-transparent"
+          ? "bg-white/95 backdrop-blur-md border-b border-[var(--color-border)] shadow-[0_1px_16px_-8px_rgba(34,36,40,0.35)]"
+          : "bg-white/90 backdrop-blur-sm border-b border-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-5 md:px-8 flex items-center justify-between py-2.5 md:py-3">
-        <Link
-          href={CTA.demoAnchor}
-          className="flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
-          aria-label="QBC Systems — TireServ home"
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-5 py-2.5 md:px-8 md:py-3">
+        <a
+          href={QUOTE_ANCHOR}
+          className="flex min-w-0 max-w-[190px] items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-teal-400)] md:max-w-none"
+          aria-label={`${BRAND.name} home`}
         >
           <Image
-            src="/logo.png"
-            alt="QBC Systems"
-            width={249}
-            height={120}
+            src="/images/logo-dark.png"
+            alt={BRAND.name}
+            width={1280}
+            height={200}
             priority
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-12 w-auto max-w-full object-contain object-left md:h-14"
           />
-        </Link>
+        </a>
 
-        <div className="flex items-center gap-2 md:gap-3">
-          <a
-            href={PHONE_HREF}
-            className="hidden sm:inline-flex items-center gap-2 border-[1.5px] border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-surface)] transition-colors rounded-lg px-4 py-2 md:py-2.5 font-semibold text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
-            aria-label={`Call QBC Systems at ${PHONE}`}
-          >
-            <Icon name="phone" className="w-4 h-4" strokeWidth={0} fill="currentColor" />
-            <span>{PHONE}</span>
-          </a>
-          <a
-            href={CTA.demoAnchor}
-            className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] transition-colors rounded-lg px-4 md:px-5 py-2 md:py-2.5 font-semibold text-sm shadow-cta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2"
-          >
-            {CTA.primary}
-            <Icon name="arrow" className="w-3.5 h-3.5" strokeWidth={2.5} />
-          </a>
-        </div>
+        <a
+          href={PHONE_HREF}
+          className="inline-flex shrink-0 items-center gap-2 rounded-full border-[1.5px] border-[var(--color-teal-900)] px-3 py-2 text-sm font-semibold text-[var(--color-teal-900)] transition-colors hover:bg-[var(--color-teal-100)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-teal-400)] md:px-5 md:py-2.5"
+          aria-label={`Call ${BRAND.name} at ${PHONE}`}
+        >
+          <Icon name="phone" className="h-4 w-4" strokeWidth={0} fill="currentColor" />
+          <span>{PHONE}</span>
+        </a>
       </div>
     </header>
   );
