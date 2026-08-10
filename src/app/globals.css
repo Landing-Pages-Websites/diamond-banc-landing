@@ -42,7 +42,6 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  color: inherit;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
@@ -101,6 +100,19 @@ html {
 }
 section[id] {
   scroll-margin-top: 88px;
+}
+
+/* Appraisal embed , the widget's step container reserves a full viewport
+   (.ldg-flow { min-height: calc(100vh - 68px) }), which strands a band of empty
+   white below the compact first step on small screens. Let the flow hug its
+   content on mobile; kept as a min-height floor so nothing is clipped and taller
+   later steps still grow. Desktop keeps the widget's own sizing. */
+@media (max-width: 767px) {
+  #db-appraisal-root .ldg-flow {
+    min-height: 0;
+    padding-top: 28px;
+    padding-bottom: 40px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
