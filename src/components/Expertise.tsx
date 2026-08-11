@@ -23,7 +23,13 @@ export function Expertise(): React.ReactElement {
               <Icon name="gem" className="h-4 w-4 text-[var(--color-gold)]" />
               Rooted in Buchroeders Jewelers, established 1896.
             </p>
-            <div className="relative mt-8 aspect-[3/2] overflow-hidden rounded-3xl shadow-card-lg ring-1 ring-[var(--color-border)]">
+          </Reveal>
+
+          <Reveal
+            delay={100}
+            className="lg:col-span-6 lg:flex lg:flex-col lg:gap-8"
+          >
+            <div className="relative aspect-[3/2] overflow-hidden rounded-3xl shadow-card-lg ring-1 ring-[var(--color-border)] lg:aspect-auto lg:min-h-[168px] lg:flex-1">
               <Image
                 src={EXPERTISE.image}
                 alt={EXPERTISE.imageAlt}
@@ -32,10 +38,7 @@ export function Expertise(): React.ReactElement {
                 className="object-cover"
               />
             </div>
-          </Reveal>
-
-          <Reveal delay={100} className="lg:col-span-6">
-            <div className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-cream)] p-7 md:p-8">
+            <div className="mt-8 rounded-3xl border border-[var(--color-border)] bg-[var(--color-cream)] p-7 md:p-8 lg:mt-0">
               <h3 className="font-display text-xl text-[var(--color-ink)]">
                 Your GIA-certified team
               </h3>
