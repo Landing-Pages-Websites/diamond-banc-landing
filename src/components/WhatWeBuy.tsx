@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { DualCTA } from "@/components/DualCTA";
 import { Icon } from "@/components/icons";
@@ -19,18 +20,29 @@ export function WhatWeBuy(): React.ReactElement {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {WHAT_WE_BUY.categories.map((cat, i) => (
             <Reveal key={cat.title} delay={i * 70}>
-              <article className="group flex h-full gap-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-cream)] p-7 transition-colors duration-200 hover:border-[var(--color-teal-400)]">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-[var(--color-teal-900)] shadow-card ring-1 ring-[var(--color-border)]">
-                  <Icon name={cat.icon} className="h-6 w-6" />
-                </span>
-                <div>
-                  <h3 className="font-display text-xl leading-snug text-[var(--color-ink)]">
-                    {cat.title}
-                  </h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-[var(--color-muted)]">
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-cream)] shadow-card transition-all duration-200 hover:-translate-y-1 hover:border-[var(--color-teal-400)] hover:shadow-card-lg">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={cat.image}
+                    alt={cat.alt}
+                    fill
+                    sizes="(min-width: 1024px) 45vw, (min-width: 640px) 50vw, 92vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[var(--color-teal-900)] shadow-card ring-1 ring-[var(--color-border)]">
+                      <Icon name={cat.icon} className="h-5 w-5" />
+                    </span>
+                    <h3 className="font-display text-xl leading-snug text-[var(--color-ink)]">
+                      {cat.title}
+                    </h3>
+                  </div>
+                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--color-muted)]">
                     {cat.body}
                   </p>
                 </div>

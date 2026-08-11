@@ -58,6 +58,8 @@ export const TWO_OPTIONS = {
       title: "Sell your item",
       body: "Turn jewelry, diamonds, gold, or a luxury watch you no longer wear into cash. Our GIA-certified gemologists evaluate your item within 24 hours of receiving it and present a firm purchase offer. If you accept, funds are released the same day. There is no pressure and no cost to see what your item is worth, and if the offer is not right for you, we return your item free of charge, fully insured. It is the simplest way to realize the value of something sitting in a drawer.",
       cta: "Get my quote",
+      image: "/images/option-sell.jpg",
+      alt: "An open dark velvet tray displaying gold and diamond jewelry pieces ready for evaluation",
     },
     {
       id: "borrow",
@@ -65,6 +67,8 @@ export const TWO_OPTIONS = {
       title: "Get a loan and keep your item",
       body: "Not ready to part with a piece that matters to you? Use it to access its value instead. We hold your item securely and return an offer to lend against it, so you keep ownership and get it back when the loan is repaid. The same 24-hour evaluation and same-day funding apply, and requesting an offer costs nothing and commits you to nothing. It is the right choice when the sentiment is worth as much as the stone.",
       cta: "Get my quote",
+      image: "/images/option-loan.jpg",
+      alt: "A diamond ring resting in a secure case with a vault door softly blurred behind it",
     },
   ],
 };
@@ -108,21 +112,29 @@ export const WHAT_WE_BUY = {
       icon: "gem",
       title: "Diamonds & engagement rings",
       body: "Loose diamonds and diamond jewelry of every shape and size, graded by GIA-certified gemologists against the same standards used to certify them.",
+      image: "/images/cat-diamonds.jpg",
+      alt: "Loose brilliant cut diamonds beside a platinum solitaire ring on a charcoal surface",
     },
     {
       icon: "watch",
       title: "Luxury watches, including Rolex",
       body: "Rolex, Patek Philippe, Audemars Piguet, and other fine timepieces, evaluated by a dedicated Rolex specialist who knows what the market pays.",
+      image: "/images/cat-watches.jpg",
+      alt: "A gold dress watch and a steel sport watch resting on a cream stone slab",
     },
     {
       icon: "gem",
       title: "Designer & signed jewelry",
       body: "Cartier, Tiffany & Co., Van Cleef & Arpels, and Bvlgari pieces valued for the brand, craftsmanship, and materials that make them sought after.",
+      image: "/images/cat-designer.jpg",
+      alt: "A diamond tennis bracelet, a gold rope chain, and emerald drop earrings arranged together",
     },
     {
       icon: "bar",
       title: "Gold & precious metals",
       body: "Gold, platinum, and precious-metal jewelry weighed and valued transparently against current market rates, with nothing hidden in the math.",
+      image: "/images/cat-gold.jpg",
+      alt: "Gold rings and chains piled beside a brass balance scale",
     },
   ],
 };
@@ -145,6 +157,8 @@ export const EXPERTISE = {
   eyebrow: "Expertise you can trust",
   headline: "Founded by a third-generation jeweler. Evaluated by certified experts.",
   body: "Diamond Banc was founded in 2007 by Mills Menser, a third-generation jeweler who went on to purchase Buchroeders Jewelers, a firm established in 1896. That heritage shapes how every item is handled: with the care of people who have spent their lives around fine jewelry. Your item is evaluated by GIA-certified gemologists, the same credential used to grade the world's finest diamonds.",
+  image: "/images/expertise.jpg",
+  imageAlt: "A GIA-certified gemologist examining a diamond through a loupe at a workbench",
   team: [
     { name: "Jodi Hudson", role: "GIA Graduate Gemologist" },
     {
