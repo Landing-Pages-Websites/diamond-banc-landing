@@ -5,6 +5,7 @@ import { QueryParamPersistence } from "@/components/QueryParamPersistence";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProofBar } from "@/components/ProofBar";
+import { LocationMap } from "@/components/LocationMap";
 import { TwoOptions } from "@/components/TwoOptions";
 import { HowItWorks } from "@/components/HowItWorks";
 import { WhatWeBuy } from "@/components/WhatWeBuy";
@@ -31,6 +32,7 @@ export default function Page(): React.ReactElement {
       <Header />
       <Hero />
       <ProofBar />
+      <LocationMap />
       <TwoOptions />
       <HowItWorks />
       <WhatWeBuy />

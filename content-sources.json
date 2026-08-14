@@ -2,10 +2,10 @@
   "repo": "Landing-Pages-Websites/diamond-banc-landing",
   "customer_name": "Diamond Banc (Menser & Co., Inc.)",
   "production_url": "https://quote.diamondbanc.com",
-  "product": "Nationwide mail-in service to sell jewelry, watches, diamonds and gold, or to borrow against them",
+  "product": "Nationwide mail-in and in-office service to sell jewelry, watches, diamonds and gold, or to borrow against them",
   "claims": [
     {
-      "claim": "Sell or borrow using your jewelry: two options from one inquiry",
+      "claim": "Sell or borrow using your jewelry: one valuation, two ways to use it",
       "source_url": "https://www.diamondbanc.com/",
       "verified": true
     },
@@ -15,12 +15,17 @@
       "verified": true
     },
     {
-      "claim": "24-hour expert evaluation by GIA-certified gemologists",
-      "source_url": "https://www.diamondbanc.com/about-us/",
+      "claim": "Instant online quote up front; item then confirmed by Diamond Banc's experienced experts, in person at a local office or after insured shipment",
+      "source_url": "https://www.diamondbanc.com/",
       "verified": true
     },
     {
-      "claim": "Same-day funding once an offer is accepted",
+      "claim": "Customers may ship the item in or visit a local office to book an appointment",
+      "source_url": "https://www.diamondbanc.com/locations/",
+      "verified": true
+    },
+    {
+      "claim": "Funding within 24 hours of accepting your offer",
       "source_url": "https://www.diamondbanc.com/",
       "verified": true
     },
@@ -30,8 +35,8 @@
       "verified": true
     },
     {
-      "claim": "5.0 out of 5 on Trustpilot across 1,836+ reviews",
-      "source_url": "https://www.trustpilot.com/review/diamondbanc.com",
+      "claim": "5.0 out of 5 with 10,000+ reviews combined across Google, Trustpilot, and Yelp",
+      "source_url": "https://www.diamondbanc.com/",
       "verified": true
     },
     {
@@ -40,17 +45,17 @@
       "verified": true
     },
     {
-      "claim": "Nationwide service plus 15 local offices",
-      "source_url": "https://www.diamondbanc.com/",
+      "claim": "Nationwide service plus 15+ local offices",
+      "source_url": "https://www.diamondbanc.com/locations/",
+      "verified": true
+    },
+    {
+      "claim": "16 active office markets: Aventura, Boca Raton, Coral Gables, Tampa, West Palm Beach, Orlando, Sarasota (FL); Atlanta, Roswell (GA); Kansas City, Columbia, St. Louis (MO); Nashville (TN); Scottsdale (AZ); Beverly Hills, San Diego (CA). Pasadena is coming soon and is not counted as active.",
+      "source_url": "https://www.diamondbanc.com/locations/",
       "verified": true
     },
     {
       "claim": "Founded in 2007 by Mills Menser, a third-generation jeweler",
-      "source_url": "https://www.diamondbanc.com/about-us/",
-      "verified": true
-    },
-    {
-      "claim": "Mills Menser purchased Buchroeders Jewelers, established 1896",
       "source_url": "https://www.diamondbanc.com/about-us/",
       "verified": true
     },
@@ -60,12 +65,27 @@
       "verified": true
     },
     {
-      "claim": "Team members: Jodi Hudson (GIA GG); Jason Perry (GIA GG, Certified Jewelry Appraiser); Jordan Isaacs (Director of Transactions, Head Buyer & Rolex Specialist)",
+      "claim": "Current featured team: Mills Menser (Founder & Owner); Devin Smith (Executive Vice President, Revenue & Operations); Kyle Z. Cook (Vice President, Underwriting & Logistics); Jordan Isaacs (Director of Transactions, Head Buyer & Lender, Rolex Specialist); David Fernandez (Regional Director, Miami Markets); Jodi Hudson (Director, Tampa); Deena Maali (Director, Orlando)",
       "source_url": "https://www.diamondbanc.com/about-us/",
       "verified": true
     },
     {
-      "claim": "Brands evaluated: Rolex, Cartier, Tiffany & Co., Van Cleef & Arpels, Bvlgari, Patek Philippe, Audemars Piguet",
+      "claim": "Team members are referred to as experienced experts; no individual is described as GIA certified in customer-facing copy",
+      "source_url": "task spec: approved credential language",
+      "verified": true
+    },
+    {
+      "claim": "Diamonds: natural diamonds and engagement rings only; Diamond Banc does not purchase lab-grown stones",
+      "source_url": "https://www.diamondbanc.com/sell-a-diamond/",
+      "verified": true
+    },
+    {
+      "claim": "Watches: Rolex and other Swiss timepieces, evaluated by Rolex- and watch-trained experts",
+      "source_url": "https://www.diamondbanc.com/sell-a-watch/",
+      "verified": true
+    },
+    {
+      "claim": "Designer jewelry brands evaluated: Cartier, Tiffany & Co., Van Cleef & Arpels, Bvlgari",
       "source_url": "https://www.diamondbanc.com/",
       "verified": true
     },
@@ -75,19 +95,101 @@
       "verified": true
     }
   ],
-  "testimonials": [],
-  "testimonials_note": "Aggregate Trustpilot rating (5.0/5, 1,836+ reviews) and A+ BBB rating are presented as aggregate proof only. No individual customer testimonial quotes exist in the approved facts; none were fabricated.",
+  "testimonials": [
+    {
+      "quote": "After watching countless videos on YouTube, I reached out to Diamond Banc and was introduced to Jordan. He made the process seamless and simple and answered all of my questions. The entire process, from initial contact to securing a loan took less than 48 hours. I am very impressed with their process and level of customer service and highly recommend them to anyone needing to access their jewelry's equity. Thank you again!",
+      "name": "Sebastian C.",
+      "attribution": "Diamond Banc customer",
+      "source_url": "https://www.diamondbanc.com/loans/",
+      "verified": true
+    },
+    {
+      "quote": "I got 4 different estimates. Diamond Banc was the clear winner. Christine was a great advocate in making sure I got the best deal. Everyone was delightful and the location of the office was beautiful and convenient. Highly recommend.",
+      "name": "Shirley Farrah",
+      "attribution": "Google review",
+      "source_url": "https://www.diamondbanc.com/loans/",
+      "verified": true
+    },
+    {
+      "quote": "Christine Weimer was extremely friendly, professional, and helpful. She made the whole process quick and easy, and everything went very smoothly. Excellent customer service. Highly recommended!",
+      "name": "Mehmet Ali Ünal",
+      "attribution": "Google review",
+      "source_url": "https://www.diamondbanc.com/loans/",
+      "verified": true
+    }
+  ],
+  "testimonials_note": "Three published testimonials are used verbatim with accurate attribution. Sebastian C. is published on Diamond Banc's own loans page; Shirley Farrah and Mehmet Ali Ünal appear in the Google review feed on that page and are labeled as Google reviews. Not represented as Trustpilot reviews. Aggregate proof (5.0/5, 10,000+ combined reviews, A+ BBB) is presented separately.",
   "images": [
     {
       "file": "public/images/hero-jewelry.jpg",
-      "subject": "dark luxury jewelry still life (loose diamond, solitaire ring, gold bands) with empty left half for hero text",
-      "source": "provided in scaffold (public/images)",
+      "subject": "real Diamond Banc product photography: a diamond riviera necklace with an emerald-cut green gemstone and diamond ring on a light ground",
+      "source": "client Drive file 0162_Surgener-MarketingShoot_081021_STACK.jpg",
+      "verified": true
+    },
+    {
+      "file": "public/images/option-sell.jpg",
+      "subject": "real Diamond Banc consultation: an expert presenting a diamond bracelet to a seated client across an office desk",
+      "source": "client Drive file DiamondBanc_12-25-02011.jpg",
+      "verified": true
+    },
+    {
+      "file": "public/images/option-loan.jpg",
+      "subject": "real Diamond Banc consultation: an expert presenting a jewelry box to a client at a branded office desk",
+      "source": "client Drive file diamondbanc_2-10-26-02885.jpg",
       "verified": true
     },
     {
       "file": "public/images/shipping-secure.jpg",
-      "subject": "jewelry gift box, protective pouch, and envelope prepared for insured shipping",
-      "source": "provided in scaffold (public/images)",
+      "subject": "real Diamond Banc packaging and FedEx Express shipping workflow with a watch box being prepared for insured shipment",
+      "source": "https://www.diamondbanc.com/safety-security-shipping/",
+      "verified": true
+    },
+    {
+      "file": "public/images/expertise.jpg",
+      "subject": "real portrait of founder Mills Menser",
+      "source": "https://www.diamondbanc.com/about-us/mills-menser/",
+      "verified": true
+    },
+    {
+      "file": "public/images/team/team-mills.jpg",
+      "subject": "headshot, Mills Menser (Founder & Owner)",
+      "source": "https://www.diamondbanc.com/about-us/",
+      "verified": true
+    },
+    {
+      "file": "public/images/team/team-devin.jpg",
+      "subject": "headshot, Devin Smith (Executive Vice President, Revenue & Operations)",
+      "source": "https://www.diamondbanc.com/about-us/",
+      "verified": true
+    },
+    {
+      "file": "public/images/team/team-kyle.jpg",
+      "subject": "headshot, Kyle Z. Cook (Vice President, Underwriting & Logistics)",
+      "source": "https://www.diamondbanc.com/about-us/",
+      "verified": true
+    },
+    {
+      "file": "public/images/team/team-jordan.jpg",
+      "subject": "headshot, Jordan Isaacs (Director of Transactions, Head Buyer & Lender, Rolex Specialist)",
+      "source": "https://www.diamondbanc.com/about-us/",
+      "verified": true
+    },
+    {
+      "file": "public/images/team/team-david.jpg",
+      "subject": "headshot, David Fernandez (Regional Director, Miami Markets)",
+      "source": "https://www.diamondbanc.com/about-us/",
+      "verified": true
+    },
+    {
+      "file": "public/images/team/team-jodi.jpg",
+      "subject": "headshot, Jodi Hudson (Director, Tampa)",
+      "source": "https://www.diamondbanc.com/about-us/",
+      "verified": true
+    },
+    {
+      "file": "public/images/team/team-deena.jpg",
+      "subject": "headshot, Deena Maali (Director, Orlando)",
+      "source": "https://www.diamondbanc.com/about-us/",
       "verified": true
     },
     {
@@ -102,5 +204,6 @@
       "source": "provided in scaffold (rasterized from brand SVG)",
       "verified": true
     }
-  ]
+  ],
+  "office_map_note": "The office-locations section renders a simplified accessible US map (Albers projection, U.S. Census nation boundary) with gold pins at the true geographic position of each of the 16 active markets, plus a text list grouped by state so location data is not conveyed by color alone. Supporting trust copy reads '15+ offices' by design."
 }

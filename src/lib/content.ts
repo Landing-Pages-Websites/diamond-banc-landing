@@ -25,50 +25,67 @@ export const CURRENT_YEAR = 2026;
 export const HERO = {
   h1: "Find out what your jewelry is worth.",
   subhead:
-    "Get a free, no-obligation quote in 24 hours. Sell it or use it to get a loan. Free insured overnight shipping both ways.",
+    "Get an instant quote for your jewelry, watch, or diamonds. Ship it to us or visit a local office to book an appointment, with free insured overnight shipping both ways.",
   chips: [
     "Free insured shipping",
-    "24-hour evaluation",
-    "Same-day funding",
+    "Instant evaluation",
+    "Ship or visit a local office",
     "No obligation",
   ],
   formHeading: "Get your free, no-obligation quote",
   formSubhead:
-    "Add a photo and our GIA-certified gemologists will review it within 24 hours.",
+    "Add a photo and get an instant estimate from our experts.",
 };
 
 // ─── Proof bar (#proof-bar) ───
 export const PROOF_BAR = [
-  { icon: "star", value: "5.0 / 5", label: "1,836+ Trustpilot reviews" },
+  { icon: "star", value: "10,000+", label: "reviews across Google, Trustpilot, and Yelp" },
   { icon: "award", value: "A+", label: "BBB rating" },
-  { icon: "gem", value: "GIA-certified", label: "Expert gemologists" },
-  { icon: "pin", value: "15 offices", label: "Local, plus nationwide service" },
+  { icon: "gem", value: "Experienced", label: "experts" },
+  { icon: "pin", value: "15+ offices", label: "local, plus nationwide service" },
 ];
+
+// ─── Office locations (#office-locations) ───
+export const LOCATIONS = {
+  eyebrow: "Where we are",
+  headline: "15+ offices, coast to coast, plus nationwide mail-in service.",
+  intro:
+    "Prefer to hand your item across the desk? Book an appointment at any of our local offices. Anywhere else in the country, ship it to us with a free insured label.",
+  // Active office markets, grouped by state for accessible, non-color-only labels.
+  states: [
+    { state: "Florida", cities: ["Aventura", "Boca Raton", "Coral Gables", "Orlando", "Sarasota", "Tampa", "West Palm Beach"] },
+    { state: "Georgia", cities: ["Atlanta", "Roswell"] },
+    { state: "Missouri", cities: ["Columbia", "Kansas City", "St. Louis"] },
+    { state: "Tennessee", cities: ["Nashville"] },
+    { state: "Arizona", cities: ["Scottsdale"] },
+    { state: "California", cities: ["Beverly Hills", "San Diego"] },
+  ],
+};
 
 // ─── Two options (#two-options) ───
 export const TWO_OPTIONS = {
   eyebrow: "Two options, one inquiry",
   headline: "Sell it, or keep it and borrow against it.",
   intro:
-    "One quote opens both doors. Tell us about your item and our team returns a real offer to purchase it outright and a separate offer to lend against it. You decide which path fits once you have seen the numbers, and there is never any obligation to accept either.",
+    "Tell us about your item and we'll tell you what it's worth. Use that number to sell it outright or borrow against it, whichever fits.",
   cards: [
     {
       id: "sell",
       icon: "tag",
       title: "Sell your item",
-      body: "Turn jewelry, diamonds, gold, or a luxury watch you no longer wear into cash. Our GIA-certified gemologists evaluate your item within 24 hours of receiving it and present a firm purchase offer. If you accept, funds are released the same day. There is no pressure and no cost to see what your item is worth, and if the offer is not right for you, we return your item free of charge, fully insured. It is the simplest way to realize the value of something sitting in a drawer.",
-      cta: "Get my quote",
+      body: "Turn jewelry, diamonds, gold, or a luxury watch you no longer wear into cash. Our experts review your item and present a firm purchase offer, with no pressure and no cost to see what it's worth. If the offer is not right for you, we return your item free of charge, fully insured. It is the simplest way to realize the value of something sitting in a drawer.",
+      cta: "Get my instant quote",
       image: "/images/option-sell.jpg",
-      alt: "An open dark velvet tray displaying gold and diamond jewelry pieces ready for evaluation",
+      alt: "A Diamond Banc expert presenting a diamond bracelet to a seated client across an office desk",
     },
     {
       id: "borrow",
       icon: "vault",
       title: "Get a loan and keep your item",
-      body: "Not ready to part with a piece that matters to you? Use it to access its value instead. We hold your item securely and return an offer to lend against it, so you keep ownership and get it back when the loan is repaid. The same 24-hour evaluation and same-day funding apply, and requesting an offer costs nothing and commits you to nothing. It is the right choice when the sentiment is worth as much as the stone.",
-      cta: "Get my quote",
+      body: "Not ready to part with a piece that matters to you? Use it to access its value instead. We hold your item securely and return an offer to lend against it, so you keep ownership and get it back when the loan is repaid. Requesting an offer costs nothing and commits you to nothing. It is the right choice when the sentiment is worth as much as the stone.",
+      cta: "Get my instant quote",
       image: "/images/option-loan.jpg",
-      alt: "A diamond ring resting in a secure case with a vault door softly blurred behind it",
+      alt: "A Diamond Banc expert showing a jewelry box to a client during an in-office consultation",
     },
   ],
 };
@@ -80,23 +97,23 @@ export const HOW_IT_WORKS = {
   steps: [
     {
       icon: "camera",
-      title: "Tell us about your item",
-      body: "Share a few details and a photo through the quote form. It takes about two minutes and starts your evaluation.",
+      title: "Tell us about your item and get an instant quote",
+      body: "Share a few details and a photo through the quote form. It takes about two minutes, and our experts return an instant quote so you know where you stand up front.",
+    },
+    {
+      icon: "pin",
+      title: "Ship it in or visit a local office",
+      body: "Decide what works for you. Ship your item to us with a free insured label, or book an appointment and bring it to one of our local offices.",
     },
     {
       icon: "ship",
-      title: "Free insured overnight shipping",
-      body: "We send a prepaid, fully insured overnight label. Pack your item, hand it off, and track it every step of the way.",
-    },
-    {
-      icon: "gem",
-      title: "24-hour expert evaluation",
-      body: "Our GIA-certified gemologists assess your item and prepare a firm offer within 24 hours of its arrival.",
+      title: "Free insured shipping",
+      body: "If you ship, we send a prepaid, fully insured overnight label. Pack your item, hand it off, and track it every step of the way.",
     },
     {
       icon: "dollar",
-      title: "Same-day funding",
-      body: "Accept the offer and funds are released the same day. Decline, and we return your item free and fully insured.",
+      title: "Funding within 24 hours of accepting your offer.",
+      body: "Accept your offer and we get you paid fast. Decline, and we return your item free of charge and fully insured.",
     },
   ],
 };
@@ -106,25 +123,25 @@ export const WHAT_WE_BUY = {
   eyebrow: "What we evaluate",
   headline: "Expert valuations across the pieces that hold real value.",
   intro:
-    "If it is fine jewelry, a signed piece, or a luxury timepiece, our gemologists can put a number on it.",
+    "If it is fine jewelry, designer jewelry, or a luxury timepiece, our experts can put a number on it.",
   categories: [
     {
       icon: "gem",
       title: "Diamonds & engagement rings",
-      body: "Loose diamonds and diamond jewelry of every shape and size, graded by GIA-certified gemologists against the same standards used to certify them.",
+      body: "Natural diamonds and engagement rings of every shape and size. We do not purchase lab-grown stones.",
       image: "/images/cat-diamonds.jpg",
       alt: "Loose brilliant cut diamonds beside a platinum solitaire ring on a charcoal surface",
     },
     {
       icon: "watch",
-      title: "Luxury watches, including Rolex",
-      body: "Rolex, Patek Philippe, Audemars Piguet, and other fine timepieces, evaluated by a dedicated Rolex specialist who knows what the market pays.",
+      title: "Rolex watches and other Swiss timepieces",
+      body: "Rolex, Patek Philippe, Audemars Piguet, and other Swiss timepieces, evaluated by our Rolex- and watch-trained experts who know what the market pays.",
       image: "/images/cat-watches.jpg",
       alt: "A gold dress watch and a steel sport watch resting on a cream stone slab",
     },
     {
       icon: "gem",
-      title: "Designer & signed jewelry",
+      title: "Designer jewelry",
       body: "Cartier, Tiffany & Co., Van Cleef & Arpels, and Bvlgari pieces valued for the brand, craftsmanship, and materials that make them sought after.",
       image: "/images/cat-designer.jpg",
       alt: "A diamond tennis bracelet, a gold rope chain, and emerald drop earrings arranged together",
@@ -155,20 +172,19 @@ export const SHIPPING = {
 // ─── Expertise & founder story (#expertise) ───
 export const EXPERTISE = {
   eyebrow: "Expertise you can trust",
-  headline: "Founded by a third-generation jeweler. Evaluated by certified experts.",
-  body: "Diamond Banc was founded in 2007 by Mills Menser, a third-generation jeweler who went on to purchase Buchroeders Jewelers, a firm established in 1896. That heritage shapes how every item is handled: with the care of people who have spent their lives around fine jewelry. Your item is evaluated by GIA-certified gemologists, the same credential used to grade the world's finest diamonds.",
+  headline: "Founded by a third-generation jeweler, backed by a team of experts.",
+  body: "Diamond Banc was founded in 2007 by Mills Menser, a third-generation jeweler. That heritage shapes how every item is handled, with the care of people who have spent their lives around fine jewelry. Your item is evaluated by our experienced experts, who know exactly what the market pays for it.",
   image: "/images/expertise.jpg",
-  imageAlt: "A GIA-certified gemologist examining a diamond through a loupe at a workbench",
+  imageAlt: "Mills Menser, founder of Diamond Banc, in a portrait photograph",
+  teamHeading: "Meet some of our experts",
   team: [
-    { name: "Jodi Hudson", role: "GIA Graduate Gemologist" },
-    {
-      name: "Jason Perry",
-      role: "GIA Graduate Gemologist, Certified Jewelry Appraiser",
-    },
-    {
-      name: "Jordan Isaacs",
-      role: "Director of Transactions, Head Buyer & Rolex Specialist",
-    },
+    { name: "Mills Menser", role: "Founder & Owner", image: "/images/team/team-mills.jpg" },
+    { name: "Devin Smith", role: "Executive Vice President, Revenue & Operations", image: "/images/team/team-devin.jpg" },
+    { name: "Kyle Z. Cook", role: "Vice President, Underwriting & Logistics", image: "/images/team/team-kyle.jpg" },
+    { name: "Jordan Isaacs", role: "Director of Transactions, Head Buyer & Lender, Rolex Specialist", image: "/images/team/team-jordan.jpg" },
+    { name: "David Fernandez", role: "Regional Director, Miami Markets", image: "/images/team/team-david.jpg" },
+    { name: "Jodi Hudson", role: "Director, Tampa", image: "/images/team/team-jodi.jpg" },
+    { name: "Deena Maali", role: "Director, Orlando", image: "/images/team/team-deena.jpg" },
   ],
 };
 
@@ -176,11 +192,31 @@ export const EXPERTISE = {
 export const REVIEWS = {
   eyebrow: "The reputation behind the offer",
   headline: "Trusted by thousands, rated 5.0 out of 5.",
-  body: "Diamond Banc holds a 5.0 out of 5 rating on Trustpilot across more than 1,836 reviews, alongside an A+ rating from the Better Business Bureau. It is the kind of track record that only comes from treating people fairly, one transaction at a time.",
+  body: "Diamond Banc holds a 5.0 out of 5 rating with 10,000+ reviews across Google, Trustpilot, and Yelp, alongside an A+ rating from the Better Business Bureau. It is the kind of track record that only comes from treating people fairly, one transaction at a time.",
   stats: [
-    { value: "5.0 / 5", label: "Trustpilot rating" },
-    { value: "1,836+", label: "Verified reviews" },
+    { value: "5.0 / 5", label: "Average rating" },
+    { value: "10,000+", label: "Reviews across Google, Trustpilot, and Yelp" },
     { value: "A+", label: "BBB rating" },
+  ],
+  testimonials: [
+    {
+      quote:
+        "After watching countless videos on YouTube, I reached out to Diamond Banc and was introduced to Jordan. He made the process seamless and simple and answered all of my questions. The entire process, from initial contact to securing a loan took less than 48 hours. I am very impressed with their process and level of customer service and highly recommend them to anyone needing to access their jewelry's equity. Thank you again!",
+      name: "Sebastian C.",
+      source: "Diamond Banc customer",
+    },
+    {
+      quote:
+        "I got 4 different estimates. Diamond Banc was the clear winner. Christine was a great advocate in making sure I got the best deal. Everyone was delightful and the location of the office was beautiful and convenient. Highly recommend.",
+      name: "Shirley Farrah",
+      source: "Google review",
+    },
+    {
+      quote:
+        "Christine Weimer was extremely friendly, professional, and helpful. She made the whole process quick and easy, and everything went very smoothly. Excellent customer service. Highly recommended!",
+      name: "Mehmet Ali Ünal",
+      source: "Google review",
+    },
   ],
 };
 
@@ -196,11 +232,11 @@ export const FAQ = [
   },
   {
     q: "How long does the evaluation take?",
-    a: "Our GIA-certified gemologists evaluate your item within 24 hours of receiving it. You will have a firm offer in hand quickly, with no drawn-out back and forth.",
+    a: "Send a few details and a photo through the form and our experts return an instant quote up front. Once your item arrives or you visit a local office, they confirm a firm offer promptly, with no drawn-out back and forth.",
   },
   {
     q: "How fast do I get paid?",
-    a: "Once you accept an offer, funds are released the same day. There is no waiting period and no hidden processing delay.",
+    a: "Once you accept an offer, funding is released quickly, with no lengthy waiting period and no hidden processing delay.",
   },
   {
     q: "What if I want a loan instead of selling?",
@@ -208,7 +244,7 @@ export const FAQ = [
   },
   {
     q: "What items do you evaluate?",
-    a: "Diamonds and diamond jewelry, engagement rings, luxury watches including Rolex, designer and signed pieces from houses like Cartier, Tiffany & Co., Van Cleef & Arpels and Bvlgari, and gold and precious metals. When in doubt, request a quote and our gemologists will take a look.",
+    a: "Diamonds and diamond jewelry, engagement rings, Rolex and other Swiss timepieces, designer jewelry from houses like Cartier, Tiffany & Co., Van Cleef & Arpels and Bvlgari, and gold and precious metals. When in doubt, request a quote and our experts will take a look.",
   },
 ];
 
@@ -216,7 +252,7 @@ export const FAQ = [
 export const FINAL_CTA = {
   eyebrow: "Ready when you are",
   headline: "See what your jewelry is worth today.",
-  body: "Get a free, no-obligation quote in 24 hours, then decide whether to sell or borrow. Free insured overnight shipping both ways, and same-day funding once you accept.",
+  body: "Get a free, no-obligation instant quote, then decide whether to sell or borrow. Ship it to us or visit a local office, with free insured overnight shipping both ways.",
 };
 
 // ─── Mega tracking , real Diamond Banc IDs. Meta Pixel is ON. ───

@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://quote.diamondbanc.com"),
   title: "Sell or Borrow Using Your Jewelry | Free Quote | Diamond Banc",
   description:
-    "Get a free, no-obligation quote on your jewelry, diamonds, gold or luxury watch. Free insured overnight shipping, 24-hour evaluation by GIA-certified gemologists, same-day funding.",
+    "Get a free, no-obligation instant quote on your jewelry, diamonds, gold or luxury watch. Ship it to us or visit a local office, with free insured overnight shipping both ways.",
   openGraph: {
     title: "Sell or Borrow Using Your Jewelry | Diamond Banc",
     description:
-      "Get a free, no-obligation quote in 24 hours. Sell your jewelry, diamonds, gold or luxury watch, or use it to get a loan. Free insured overnight shipping both ways.",
+      "Get an instant quote on your jewelry, diamonds, gold or luxury watch, or use it to get a loan. Ship it in or visit a local office, with free insured overnight shipping both ways.",
     images: ["/images/hero-jewelry.jpg"],
     type: "website",
   },

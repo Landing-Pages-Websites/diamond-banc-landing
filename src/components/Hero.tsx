@@ -15,7 +15,7 @@ export function Hero(): React.ReactElement {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-jewelry.jpg"
-          alt=""
+          alt="A Diamond Banc diamond riviera necklace beside an emerald-cut green gemstone and diamond ring"
           fill
           priority
           sizes="100vw"
