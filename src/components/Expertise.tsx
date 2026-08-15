@@ -17,6 +17,7 @@ export function Expertise(): React.ReactElement {
                 src={EXPERTISE.image}
                 alt={EXPERTISE.imageAlt}
                 fill
+                quality={90}
                 sizes="(min-width: 1024px) 45vw, 90vw"
                 className="object-cover object-top"
               />
@@ -54,6 +55,7 @@ export function Expertise(): React.ReactElement {
                       src={member.image}
                       alt={`${member.name}, ${member.role}`}
                       fill
+                      quality={90}
                       sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw"
                       className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
                     />

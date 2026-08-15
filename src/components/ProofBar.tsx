@@ -34,7 +34,7 @@ export function ProofBar(): React.ReactElement {
               href="#reviews"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-teal-900)] transition-colors hover:text-[var(--color-teal-800)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-teal-400)] rounded-md px-1"
             >
-              See why thousands rate us 5.0 out of 5
+              See why thousands rate us 5 out of 5
               <Icon name="arrow" className="h-3.5 w-3.5" strokeWidth={2.2} />
             </a>
           </div>

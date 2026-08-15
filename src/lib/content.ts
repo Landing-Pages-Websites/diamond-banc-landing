@@ -191,10 +191,10 @@ export const EXPERTISE = {
 // ─── Reviews / aggregate proof (#reviews) ───
 export const REVIEWS = {
   eyebrow: "The reputation behind the offer",
-  headline: "Trusted by thousands, rated 5.0 out of 5.",
-  body: "Diamond Banc holds a 5.0 out of 5 rating with 10,000+ reviews across Google, Trustpilot, and Yelp, alongside an A+ rating from the Better Business Bureau. It is the kind of track record that only comes from treating people fairly, one transaction at a time.",
+  headline: "Trusted by thousands, rated 5 out of 5.",
+  body: "Diamond Banc holds a 5 out of 5 rating with 10,000+ reviews across Google, Trustpilot, and Yelp, alongside an A+ rating from the Better Business Bureau. It is the kind of track record that only comes from treating people fairly, one transaction at a time.",
   stats: [
-    { value: "5.0 / 5", label: "Average rating" },
+    { value: "5 out of 5", label: "Average rating" },
     { value: "10,000+", label: "Reviews across Google, Trustpilot, and Yelp" },
     { value: "A+", label: "BBB rating" },
   ],

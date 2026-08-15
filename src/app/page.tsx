@@ -32,10 +32,10 @@ export default function Page(): React.ReactElement {
       <Header />
       <Hero />
       <ProofBar />
-      <LocationMap />
       <TwoOptions />
       <HowItWorks />
       <WhatWeBuy />
+      <LocationMap />
       <ShippingSecurity />
       <Expertise />
       <Reviews />
