@@ -58,16 +58,16 @@ export default function AppraisalEmbed(): React.ReactElement {
 
   return (
     <div className="rounded-2xl bg-white p-5 md:p-7 shadow-card-lg ring-1 ring-black/5">
-      <h2 className="font-display text-2xl md:text-[1.7rem] leading-tight text-[var(--color-ink)]">
+      <h2 className="font-display text-[1.7rem] md:text-3xl leading-tight text-[var(--color-ink)]">
         {HERO.formHeading}
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
         {HERO.formSubhead}
       </p>
-      <div className="mt-5 hr-gold" />
+      <div className="mt-4 hr-gold" />
       {/* Third-party widget mounts here. min-height keeps the hero-form floor
           stable before the widget hydrates client-side. */}
-      <div className="mt-5 min-h-[240px] md:min-h-[320px]">
+      <div className="mt-4 min-h-[180px] md:min-h-[220px]">
         <div id="db-appraisal-root" />
       </div>
     </div>

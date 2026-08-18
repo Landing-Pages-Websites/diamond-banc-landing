@@ -25,11 +25,11 @@ export const CURRENT_YEAR = 2026;
 export const HERO = {
   h1: "Find out what your jewelry is worth.",
   subhead:
-    "Get an instant quote for your jewelry, watch, or diamonds. Ship it to us or visit a local office to book an appointment, with free insured overnight shipping both ways.",
+    "Get an instant quote for your jewelry, watch, or diamonds. Ship your items to us with free insured shipping, or book an appointment at a local office.",
   chips: [
-    "Free insured shipping",
     "Instant evaluation",
     "Ship or visit a local office",
+    "Free insured shipping",
     "No obligation",
   ],
   formHeading: "Get your free, no-obligation quote",
@@ -73,7 +73,7 @@ export const TWO_OPTIONS = {
       id: "sell",
       icon: "tag",
       title: "Sell your item",
-      body: "Turn jewelry, diamonds, gold, or a luxury watch you no longer wear into cash. Our experts review your item and present a firm purchase offer, with no pressure and no cost to see what it's worth. If the offer is not right for you, we return your item free of charge, fully insured. It is the simplest way to realize the value of something sitting in a drawer.",
+      body: "Turn jewelry, diamonds, gold, or a luxury watch you no longer wear into funds. Our experts review your item and present a firm purchase offer, with no pressure and no cost to see what it's worth. If the offer is not right for you, we return your item free of charge, fully insured. It is the simplest way to realize the value of something sitting in a drawer.",
       cta: "Get my instant quote",
       image: "/images/option-sell.jpg",
       alt: "A Diamond Banc expert presenting a diamond bracelet to a seated client across an office desk",
@@ -123,35 +123,35 @@ export const WHAT_WE_BUY = {
   eyebrow: "What we evaluate",
   headline: "Expert valuations across the pieces that hold real value.",
   intro:
-    "If it is fine jewelry, designer jewelry, or a luxury timepiece, our experts can put a number on it.",
+    "If it is fine jewelry, designer jewelry, or a luxury timepiece, our experts can provide a market-backed quote.",
   categories: [
     {
       icon: "gem",
       title: "Diamonds & engagement rings",
       body: "Natural diamonds and engagement rings of every shape and size. We do not purchase lab-grown stones.",
       image: "/images/cat-diamonds.jpg",
-      alt: "Loose brilliant cut diamonds beside a platinum solitaire ring on a charcoal surface",
+      alt: "Diamond tennis necklaces laid over GIA Diamond Dossier reports",
     },
     {
       icon: "watch",
       title: "Rolex watches and other Swiss timepieces",
       body: "Rolex, Patek Philippe, Audemars Piguet, and other Swiss timepieces, evaluated by our Rolex- and watch-trained experts who know what the market pays.",
       image: "/images/cat-watches.jpg",
-      alt: "A gold dress watch and a steel sport watch resting on a cream stone slab",
+      alt: "A silver Rolex Turn-O-Graph resting on a dark green Rolex presentation box",
     },
     {
       icon: "gem",
       title: "Designer jewelry",
       body: "Cartier, Tiffany & Co., Van Cleef & Arpels, and Bvlgari pieces valued for the brand, craftsmanship, and materials that make them sought after.",
       image: "/images/cat-designer.jpg",
-      alt: "A diamond tennis bracelet, a gold rope chain, and emerald drop earrings arranged together",
+      alt: "Four ornate designer pieces on white geometric pedestals, including enamel animal jewelry and gold bracelets",
     },
     {
       icon: "bar",
       title: "Gold & precious metals",
       body: "Gold, platinum, and precious-metal jewelry weighed and valued transparently against current market rates, with nothing hidden in the math.",
       image: "/images/cat-gold.jpg",
-      alt: "Gold rings and chains piled beside a brass balance scale",
+      alt: "Two yellow-gold cuff bracelets on white studio blocks",
     },
   ],
 };
@@ -203,7 +203,7 @@ export const REVIEWS = {
       quote:
         "After watching countless videos on YouTube, I reached out to Diamond Banc and was introduced to Jordan. He made the process seamless and simple and answered all of my questions. The entire process, from initial contact to securing a loan took less than 48 hours. I am very impressed with their process and level of customer service and highly recommend them to anyone needing to access their jewelry's equity. Thank you again!",
       name: "Sebastian C.",
-      source: "Diamond Banc customer",
+      source: "Google review",
     },
     {
       quote:
@@ -252,7 +252,7 @@ export const FAQ = [
 export const FINAL_CTA = {
   eyebrow: "Ready when you are",
   headline: "See what your jewelry is worth today.",
-  body: "Get a free, no-obligation instant quote, then decide whether to sell or borrow. Ship it to us or visit a local office, with free insured overnight shipping both ways.",
+  body: "Get an instant quote for your jewelry, watch, or diamonds. Ship your items to us with free insured shipping, or book an appointment at a local office.",
 };
 
 // ─── Mega tracking , real Diamond Banc IDs. Meta Pixel is ON. ───
