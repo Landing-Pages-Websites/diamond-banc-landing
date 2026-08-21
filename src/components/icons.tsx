@@ -103,6 +103,10 @@ interface IconProps extends SVGProps<SVGSVGElement> {
 export function Icon({ name, className, ...rest }: IconProps): JSX.Element | null {
   const path = PATHS[name];
   if (!path) return null;
+  // The svg carries a default `h-5 w-5` only when a caller omits sizing, so any
+  // supplied w-/h- utility wins outright. A concatenated `h-5 w-5 ${className}`
+  // would not: Tailwind emits `.h-5` after `.h-4`, so at equal specificity the
+  // default would override smaller caller sizes (h-4, h-3.5).
   return (
     <svg
       viewBox="0 0 24 24"
@@ -112,7 +116,7 @@ export function Icon({ name, className, ...rest }: IconProps): JSX.Element | nul
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className={className}
+      className={className ?? "h-5 w-5"}
       {...rest}
     >
       {path}
