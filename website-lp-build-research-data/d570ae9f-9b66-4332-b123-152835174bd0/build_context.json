@@ -1,0 +1,118 @@
+{
+  "confidence": "high",
+  "businessName": "Diamond Banc",
+  "vertical": "luxury-asset-buying-and-lending",
+  "websiteUrl": "https://quote.diamondbanc.com",
+  "platform": "vercel-nextjs",
+  "aiImageryAllowed": false,
+  "targetAudience": "High-intent owners of fine jewelry, natural diamonds, gold, and luxury watches in 15 named metro markets who are searching Google or Performance Max for a trustworthy way to sell an item or borrow against it. Visitors expect a premium, professional local-office experience, an immediate first step, and a clear no-obligation path.",
+  "icp": "An adult luxury-asset owner near a Diamond Banc office who wants to understand an item's value and may choose either a direct sale or a jewelry equity loan. They value expert handling, privacy, speed, trusted third-party proof, and the option to meet a local market director. The page should not target retail jewelry shoppers, pawnshop-experience seekers, or owners of unsupported items.",
+  "productsServicesInScope": [
+    "Selling natural diamonds, engagement rings, and fine jewelry",
+    "Selling Rolex and other accepted Swiss luxury watches",
+    "Selling gold, platinum, and precious-metal jewelry",
+    "Jewelry equity loans as an alternative to selling",
+    "Customer's embedded AI appraisal widget for an instant initial quote",
+    "Appointments and local-office service in each of the 15 named markets"
+  ],
+  "productsServicesOutOfScope": [
+    "Retail jewelry or watch sales to consumers",
+    "Seller's Agent or consignment service",
+    "Lab-grown diamond purchasing claims",
+    "Pawnshop framing",
+    "Guaranteed valuations, loan amounts, or returns",
+    "Any replacement or reimplementation of the customer-owned appraisal widget"
+  ],
+  "qualificationCriteria": [
+    "Visitor owns an accepted luxury asset and submits the customer-owned appraisal widget or calls the page's market phone number",
+    "The customer widget and Salesforce routing remain the source of truth for lead qualification and distribution"
+  ],
+  "disqualificationCriteria": [
+    "Retail purchase intent",
+    "Unsupported assets, including lab-grown diamonds as standalone stones",
+    "Requests for guaranteed value or loan terms"
+  ],
+  "geo": "Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+  "conversionGoal": "Primary conversion is a successful submission through Diamond Banc's existing embedded AI appraisal widget, which captures name, phone, email, ZIP code, and an item photo and routes natively to Salesforce. Secondary conversion is a qualified phone call to the exact market-specific number supplied in the build task. The nationwide root page must remain unchanged and live throughout the work.",
+  "offerPositioning": "A premium, no-obligation way to discover what a valuable item may be worth, with two possible outcomes from one inquiry: sell the item or keep it and borrow against it. Lead with the instant quote and local-office convenience, then support the decision with Diamond Banc's 5 out of 5 reputation, 10,000+ combined reviews, A+ BBB rating, experienced experts, and third-generation-jeweler heritage.",
+  "valueProposition": "Diamond Banc combines an instant online appraisal step with experienced local experts, a national reputation, and the flexibility to sell or borrow using the same inquiry.",
+  "keyMessaging": "Use the existing nationwide page's approved content framework and real Diamond Banc photography. Localize the hero as Diamond Banc plus the market name, make the nearby-office path explicit, preserve the sell-or-borrow balance, and keep copy conservative for financial-services advertising. Use 'experienced experts' or accurate GIA-accredited terminology for people, never 'GIA-certified gemologists.'",
+  "usp": "One premium inquiry gives the visitor an instant initial quote plus access to a local Diamond Banc office, with the option to sell or borrow and no obligation to accept an offer.",
+  "awarenessStage": "solution-aware",
+  "marketSophistication": 4,
+  "requiredSections": [
+    "hero and embedded AI appraisal widget",
+    "trust bar with 5 out of 5 reputation, 10,000+ reviews, A+ BBB rating, and local-office scale",
+    "sell-or-borrow options",
+    "four-step process",
+    "accepted asset categories",
+    "localized office section",
+    "shipping and security",
+    "expertise and third-generation-jeweler story",
+    "real attributed testimonials",
+    "FAQ",
+    "final CTA",
+    "legal footer and floating CTA"
+  ],
+  "primaryCTA": "Get my free quote, scrolling to the existing embedded AI appraisal widget",
+  "secondaryCTA": "Call the exact market-specific source phone number supplied in the task for the current route",
+  "trafficSource": "Google Search and Performance Max campaigns segmented by the 15 named markets. Visitors arrive with active selling, valuation, Rolex, watch, diamond, gold, jewelry, or jewelry-loan intent and need route-level message match.",
+  "existingSiteAudit": "quote.diamondbanc.com is an active, Git-linked Next.js landing page serving nationwide paid traffic. It already contains the approved premium visual system, customer-owned appraisal widget, CTM universal script, GTM container, Mega site registration, Meta Pixel, real Diamond Banc product and team photography, and an approved content framework. The new work must add 15 route paths inside the same repository without changing the nationwide root route or its instrumentation. The main marketing site currently returns an origin-level 404 to this environment, so the live quote page, current repository, task input, customer memory, and meeting summaries are the authoritative build references. Meeting context was ingested through the customer meetings source, including the August 13 customer feedback summary.",
+  "integrations": [
+    {"name": "Diamond Banc AI appraisal widget", "purpose": "Customer-owned embedded form and Salesforce routing; reuse the existing embed code and success listener"},
+    {"name": "Salesforce", "purpose": "Native downstream lead capture and ZIP-based routing handled by the embedded widget"},
+    {"name": "Google Tag Manager", "purpose": "Use task container GTM-WBLZ2J9 unchanged"},
+    {"name": "MegaTag optimizer", "purpose": "Preserve site key ae75ylrmfqweqelx and site ID 75a85d64-2685-47a6-82e4-6010397e3ddb"},
+    {"name": "Meta Pixel", "purpose": "Preserve existing pixel 1344125387527189 because it is active on the nationwide site even though this task's traffic source is Google"},
+    {"name": "CallTrackingMetrics", "purpose": "Preserve universal script 572388.tctm.co/t.js; raw route source must contain only each task-specified market number"},
+    {"name": "Vercel", "purpose": "Use existing Git-linked project prj_w0GptW5ExWD1w4WgtuPm8QqAZJVW and production domain quote.diamondbanc.com"}
+  ],
+  "brandVoice": "Premium, composed, specific, and reassuring. Explain a valuable-item transaction in plain language without sounding like a pawnshop, discount buyer, or aggressive lender. Use short direct headings, transparent process copy, and restrained urgency. The brand name is always Diamond Banc.",
+  "certifications": [
+    "A+ Better Business Bureau rating",
+    "5 out of 5 customer rating",
+    "10,000+ combined reviews across Google, Trustpilot, and Yelp",
+    "Founded by third-generation jeweler Mills Menser"
+  ],
+  "certifications_note": "Do not describe people as GIA-certified. The August 13 customer meeting explicitly corrected this terminology. Use experienced experts, jewelry experts, GIA-accredited professionals, graduate gemologists, or applied jewelry professionals only when the exact claim is sourced.",
+  "differentiators": [
+    {"claim": "Instant initial quote through the customer's embedded AI appraisal tool", "source": "build task input and existing quote page"},
+    {"claim": "Sell or borrow using one inquiry", "source": "approved strategy email and existing quote page"},
+    {"claim": "5 out of 5 rating and 10,000+ combined reviews", "source": "August 13 customer meeting and existing approved page"},
+    {"claim": "A+ BBB rating", "source": "strategy email and existing approved page"},
+    {"claim": "Founded by third-generation jeweler Mills Menser", "source": "existing approved page and customer memory"},
+    {"claim": "Local-office option plus free insured shipping", "source": "strategy email and existing approved page"}
+  ],
+  "messagingGuardrails": [
+    {"rule": "Use Diamond Banc exactly; never Diamond Bank or Diamond Bacn", "type": "must"},
+    {"rule": "Keep sell and borrow options at offer parity while leading with high-intent selling language", "type": "must"},
+    {"rule": "Use only the exact market-specific phone number supplied for each route in raw source and tel links", "type": "must"},
+    {"rule": "Reuse the customer-owned appraisal widget and preserve its Salesforce routing", "type": "must"},
+    {"rule": "Use only verified client-owned photography already in the repo", "type": "must"},
+    {"rule": "Do not use pawnshop language", "type": "must_not"},
+    {"rule": "Do not imply Diamond Banc sells jewelry or watches to consumers", "type": "must_not"},
+    {"rule": "Do not promise guaranteed valuations, guaranteed loan terms, or specific dollar outcomes", "type": "must_not"},
+    {"rule": "Do not call people GIA-certified gemologists", "type": "must_not"},
+    {"rule": "Do not use an em dash in any customer-facing copy or metadata", "type": "must_not"},
+    {"rule": "Preserving the existing nationwide root route, tracking IDs, CTM script, form behavior, and approved copy is required", "type": "must"}
+  ],
+  "designDos": [
+    "Inherit the existing Diamond Banc premium dark-ink, teal, gold, and white visual system",
+    "Reuse the current real Diamond Banc jewelry, shipping, founder, and team photography",
+    "Keep the appraisal card above the fold on mobile and desktop",
+    "Localize the hero headline and office language without making all 15 routes visually inconsistent",
+    "Keep all existing section anchors and at least six meaningful sections per route"
+  ],
+  "designDonts": [
+    "Do not redesign or modify the live nationwide root route",
+    "Do not generate AI imagery or use generic stock photography",
+    "Do not introduce a generic city skyline as the localization mechanism",
+    "Do not change the GTM, MegaTag, Meta Pixel, CTM, form embed, or form success handler",
+    "Do not add a retail navigation, product catalog, or unrelated outbound links"
+  ],
+  "competitors": [
+    {"name": "Worthy", "url": "https://www.worthy.com", "notes": "National jewelry-sale funnel; useful only as a clarity benchmark"},
+    {"name": "The RealReal", "url": "https://www.therealreal.com/sell", "notes": "Luxury resale trust and intake patterns"},
+    {"name": "WP Diamonds", "url": "https://www.wpdiamonds.com", "notes": "Direct diamond and watch buying competitor"}
+  ]
+}

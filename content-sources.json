@@ -99,7 +99,7 @@
     {
       "quote": "After watching countless videos on YouTube, I reached out to Diamond Banc and was introduced to Jordan. He made the process seamless and simple and answered all of my questions. The entire process, from initial contact to securing a loan took less than 48 hours. I am very impressed with their process and level of customer service and highly recommend them to anyone needing to access their jewelry's equity. Thank you again!",
       "name": "Sebastian C.",
-      "attribution": "Diamond Banc customer",
+      "attribution": "Google review",
       "source_url": "https://www.diamondbanc.com/loans/",
       "verified": true
     },
@@ -118,7 +118,7 @@
       "verified": true
     }
   ],
-  "testimonials_note": "Three published testimonials are used verbatim with accurate attribution. Sebastian C. is published on Diamond Banc's own loans page; Shirley Farrah and Mehmet Ali Ünal appear in the Google review feed on that page and are labeled as Google reviews. Not represented as Trustpilot reviews. Aggregate proof (5.0/5, 10,000+ combined reviews, A+ BBB) is presented separately.",
+  "testimonials_note": "Three published testimonials are used verbatim with accurate attribution. Sebastian C., Shirley Farrah, and Mehmet Ali Ünal all appear in the Google review feed on Diamond Banc's loans page and are labeled as Google reviews. Not represented as Trustpilot reviews. Aggregate proof (5.0/5, 10,000+ combined reviews, A+ BBB) is presented separately.",
   "images": [
     {
       "file": "public/images/hero-jewelry.jpg",
@@ -205,5 +205,23 @@
       "verified": true
     }
   ],
-  "office_map_note": "The office-locations section renders a simplified accessible US map (Albers projection, U.S. Census nation boundary) with gold pins at the true geographic position of each of the 16 active markets, plus a text list grouped by state so location data is not conveyed by color alone. Supporting trust copy reads '15+ offices' by design."
+  "office_map_note": "The office-locations section renders a simplified accessible US map (Albers projection, U.S. Census nation boundary) with gold pins at the true geographic position of each of the 16 active markets, plus a text list grouped by state so location data is not conveyed by color alone. Supporting trust copy reads '15+ offices' by design.",
+  "market_routes_note": "Localized paid-traffic routes at /[market]. Each route renders only its own exact market-specific phone number, supplied by the build task, in raw source, visible text, aria labels, and tel hrefs. CTM may swap numbers at runtime. The nationwide root route is unchanged and keeps Columbia's 573-875-2265.",
+  "market_routes": [
+    { "slug": "tampa", "display": "Tampa, FL", "phone": "813-609-4331", "tel": "+18136094331", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "orlando", "display": "Orlando, FL", "phone": "407-232-7688", "tel": "+14072327688", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "coral-gables", "display": "Coral Gables, FL", "phone": "(786) 605-9593", "tel": "+17866059593", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "aventura", "display": "Aventura, FL", "phone": "954-323-8475", "tel": "+19543238475", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "boca-raton", "display": "Boca Raton, FL", "phone": "561-430-5035", "tel": "+15614305035", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "west-palm-beach", "display": "West Palm Beach, FL", "phone": "561-899-7575", "tel": "+15618997575", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "sarasota", "display": "Sarasota, FL", "phone": "941-877-5472", "tel": "+19418775472", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "nashville", "display": "Nashville, TN", "phone": "615-695-7675", "tel": "+16156957675", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "atlanta", "display": "Atlanta, GA", "phone": "404-407-5046", "tel": "+14044075046", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "roswell", "display": "Roswell, GA", "phone": "678-403-6344", "tel": "+16784036344", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "scottsdale", "display": "Scottsdale, AZ", "phone": "(602) 878-6698", "tel": "+16028786698", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "beverly-hills", "display": "Beverly Hills, CA", "phone": "310-299-9557", "tel": "+13102999557", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "st-louis", "display": "St. Louis, MO", "phone": "314-876-6659", "tel": "+13148766659", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "columbia", "display": "Columbia, MO", "phone": "573-875-2265", "tel": "+15738752265", "source": "task spec: authorized market-specific phone number", "verified": true },
+    { "slug": "kansas-city", "display": "Kansas City, MO", "phone": "816-597-5773", "tel": "+18165975773", "source": "task spec: authorized market-specific phone number", "verified": true }
+  ]
 }

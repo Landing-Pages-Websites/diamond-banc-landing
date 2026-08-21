@@ -1,0 +1,582 @@
+{
+  "meta": {
+    "client_name": "Diamond Banc",
+    "profile": "landing-page",
+    "source_url": "https://quote.diamondbanc.com",
+    "confidence": "high"
+  },
+  "visual_theme": {
+    "archetype": "localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.",
+    "copy_framework": "AIDA",
+    "brand_voice": "Premium, composed, specific, and reassuring. Explain a valuable-item transaction in plain language without sounding like a pawnshop, discount buyer, or aggressive lender. Use short direct headings, transparent process copy, and restrained urgency. The brand name is always Diamond Banc.",
+    "rationale": "The customer requested the same nationwide content framework localized by market. Preserving the live page's design system reduces risk to an active paid-traffic asset, keeps customer-approved proof and imagery intact, and isolates the new work to route-aware content and phone values.",
+    "section_order": [
+      "header",
+      "hero",
+      "proof-bar",
+      "two-options",
+      "how-it-works",
+      "what-we-buy",
+      "local-office",
+      "shipping-security",
+      "expertise",
+      "reviews",
+      "faq",
+      "final-cta",
+      "footer",
+      "floating-cta"
+    ],
+    "visual_exclusions": [
+      "city skylines",
+      "AI-generated jewelry",
+      "generic stock people",
+      "glassmorphism",
+      "neon",
+      "gold button fills",
+      "retail product grids",
+      "pawnshop imagery",
+      "countdown timers",
+      "Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens."
+    ]
+  },
+  "color_roles": {
+    "primary": "#1C7E86",
+    "secondary": "#222428",
+    "accent": "#BD8D41",
+    "neutral": [
+      "#FFFFFF",
+      "#F2F0EE",
+      "#E1D9CD",
+      "#5C6066"
+    ],
+    "roles": {
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "text": "#1A1A1A",
+      "muted": "#5C6066",
+      "border": "#E6E2DB",
+      "link": "#1C7E86"
+    },
+    "states": {
+      "primary_default": "#1C7E86 background with white text",
+      "primary_hover": "#196F76 background with white text",
+      "primary_focus": "2px #6AC5CC focus ring",
+      "secondary_default": "transparent with #1C7E86 border and text",
+      "hover": "#186B72",
+      "focus": "#BD8D41",
+      "active": "#14585E",
+      "disabled": "#A4CBCF",
+      "error": "#D92D20",
+      "success": "#12805C"
+    },
+    "contrast_verdict": "White on #1C7E86 measures 4.8:1 and white on #222428 measures 15.54:1. Gold on #222428 measures 5.22:1. Gold is decorative only on white.",
+    "wcag_pairings": [
+      "#FFFFFF on #1C7E86: 4.8:1, AA",
+      "#FFFFFF on #222428: 15.54:1, AAA",
+      "#BD8D41 on #222428: 5.22:1, AA"
+    ]
+  },
+  "typography_rules": {
+    "display": "Cormorant Garamond, weights 400, 600, and 700, for premium editorial headings",
+    "body": "Poppins, weights 400, 500, 600, and 700, for body copy, labels, controls, and buttons",
+    "scale": "Preserve the existing fluid mobile-first scale; H1 remains at least 39px on a 390px viewport and reaches roughly 66px on desktop",
+    "scale_steps": {}
+  },
+  "component_stylings": [
+    {
+      "name": "Header",
+      "variants": [
+        "fixed-light"
+      ],
+      "states": {
+        "default": "white translucent",
+        "scrolled": "white with border and soft shadow"
+      },
+      "notes": "Logo and exact route phone only"
+    },
+    {
+      "name": "Hero",
+      "variants": [
+        "dark-split"
+      ],
+      "states": {
+        "mobile": "form first",
+        "desktop": "copy left and form right"
+      },
+      "notes": "Real jewelry image and localized H1"
+    },
+    {
+      "name": "AppraisalCard",
+      "variants": [
+        "white-raised"
+      ],
+      "states": {
+        "loading": "reserved floor",
+        "ready": "customer widget interactive"
+      },
+      "notes": "Preserve embed code and compact spacing"
+    },
+    {
+      "name": "ProofBar",
+      "variants": [
+        "compact-light"
+      ],
+      "states": {},
+      "notes": "Four approved proof points"
+    },
+    {
+      "name": "OptionCard",
+      "variants": [
+        "sell",
+        "borrow"
+      ],
+      "states": {
+        "hover": "subtle border and image emphasis"
+      },
+      "notes": "Real consultation photos"
+    },
+    {
+      "name": "LocalOffice",
+      "variants": [
+        "market-focused"
+      ],
+      "states": {},
+      "notes": "City name, appointment or shipping, exact route phone"
+    },
+    {
+      "name": "DualCTA",
+      "variants": [
+        "light",
+        "dark"
+      ],
+      "states": {
+        "hover": "controlled teal change",
+        "focus": "visible teal ring"
+      },
+      "notes": "Quote anchor plus exact route phone"
+    },
+    {
+      "name": "Faq",
+      "variants": [
+        "accordion"
+      ],
+      "states": {
+        "closed": "question row",
+        "open": "answer visible"
+      },
+      "notes": "Keyboard accessible"
+    },
+    {
+      "name": "FinalCta",
+      "variants": [
+        "dark-centered"
+      ],
+      "states": {},
+      "notes": "Localized headline and route-correct CTA"
+    }
+  ],
+  "layout_principles": {
+    "spacing_scale": [
+      "4px",
+      "8px",
+      "12px",
+      "16px",
+      "24px",
+      "32px",
+      "48px",
+      "64px",
+      "80px",
+      "112px"
+    ],
+    "base_unit": "4px",
+    "container": "max-width 1280px with 20px mobile and 32px desktop gutters",
+    "grid": "12 columns on desktop, one column on mobile; hero copy spans 6 and form spans 5 with one-column breathing room",
+    "section_order": [
+      "header",
+      "hero",
+      "proof-bar",
+      "two-options",
+      "how-it-works",
+      "what-we-buy",
+      "local-office",
+      "shipping-security",
+      "expertise",
+      "reviews",
+      "faq",
+      "final-cta",
+      "footer",
+      "floating-cta"
+    ]
+  },
+  "depth_elevation": {
+    "surface": "#FFFFFF",
+    "border": "#E6E2DB",
+    "elevation_note": "Use the surface role for raised cards/panels against background; keep shadows subtle and consistent with the component card spec.",
+    "iconography": {
+      "direction": "Reuse the existing small single-color line icon system.",
+      "stroke": "1.75px to 2.5px depending on scale",
+      "exclusions": [
+        "decorative icon confetti",
+        "unrelated icon libraries",
+        "multicolor emoji"
+      ]
+    },
+    "motion": {
+      "direction": "Subtle opacity and vertical reveal only; form and phone controls remain immediately interactive.",
+      "easing": "ease-out",
+      "duration": "300ms to 500ms; 0.01ms under prefers-reduced-motion"
+    }
+  },
+  "dos_donts": {
+    "design_dos": [
+      "Inherit the existing Diamond Banc premium dark-ink, teal, gold, and white visual system",
+      "Reuse the current real Diamond Banc jewelry, shipping, founder, and team photography",
+      "Keep the appraisal card above the fold on mobile and desktop",
+      "Localize the hero headline and office language without making all 15 routes visually inconsistent",
+      "Keep all existing section anchors and at least six meaningful sections per route"
+    ],
+    "design_donts": [
+      "Do not redesign or modify the live nationwide root route",
+      "Do not generate AI imagery or use generic stock photography",
+      "Do not introduce a generic city skyline as the localization mechanism",
+      "Do not change the GTM, MegaTag, Meta Pixel, CTM, form embed, or form success handler",
+      "Do not add a retail navigation, product catalog, or unrelated outbound links"
+    ],
+    "visual_exclusions": [
+      "city skylines",
+      "AI-generated jewelry",
+      "generic stock people",
+      "glassmorphism",
+      "neon",
+      "gold button fills",
+      "retail product grids",
+      "pawnshop imagery",
+      "countdown timers",
+      "Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens."
+    ],
+    "messaging_guardrails": [
+      {
+        "rule": "Use Diamond Banc exactly; never Diamond Bank or Diamond Bacn",
+        "type": "must"
+      },
+      {
+        "rule": "Keep sell and borrow options at offer parity while leading with high-intent selling language",
+        "type": "must"
+      },
+      {
+        "rule": "Use only the exact market-specific phone number supplied for each route in raw source and tel links",
+        "type": "must"
+      },
+      {
+        "rule": "Reuse the customer-owned appraisal widget and preserve its Salesforce routing",
+        "type": "must"
+      },
+      {
+        "rule": "Use only verified client-owned photography already in the repo",
+        "type": "must"
+      },
+      {
+        "rule": "Do not use pawnshop language",
+        "type": "must_not"
+      },
+      {
+        "rule": "Do not imply Diamond Banc sells jewelry or watches to consumers",
+        "type": "must_not"
+      },
+      {
+        "rule": "Do not promise guaranteed valuations, guaranteed loan terms, or specific dollar outcomes",
+        "type": "must_not"
+      },
+      {
+        "rule": "Do not call people GIA-certified gemologists",
+        "type": "must_not"
+      },
+      {
+        "rule": "Do not use an em dash in any customer-facing copy or metadata",
+        "type": "must_not"
+      },
+      {
+        "rule": "Preserving the existing nationwide root route, tracking IDs, CTM script, form behavior, and approved copy is required",
+        "type": "must"
+      }
+    ]
+  },
+  "responsive_behavior": {
+    "mobile_first_notes": [
+      "The appraisal card must begin within the first 480px of a 390px viewport as closely as the current approved pattern allows",
+      "The route phone must remain readable and tappable in the fixed header",
+      "No horizontal overflow at 320px, 390px, 768px, or 1440px",
+      "The floating CTA is quote-form only and must not add a duplicate phone CTA"
+    ],
+    "breakpoints": {
+      "mobile": "<=640px",
+      "tablet": "641-1024px",
+      "desktop": ">=1025px"
+    }
+  },
+  "agent_prompt_guide": {
+    "instruction_block": "Build a landing-page for Diamond Banc.\nArchetype: localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.. Copy framework: AIDA.\nTheme the ENTIRE build off this client palette \u2014 primary #1C7E86, secondary #222428, accent #BD8D41. Never substitute a generic brand color.\nTypography: headings in Cormorant Garamond, weights 400, 600, and 700, for premium editorial headings, body in Poppins, weights 400, 500, 600, and 700, for body copy, labels, controls, and buttons; honor the typography scale_steps.\nUse the color_roles + states verbatim for surfaces, text, and interactive feedback.\nRender every component across the states given in component_stylings \u2014 do not ship defaults.\nVoice: Premium, composed, specific, and reassuring. Explain a valuable-item transaction in plain language without sounding like a pawnshop, discount buyer, or aggressive lender. Use short direct headings, transparent process copy, and restrained urgency. The brand name is always Diamond Banc..\nHARD EXCLUSIONS (never produce): city skylines; AI-generated jewelry; generic stock people; glassmorphism; neon; gold button fills; retail product grids; pawnshop imagery; countdown timers; Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens..\nWrite real copy from page_blueprint.copy_direction grounded in the content inventory \u2014 never lorem, never invented facts.",
+    "non_negotiables": [
+      "client-themed palette (no fixed brand color)",
+      "all component states rendered",
+      "real copy per blueprint copy_direction",
+      "exclude: city skylines",
+      "exclude: AI-generated jewelry",
+      "exclude: generic stock people",
+      "exclude: glassmorphism",
+      "exclude: neon",
+      "exclude: gold button fills",
+      "exclude: retail product grids",
+      "exclude: pawnshop imagery",
+      "exclude: countdown timers",
+      "exclude: Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens."
+    ]
+  },
+  "page_blueprint": {
+    "confidence": "high",
+    "pages": [
+      {
+        "path": "/[market]",
+        "title": "Diamond Banc [Market] | Sell or Borrow Using Your Jewelry",
+        "intent": "transactional",
+        "proof_to_feature": [
+          "5 out of 5 rating",
+          "10,000+ combined reviews",
+          "A+ BBB rating",
+          "third-generation-jeweler heritage",
+          "local office availability"
+        ],
+        "sections": [
+          {
+            "name": "header",
+            "functional_goal": "Keep the exact local phone and quote action available without adding navigation leakage.",
+            "copy_direction": "Diamond Banc logo, exact market phone, and quote anchor. Preserve the existing header layout and logo contrast.",
+            "components": [
+              "Header"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Call the exact market number"
+          },
+          {
+            "name": "hero",
+            "functional_goal": "Message-match the visitor's city and place the customer-owned appraisal widget above the fold.",
+            "copy_direction": "Use 'Diamond Banc [Market]' in the H1 with the approved value line, existing subhead, chip order, exact route phone, and existing embedded AI appraisal widget.",
+            "components": [
+              "Hero",
+              "AppraisalEmbed"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "proof-bar",
+            "functional_goal": "Establish legitimacy before asking the visitor to evaluate a sensitive high-value transaction.",
+            "copy_direction": "Keep the approved 10,000+ reviews, A+ BBB, experienced experts, and 15+ office proof.",
+            "components": [
+              "ProofBar"
+            ],
+            "internal_links": [],
+            "cta": "none"
+          },
+          {
+            "name": "two-options",
+            "functional_goal": "Clarify that one inquiry can lead to a sale or a jewelry equity loan without forcing an early commitment.",
+            "copy_direction": "Preserve the approved sell and borrow cards, full body copy, real consultation photos, and quote CTA.",
+            "components": [
+              "TwoOptions",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my instant quote and exact market phone"
+          },
+          {
+            "name": "how-it-works",
+            "functional_goal": "Reduce process anxiety by showing the four steps from online quote through accepted offer.",
+            "copy_direction": "Keep the existing four-step framework and conservative wording. Mention local office or free insured shipping.",
+            "components": [
+              "HowItWorks",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "what-we-buy",
+            "functional_goal": "Confirm category fit for natural diamonds, fine and designer jewelry, accepted luxury watches, and precious metals.",
+            "copy_direction": "Preserve all four approved cards and verified client-owned product images. Do not imply retail sales or lab-grown diamond purchasing.",
+            "components": [
+              "WhatWeBuy",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "local-office",
+            "functional_goal": "Turn generic national trust into a specific nearby-office option for the route's market.",
+            "copy_direction": "Name the market, explain that visitors can book a local appointment or use insured shipping, and display only the exact route phone. Do not use a skyline or generic city imagery.",
+            "components": [
+              "LocalOffice",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Call the exact market number or get a quote"
+          },
+          {
+            "name": "shipping-security",
+            "functional_goal": "Reassure visitors who prefer the mail-in path that the item remains protected.",
+            "copy_direction": "Preserve the approved insured-shipping and secure-handling content and real packaging image.",
+            "components": [
+              "ShippingSecurity",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "expertise",
+            "functional_goal": "Show the people and heritage behind the valuation instead of relying on abstract claims.",
+            "copy_direction": "Preserve Mills Menser's third-generation-jeweler story and real team photography. Use experienced-expert terminology.",
+            "components": [
+              "Expertise",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "reviews",
+            "functional_goal": "Use real attributed customer language to answer trust and process objections.",
+            "copy_direction": "Preserve the three approved testimonials and the 5 out of 5, 10,000+, and A+ aggregate proof.",
+            "components": [
+              "Reviews",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "faq",
+            "functional_goal": "Resolve obligation, shipping, timeline, payment, loan-option, and item-fit objections.",
+            "copy_direction": "Preserve the existing FAQ questions and answers unless route-local wording is necessary. Do not introduce guarantees.",
+            "components": [
+              "Faq",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "final-cta",
+            "functional_goal": "Give decided visitors a final local action with the same offer and route-correct phone.",
+            "copy_direction": "Use 'See what your jewelry is worth in [Market]' with the existing approved sentence and benefit chips.",
+            "components": [
+              "FinalCta",
+              "DualCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote and exact market phone"
+          },
+          {
+            "name": "footer",
+            "functional_goal": "Close with legal identity and the route-correct phone without leaking the paid visit.",
+            "copy_direction": "Preserve the existing footer structure and legal name, using the exact current market phone.",
+            "components": [
+              "SiteFooter",
+              "FloatingCTA"
+            ],
+            "internal_links": [
+              "#get-quote"
+            ],
+            "cta": "Get my free quote"
+          }
+        ]
+      }
+    ],
+    "nav": {
+      "primary": [
+        "#get-quote"
+      ],
+      "footer": [
+        "#get-quote",
+        "#faq"
+      ]
+    },
+    "internal_linking_notes": "The paid funnel is intentionally single-goal. All non-phone CTAs anchor to #get-quote on the current route. Phone links use only that route's exact task-specified number. The nationwide root route remains unchanged and no city route links to another city route."
+  },
+  "references": [
+    "build task input",
+    "current quote.diamondbanc.com deployment",
+    "current diamond-banc-landing repository",
+    "August 13 customer meeting summary"
+  ],
+  "build_directives": [
+    {
+      "section": "architecture",
+      "directive": "Add one typed market configuration covering exactly the 15 task-specified slugs, display names, and phone values, plus a dynamic Next.js route that renders the existing approved component system with route-specific data. Generate static params and route metadata. Keep src/app/page.tsx output unchanged.",
+      "source": "build task input_data.page_differences and existing repository"
+    },
+    {
+      "section": "phone",
+      "directive": "Every visible phone and tel href on each market route must derive from that route's exact task-specified source phone. Preserve 573-875-2265 on the nationwide root. Never embed a runtime CTM tracking pool number in source.",
+      "source": "build task input_data.content_requests and WEB phone-source mandate"
+    },
+    {
+      "section": "hero",
+      "directive": "Localize the H1 with 'Diamond Banc [Market]' and the existing value message, while preserving the current hero art direction, appraisal-card position, copy tone, benefit chips, and real jewelry image.",
+      "source": "build task landing_page_focus and page_differences"
+    },
+    {
+      "section": "form",
+      "directive": "Reuse AppraisalEmbed exactly once per route, including the customer widget base URL and one-shot form_submit success tracking. Do not replace the widget with a MEGA form and do not change Salesforce routing.",
+      "source": "build task form_type, form_already_created, reuse_form_on_all_pages"
+    },
+    {
+      "section": "local-office",
+      "directive": "On localized routes, replace the nationwide all-market LocationMap with a focused local-office section that names the current market, offers local appointment or insured shipping, and uses the exact route phone. Do not add skyline imagery.",
+      "source": "build task page_differences and design_direction"
+    },
+    {
+      "section": "content",
+      "directive": "Preserve the nationwide section order, approved proof, service cards, shipping, expertise, testimonials, FAQ, and real client photography. Localize only the hero, local-office references, final CTA, metadata, and route phone surfaces unless a prop is required for safe reuse.",
+      "source": "build task content_requests: same content framework as existing nationwide page"
+    },
+    {
+      "section": "tracking",
+      "directive": "Preserve GTM-WBLZ2J9, site key ae75ylrmfqweqelx, site ID 75a85d64-2685-47a6-82e4-6010397e3ddb, pixel 1344125387527189, optimizer endpoint, and 572388.tctm.co/t.js byte-identical.",
+      "source": "task input and current production source snapshot"
+    },
+    {
+      "section": "quality",
+      "directive": "Verify all 15 routes return 200, each has unique route metadata and H1, each raw DOM and JavaScript-disabled DOM contains only the exact task phone for that route, all tel links match, root stays 200 and unchanged, no em dash exists under src, and the shared design remains responsive at 390px and 1440px.",
+      "source": "WEB acceptance rules and task route matrix"
+    },
+    {
+      "section": "research",
+      "directive": "Commit build_context.json, brand.json, ai_build_contract.json, recommendations.json, proof.json, content_inventory.json, offer_cro.json, design_direction.json, page_blueprint.json, inspiration.json, and competitors.json under website-lp-build-research-data/d570ae9f-9b66-4332-b123-152835174bd0 in the LP repo.",
+      "source": "AGENTS.md Stage 0 research-artifact contract"
+    }
+  ]
+}

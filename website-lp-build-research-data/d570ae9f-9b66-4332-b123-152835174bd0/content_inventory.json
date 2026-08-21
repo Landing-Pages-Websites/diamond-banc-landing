@@ -1,0 +1,40 @@
+{
+  "confidence": "high",
+  "pages": [
+    {
+      "path": "/",
+      "status": "keep",
+      "purpose": "Preserve the active nationwide paid-traffic landing page exactly as the approved control and shared design source.",
+      "key_copy_points": [
+        "Find out what your jewelry is worth",
+        "Sell or borrow using one inquiry",
+        "Instant initial quote through the embedded appraisal widget",
+        "Free insured shipping or a local office visit",
+        "5 out of 5 reputation, 10,000+ combined reviews, and A+ BBB rating"
+      ],
+      "suggested_headline": "Find out what your jewelry is worth."
+    },
+    {
+      "path": "/[market]",
+      "status": "new",
+      "purpose": "Serve 15 localized Google Search and Performance Max landing-page routes with exact city message match, exact market phone routing, and the existing customer-owned appraisal embed.",
+      "key_copy_points": [
+        "Diamond Banc plus the market name in the hero",
+        "Local-office availability in the named market",
+        "Exact task-specified source phone in all visible and tel-link surfaces",
+        "The same approved sell-or-borrow, accepted-items, process, proof, shipping, expertise, review, FAQ, and final-CTA content framework as the nationwide page",
+        "The same embedded AI appraisal widget and Salesforce routing"
+      ],
+      "suggested_headline": "Diamond Banc [Market]: Find out what your jewelry is worth."
+    }
+  ],
+  "global_copy": {
+    "tagline": "Sell or borrow using your jewelry.",
+    "boilerplate": "Diamond Banc helps owners of fine jewelry, natural diamonds, gold, and luxury watches understand their item's value, choose a direct sale or jewelry equity loan, and work with experienced experts online, by insured shipping, or at a local office.",
+    "ctas": [
+      "Get my free quote",
+      "Get my instant quote",
+      "Call Diamond Banc"
+    ]
+  }
+}

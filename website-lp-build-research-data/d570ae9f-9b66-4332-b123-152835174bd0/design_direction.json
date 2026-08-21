@@ -1,0 +1,93 @@
+{
+  "confidence": "high",
+  "archetype": "localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.",
+  "section_order": ["header", "hero", "proof-bar", "two-options", "how-it-works", "what-we-buy", "local-office", "shipping-security", "expertise", "reviews", "faq", "final-cta", "footer", "floating-cta"],
+  "copy_framework": "AIDA",
+  "palette": {
+    "primary": "#1C7E86",
+    "secondary": "#222428",
+    "accent": "#BD8D41",
+    "neutral": ["#FFFFFF", "#F2F0EE", "#E1D9CD", "#5C6066"],
+    "roles": {
+      "ink": "#222428",
+      "ink_soft": "#34373C",
+      "surface": "#FFFFFF",
+      "surface_alt": "#F2F0EE",
+      "teal_action": "#1C7E86",
+      "teal_hover": "#196F76",
+      "teal_light": "#6AC5CC",
+      "gold_rule": "#BD8D41",
+      "muted": "#5C6066",
+      "border": "#E6E2DB",
+      "focus": "#6AC5CC",
+      "error": "#B3261E",
+      "success": "#1E6B45"
+    },
+    "states": {
+      "primary_default": "#1C7E86 background with white text",
+      "primary_hover": "#196F76 background with white text",
+      "primary_focus": "2px #6AC5CC focus ring",
+      "secondary_default": "transparent with #1C7E86 border and text"
+    },
+    "contrast_verdict": "White on #1C7E86 measures 4.8:1 and white on #222428 measures 15.54:1. Gold on #222428 measures 5.22:1. Gold is decorative only on white.",
+    "wcag_pairings": ["#FFFFFF on #1C7E86: 4.8:1, AA", "#FFFFFF on #222428: 15.54:1, AAA", "#BD8D41 on #222428: 5.22:1, AA"]
+  },
+  "typography": {
+    "display": "Cormorant Garamond, weights 400, 600, and 700, for premium editorial headings",
+    "body": "Poppins, weights 400, 500, 600, and 700, for body copy, labels, controls, and buttons",
+    "scale": "Preserve the existing fluid mobile-first scale; H1 remains at least 39px on a 390px viewport and reaches roughly 66px on desktop",
+    "rules": ["Short display headlines", "16px minimum body copy", "Comfortable 1.6 to 1.75 body leading", "Uppercase Poppins eyebrows used sparingly"]
+  },
+  "spacing": {
+    "base": "4px",
+    "scale": ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "80px", "112px"],
+    "container": "max-width 1280px with 20px mobile and 32px desktop gutters",
+    "grid": "12 columns on desktop, one column on mobile; hero copy spans 6 and form spans 5 with one-column breathing room"
+  },
+  "components": [
+    {"name": "Header", "variants": ["fixed-light"], "states": {"default": "white translucent", "scrolled": "white with border and soft shadow"}, "notes": "Logo and exact route phone only"},
+    {"name": "Hero", "variants": ["dark-split"], "states": {"mobile": "form first", "desktop": "copy left and form right"}, "notes": "Real jewelry image and localized H1"},
+    {"name": "AppraisalCard", "variants": ["white-raised"], "states": {"loading": "reserved floor", "ready": "customer widget interactive"}, "notes": "Preserve embed code and compact spacing"},
+    {"name": "ProofBar", "variants": ["compact-light"], "states": {}, "notes": "Four approved proof points"},
+    {"name": "OptionCard", "variants": ["sell", "borrow"], "states": {"hover": "subtle border and image emphasis"}, "notes": "Real consultation photos"},
+    {"name": "LocalOffice", "variants": ["market-focused"], "states": {}, "notes": "City name, appointment or shipping, exact route phone"},
+    {"name": "DualCTA", "variants": ["light", "dark"], "states": {"hover": "controlled teal change", "focus": "visible teal ring"}, "notes": "Quote anchor plus exact route phone"},
+    {"name": "Faq", "variants": ["accordion"], "states": {"closed": "question row", "open": "answer visible"}, "notes": "Keyboard accessible"},
+    {"name": "FinalCta", "variants": ["dark-centered"], "states": {}, "notes": "Localized headline and route-correct CTA"}
+  ],
+  "sections": {
+    "hero": "Localize the H1 and market context only; keep the approved visual and widget hierarchy.",
+    "local-office": "Replace the all-market map on localized routes with a focused market panel, city name, appointment language, and the exact route phone.",
+    "proof": "Keep the current approved proof and real testimonials unchanged except for necessary local context.",
+    "final-cta": "Repeat the local market name and exact route phone while using the approved quote copy and chip order."
+  },
+  "imagery_direction": "Use the existing verified Diamond Banc photography already committed in public/images. Do not generate, synthesize, or source new city imagery. The offering remains the subject: valuable jewelry, watches, secure shipping, and experienced people.",
+  "imagery_system": {
+    "hero": "/images/hero-jewelry.jpg",
+    "options": ["/images/option-sell.jpg", "/images/option-loan.jpg"],
+    "categories": ["/images/cat-diamonds.jpg", "/images/cat-watches.jpg", "/images/cat-designer.jpg", "/images/cat-gold.jpg"],
+    "shipping": "/images/shipping-secure.jpg",
+    "expertise": "/images/expertise.jpg"
+  },
+  "iconography": {
+    "direction": "Reuse the existing small single-color line icon system.",
+    "stroke": "1.75px to 2.5px depending on scale",
+    "exclusions": ["decorative icon confetti", "unrelated icon libraries", "multicolor emoji"]
+  },
+  "motion": {
+    "direction": "Subtle opacity and vertical reveal only; form and phone controls remain immediately interactive.",
+    "easing": "ease-out",
+    "duration": "300ms to 500ms; 0.01ms under prefers-reduced-motion"
+  },
+  "motion_direction": "Subtle opacity and vertical reveal only; form and phone controls are immediately interactive.",
+  "mobile_first_notes": [
+    "The appraisal card must begin within the first 480px of a 390px viewport as closely as the current approved pattern allows",
+    "The route phone must remain readable and tappable in the fixed header",
+    "No horizontal overflow at 320px, 390px, 768px, or 1440px",
+    "The floating CTA is quote-form only and must not add a duplicate phone CTA"
+  ],
+  "visual_exclusions": ["city skylines", "AI-generated jewelry", "generic stock people", "glassmorphism", "neon", "gold button fills", "retail product grids", "pawnshop imagery", "countdown timers"],
+  "inspiration_refs": ["The current live Diamond Banc nationwide route is the primary and binding design exemplar."],
+  "references": ["build task input", "current quote.diamondbanc.com deployment", "current diamond-banc-landing repository", "August 13 customer meeting summary"],
+  "rationale": "The customer requested the same nationwide content framework localized by market. Preserving the live page's design system reduces risk to an active paid-traffic asset, keeps customer-approved proof and imagery intact, and isolates the new work to route-aware content and phone values."
+}

@@ -1,0 +1,141 @@
+{
+  "url": "https://quote.diamondbanc.com",
+  "scannedAt": "2026-08-21T17:01:06.486262+00:00",
+  "engine": "curl",
+  "builder": "nextjs-tailwind-v4",
+  "needs_palette_review": false,
+  "palette_review_reasons": [],
+  "theme": "mixed",
+  "colors": {
+    "primary": "#1C7E86",
+    "secondary": "#222428",
+    "accent": "#BD8D41",
+    "neutral": [
+      "#FFFFFF",
+      "#F2F0EE",
+      "#E1D9CD",
+      "#5C6066"
+    ],
+    "all": [
+      "#1C7E86",
+      "#196F76",
+      "#6AC5CC",
+      "#222428",
+      "#34373C",
+      "#BD8D41",
+      "#D4AB63",
+      "#FFFFFF",
+      "#F2F0EE",
+      "#E1D9CD",
+      "#5C6066"
+    ]
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Poppins",
+    "all": [
+      "Cormorant Garamond",
+      "Poppins"
+    ]
+  },
+  "logo_url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Flogo-dark.png&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+  "favicon_url": "https://quote.diamondbanc.com/icon.png",
+  "images": [
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Flogo-dark.png&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Diamond Banc"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fhero-jewelry.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "A Diamond Banc diamond riviera necklace beside an emerald-cut green gemstone and diamond ring"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Foption-sell.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "A Diamond Banc expert presenting a diamond bracelet to a seated client across an office desk"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Foption-loan.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "A Diamond Banc expert showing a jewelry box to a client during an in-office consultation"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fcat-diamonds.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Diamond tennis necklaces laid over GIA Diamond Dossier reports"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fcat-watches.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "A silver Rolex Turn-O-Graph resting on a dark green Rolex presentation box"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fcat-designer.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Four ornate designer pieces on white geometric pedestals, including enamel animal jewelry and gold bracelets"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fcat-gold.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Two yellow-gold cuff bracelets on white studio blocks"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fshipping-secure.jpg&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "A Diamond Banc team member packing a jewelry box into insured FedEx Express shipping envelopes"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fexpertise.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Mills Menser, founder of Diamond Banc, in a portrait photograph"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fteam%2Fteam-mills.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Mills Menser, Founder &amp; Owner"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fteam%2Fteam-devin.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Devin Smith, Executive Vice President, Revenue &amp; Operations"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fteam%2Fteam-kyle.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Kyle Z. Cook, Vice President, Underwriting &amp; Logistics"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fteam%2Fteam-jordan.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Jordan Isaacs, Director of Transactions, Head Buyer &amp; Lender, Rolex Specialist"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fteam%2Fteam-david.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "David Fernandez, Regional Director, Miami Markets"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fteam%2Fteam-jodi.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Jodi Hudson, Director, Tampa"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Fteam%2Fteam-deena.jpg&amp;w=3840&amp;q=90&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Deena Maali, Director, Orlando"
+    },
+    {
+      "url": "https://quote.diamondbanc.com/_next/image?url=%2Fimages%2Flogo-white.png&amp;w=3840&amp;q=75&amp;dpl=dpl_Dd69dpYRYwTRRu4VXTaoVSuW6kSS",
+      "alt": "Diamond Banc"
+    }
+  ],
+  "ctas": [
+    "Get my free quote"
+  ],
+  "navItems": [],
+  "toneWords": [
+    "premium",
+    "composed",
+    "trustworthy",
+    "expert",
+    "modern luxury",
+    "reassuring"
+  ],
+  "confidence": "high",
+  "hero_photo_available": true,
+  "asset_classification": {
+    "classified": 18,
+    "hero_grade": 9,
+    "by_subject": {
+      "hero-grade-photo": 9,
+      "team-photo": 7,
+      "logo": 2
+    },
+    "manual_verification": "Verified from the current live quote page and the committed public/images assets after the Next.js optimization URLs blocked automated hotlink classification."
+  }
+}

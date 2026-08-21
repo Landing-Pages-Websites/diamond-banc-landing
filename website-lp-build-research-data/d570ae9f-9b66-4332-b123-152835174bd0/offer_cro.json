@@ -1,0 +1,31 @@
+{
+  "confidence": "high",
+  "offer": "A free, no-obligation instant initial quote through Diamond Banc's customer-owned AI appraisal widget, followed by access to experienced local experts who can present purchase and jewelry-equity-loan options. The 15 localized routes add market message match, a named nearby office, and the exact market phone number while retaining the trusted nationwide content framework.",
+  "risk_reversal": "No obligation to accept an offer, no cost to request the initial quote, free insured overnight shipping when the visitor chooses mail-in service, fully insured return shipping if an offer is declined, and the ability to choose between selling and borrowing only after seeing the options.",
+  "urgency": "No manufactured urgency. The visitor's legitimate motivation is active search intent and a desire to understand the item's value now. Use immediate next-step language such as 'Get my free quote' and 'instant initial quote,' but no countdowns, scarcity, guaranteed turnaround, or guaranteed funding claims.",
+  "primaryCTA": "Get my free quote, scrolling to the existing embedded AI appraisal widget",
+  "secondaryCTA": "Call the exact task-specified phone number for the current market route",
+  "form": {
+    "type": "customer-owned embedded AI appraisal widget",
+    "fields": [
+      {"name": "name", "type": "text", "required": true},
+      {"name": "phone", "type": "tel", "required": true},
+      {"name": "email", "type": "email", "required": true},
+      {"name": "zipCode", "type": "text", "required": true},
+      {"name": "itemPhoto", "type": "file", "required": true}
+    ],
+    "qualifier_question": "Qualification and routing are owned by the embedded appraisal widget and Salesforce. Do not recreate, intercept, or alter the customer's fields, validation, item-photo flow, ZIP routing, or submission behavior.",
+    "submission_behavior": "Reuse the current embed code and current postMessage success listener. On a valid success or submitted message, fire MegaTag form_submit and dataLayer form_submit once. Do not produce duplicate events."
+  },
+  "section_strategy": [
+    "Hero: localize the H1 with Diamond Banc and the market name while keeping the form card above the fold",
+    "Proof bar: 5 out of 5 reputation, 10,000+ combined reviews, A+ BBB rating, and local-office scale",
+    "Two options: explain sale and jewelry equity loan at offer parity",
+    "How it works: instant quote, local visit or insured shipping, protected handling, and funding after an accepted offer",
+    "Accepted items: natural diamonds and jewelry, Rolex and Swiss watches, designer jewelry, and gold or precious metals",
+    "Local office: feature the current market and a concise nearby-office path rather than a generic all-market map",
+    "Shipping and security: reassure visitors who choose mail-in service",
+    "Expertise and reviews: third-generation-jeweler heritage plus real customer proof",
+    "FAQ and final CTA: close objections and repeat the same route-correct phone and quote action"
+  ]
+}

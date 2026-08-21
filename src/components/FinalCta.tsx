@@ -2,10 +2,13 @@
 
 import { Reveal } from "@/components/Reveal";
 import { DualCTA } from "@/components/DualCTA";
+import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 import { FINAL_CTA, HERO } from "@/lib/content";
 
 export function FinalCta(): React.ReactElement {
+  const { city, isMarket } = useMarket();
+  const headline = isMarket ? `See what your jewelry is worth in ${city}.` : FINAL_CTA.headline;
   return (
     <section
       id="get-started"
@@ -19,7 +22,7 @@ export function FinalCta(): React.ReactElement {
         <Reveal>
           <p className="eyebrow text-[var(--color-teal-400)]">{FINAL_CTA.eyebrow}</p>
           <h2 className="mt-3 font-display text-[2.4rem] leading-[1.08] text-white md:text-[3.25rem]">
-            {FINAL_CTA.headline}
+            {headline}
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
             {FINAL_CTA.body}

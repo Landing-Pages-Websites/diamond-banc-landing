@@ -1,0 +1,48 @@
+{
+  "confidence": "high",
+  "rating": {
+    "score": 5.0,
+    "scale": 5,
+    "count": "10,000+ combined",
+    "sources": ["Google", "Trustpilot", "Yelp"]
+  },
+  "testimonials": [
+    {
+      "quote": "After watching countless videos on YouTube, I reached out to Diamond Banc and was introduced to Jordan. He made the process seamless and simple and answered all of my questions. The entire process, from initial contact to securing a loan took less than 48 hours. I am very impressed with their process and level of customer service and highly recommend them to anyone needing to access their jewelry's equity. Thank you again!",
+      "name": "Sebastian C.",
+      "source": "Google review"
+    },
+    {
+      "quote": "I got 4 different estimates. Diamond Banc was the clear winner. Christine was a great advocate in making sure I got the best deal. Everyone was delightful and the location of the office was beautiful and convenient. Highly recommend.",
+      "name": "Shirley Farrah",
+      "source": "Google review"
+    },
+    {
+      "quote": "Christine Weimer was extremely friendly, professional, and helpful. She made the whole process quick and easy, and everything went very smoothly. Excellent customer service. Highly recommended!",
+      "name": "Mehmet Ali Ünal",
+      "source": "Google review"
+    }
+  ],
+  "credentials": [
+    "A+ Better Business Bureau rating",
+    "Founded by third-generation jeweler Mills Menser",
+    "Experienced jewelry, diamond, and watch experts",
+    "15+ local offices plus nationwide service"
+  ],
+  "trust_badges": [
+    "5 out of 5 average rating",
+    "10,000+ combined reviews across Google, Trustpilot, and Yelp",
+    "A+ BBB rating"
+  ],
+  "voice_of_customer": [
+    {"phrase": "seamless and simple", "source": "Sebastian C. Google review"},
+    {"phrase": "the clear winner", "source": "Shirley Farrah Google review"},
+    {"phrase": "quick and easy", "source": "Mehmet Ali Ünal Google review"},
+    {"phrase": "no pressure and no cost to see what it's worth", "source": "approved nationwide page"}
+  ],
+  "client_own_headlines": [
+    "Find out what your jewelry is worth.",
+    "Sell it, or keep it and borrow against it.",
+    "See what your jewelry is worth today."
+  ]
+}

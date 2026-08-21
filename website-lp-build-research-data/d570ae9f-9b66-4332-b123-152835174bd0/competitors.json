@@ -1,0 +1,635 @@
+{
+  "customer_id": "d570ae9f-9b66-4332-b123-152835174bd0",
+  "seed_keywords": [
+    "Selling natural diamonds, engagement rings, and fine jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+    "Selling Rolex and other accepted Swiss luxury watches Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+    "Selling gold, platinum, and precious-metal jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+    "Jewelry equity loans as an alternative to selling Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+    "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+    "Appointments and local-office service in each of the 15 named markets Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+    "A premium, no-obligation way to discover what a valuable item may be worth, with two possible outcomes from one inquiry: sell the item or keep it and borrow against it. Lead with the instant quote and local-office convenience, then support the decision with Diamond Banc's 5 out of 5 reputation, 10,000+ combined reviews, A+ BBB rating, experienced experts, and third-generation-jeweler heritage. Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+  ],
+  "discovered": [
+    {
+      "name": "CIRCA Boca Raton | Sell Jewelry, Diamonds, and Watches",
+      "url": "https://www.circajewels.com/office/boca-raton/",
+      "rank": 1,
+      "is_advertiser": null,
+      "design_system": {
+        "palette": {
+          "neutral": [
+            "#FFFFFF",
+            "#F8F9FA",
+            "#343A40",
+            "#6C757D"
+          ],
+          "primary": "#28A745",
+          "secondary": "#17A2B8"
+        },
+        "fonts": {
+          "body": "Open Sans",
+          "heading": "Open Sans"
+        },
+        "layout_archetype": "Informational page with a two-column hero, followed by profile and map sections.",
+        "section_order": [
+          "Top promotional bar",
+          "Header navigation",
+          "Office details (image, address, contact, CTAs)",
+          "Directions",
+          "Once inside details",
+          "Director profile",
+          "Interactive map"
+        ],
+        "hero_treatment": "Two-column layout with a large image on the left and office information, contact details, and action buttons on the right.",
+        "components": [
+          "Global header with navigation and utility links",
+          "Office detail block with image, text, contact, and action buttons",
+          "Color-coded action buttons (e.g., Google Maps, Waze)",
+          "Director profile card",
+          "Interactive map widget"
+        ],
+        "social_proof": {
+          "notes": "The Director's profile highlights extensive experience (35 years) and relevant qualifications (Graduate Gemologist diploma), serving as an expert endorsement for the business.",
+          "types": [
+            "Expertise endorsement"
+          ]
+        },
+        "visual_premium_feel": 3,
+        "visual_hierarchy_notes": "The page uses clear headings and distinct blocks to guide the eye. The office name and image are prominent. Action buttons are visually distinct with color. The director's photo and name draw attention to the profile section.",
+        "imagery_treatment": "Realistic photography for building exterior and professional headshot for staff profile.",
+        "whitespace_density": "Balanced, with ample padding around content blocks, contributing to readability and a clean feel.",
+        "standout_elements": [
+          "Prominent, color-coded action buttons for navigation (Google Maps, Waze)",
+          "Dedicated staff profile card with photo and detailed experience"
+        ],
+        "aesthetic_summary": "A straightforward and informative page design that prioritizes clarity and ease of access to office information and contact options, using a clean layout and standard web elements.",
+        "analyzer_model": "gemini-2.5-flash",
+        "analysis_source": "gemini"
+      },
+      "analyzer_model": "gemini-2.5-flash",
+      "analysis_source": "gemini",
+      "notes": null,
+      "source": "Selling natural diamonds, engagement rings, and fine jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+      "screenshot_url": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-3f32edc4-d567-49ce-93d8-5a7de8f08f1f.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1787936578&Signature=uSaX%2Bg9QPm8%2FBvIw9J2virYIJRZQAEo9As4UuaVE8uW7%2Bmo7O1%2B2Wiw65FYNfe9y5fE9XCj0Gqca48rQUUmzJcVcvoGYrhAJKCj3XsAiiT7qgKBU4aIUI5g7pcOE9M380o6kIYZZ97KOMkNT37NA3HXFRV6nIxDpKC2jyqnbp7R%2BNAVB8ZQ0UFPD%2FsZTUbq%2BaWoTYNYTbk4L0ZbmffnjWh2BlK5QyFJNp2hb5JqMUAcICnlxoicUf3SQVl3nBI1mVzhdiP%2FnrLeGZHK4iiyro6M%2Ffz8yk7v6HrwD%2FeqRctcdXzgSmOn%2BRoP%2FDfvzVcpbpPf%2FGsE3s9pLgW6GK60AKQ%3D%3D"
+    },
+    {
+      "name": "Sell Engagement Ring in Miami | Get a Fair Offer",
+      "url": "https://vividdiamonds.com/pages/sell-engagement-ring?srsltid=AfmBOooSYZSswgGiBsCPXFwHZleXtac-GfstnY05yHNxi1YJKtozIJdI",
+      "rank": 2,
+      "is_advertiser": null,
+      "design_system": {
+        "palette": {
+          "neutral": [
+            "#FFFFFF",
+            "#000000",
+            "#E0E0E0"
+          ],
+          "primary": "#000000",
+          "secondary": ""
+        },
+        "fonts": {
+          "body": "Inter",
+          "heading": "Georgia"
+        },
+        "layout_archetype": "Single column, product-focused landing page.",
+        "section_order": [
+          "Top Header (Search, Logo, Account, Cart)",
+          "Main Navigation Bar",
+          "Hero Section (Heading, Product Image)",
+          "Descriptive Text Block"
+        ],
+        "hero_treatment": "Centered large product image with a prominent, elegant heading above it.",
+        "components": [
+          "Global Header (logo, utility nav, main nav)",
+          "Hero Heading",
+          "Product Image Display",
+          "Descriptive Text Block"
+        ],
+        "social_proof": {
+          "notes": "No social proof elements are visible on this page.",
+          "types": []
+        },
+        "visual_premium_feel": 4,
+        "visual_hierarchy_notes": "The eye is drawn first to the large, centered product image, then to the main heading above it, and finally to the navigation and smaller text. The ample whitespace helps focus attention.",
+        "imagery_treatment": "High-resolution, studio-quality product photography with a pure white background, emphasizing the product's detail and sparkle.",
+        "whitespace_density": "airy",
+        "standout_elements": [
+          "The large, perfectly lit, and detailed product image.",
+          "The elegant serif font used for the main heading."
+        ],
+        "aesthetic_summary": "A clean, minimalist, and elegant design that uses high-quality product photography and ample whitespace to convey luxury and focus on the item being sold.",
+        "analyzer_model": "gemini-2.5-flash",
+        "analysis_source": "gemini"
+      },
+      "analyzer_model": "gemini-2.5-flash",
+      "analysis_source": "gemini",
+      "notes": null,
+      "source": "Selling natural diamonds, engagement rings, and fine jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+      "screenshot_url": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-867a431f-a7d1-445d-afb5-53e9add1f5b8.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1787936592&Signature=XY5ajkxTNoK4DjTA7%2F5aOXE6z0chljPSOrEqeYcm0a6v4n2qP4XCbFTLzQnhWDFMEbQEJApYCwQ4cQzF3edUiJybkgv2%2FnT4vX5ntOi%2FLy8FxYFhLc7rJorcA1q2nSwVA7eb3TC3qwUOd5Og3vRSbsRS7Q74tF0huitXo44xcMaysuVBPMmqFa%2FbS%2F0YQkwnqpxV02Z2B0obJi85K8nhqKi2Pl90%2Bx4qnezGNydYqgy8tPA%2BzK0Yk%2FkBOx3Of3nXIxZ3WPV%2BlyZas%2BZlX30g2NCfEYwyPsTpUUz2xK96ccos87Ex67XggO28PqeFq0NrW0fLMCvLq74QwOmuPWQN3A%3D%3D"
+    },
+    {
+      "name": "Meridian Diamond Buyer | Sell Diamonds, Jewelry ...",
+      "url": "https://meridiandiamonds.com/",
+      "rank": 3,
+      "is_advertiser": null,
+      "design_system": {
+        "palette": {
+          "neutral": [
+            "#2C2C2C",
+            "#FFFFFF"
+          ],
+          "primary": "#4DB7B0",
+          "secondary": ""
+        },
+        "fonts": {
+          "body": "Sans-serif",
+          "heading": "Sans-serif"
+        },
+        "layout_archetype": "Full-width hero with text overlay, followed by stacked content sections.",
+        "section_order": [
+          "Header",
+          "Hero",
+          "Call to Action (Text Valuation)"
+        ],
+        "hero_treatment": "Full-width, high-quality photographic background of a luxurious jewelry store interior, with a large, centered white text overlay and a prominent teal call-to-action button.",
+        "components": [
+          "Global Navigation",
+          "Primary Call-to-Action Button",
+          "Text Block with Headline and CTA"
+        ],
+        "social_proof": {
+          "notes": "The markdown indicates the presence of 'BBB Rated A+' and '5 STAR RATINGS and Review S' as well as 'Client Testimonials' on the full page, though not directly visible in the screenshot.",
+          "types": [
+            "Ratings",
+            "Testimonials"
+          ]
+        },
+        "visual_premium_feel": 4,
+        "visual_hierarchy_notes": "The large, bold white text in the hero immediately draws the eye, followed by the bright teal CTA button. The header navigation is secondary. The bottom section's bold headline and CTA also stand out effectively.",
+        "imagery_treatment": "Professional, high-resolution photography of a modern, upscale interior retail space.",
+        "whitespace_density": "Balanced",
+        "standout_elements": [
+          "Full-bleed hero image of a sophisticated interior",
+          "Prominent, contrasting teal call-to-action buttons",
+          "Clean, modern sans-serif typography"
+        ],
+        "aesthetic_summary": "A professional and clean design with an upscale and trustworthy feel, utilizing a strong photographic hero and clear calls to action.",
+        "analyzer_model": "gemini-2.5-flash",
+        "analysis_source": "gemini"
+      },
+      "analyzer_model": "gemini-2.5-flash",
+      "analysis_source": "gemini",
+      "notes": null,
+      "source": "Selling natural diamonds, engagement rings, and fine jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+      "screenshot_url": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-b6611027-9c40-46dc-8654-1c8fc8b20ede.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1787899826&Signature=TZ4t0Ecpdb8UwvRVdP%2BpaXiupkJin5VhExhxxhoGParOEwrlEmeWg9TAOqKgn885Xa9GYoDUf7PhbnoCPnNnddOvyXRYMBrKbnAdYIfgzGcnwn5hgu5q8BR3P3qYyUbX9xuVtHSqK581Z4DAIfvnR7JS%2B5ANahOl8%2BQOtHfY2msW5FPuTh0Ts%2B1Ji3CODpN5irt8M%2FWt0Z5RUTCcqXlLBGSs25kkqPSyXS8EizB2rSMGx1oraVKevEhr12JGPHghdLIYbyGnyfJqzlR9iFVAPmvKPxOAHSM29RXn5DfwOE8vxw8RZxPpf7BDZeN2kC1GTKsH7Nzgp9Hg%2FhAlwzfGsw%3D%3D"
+    },
+    {
+      "name": "LC Rings: Wholesale Diamonds & Engagement Rings, Tampa",
+      "url": "https://lcrings.com/?srsltid=AfmBOorqyQQWN_7RrGHxH90fNJ9uHraDTUD6iwTrFHdfIGNu9pNsF9XI",
+      "rank": 4,
+      "is_advertiser": null,
+      "design_system": {
+        "palette": {
+          "neutral": [
+            "#F8F6F4",
+            "#333333",
+            "#666666"
+          ],
+          "primary": "#20728D",
+          "secondary": "#7A8BA0"
+        },
+        "fonts": {
+          "body": "Open Sans",
+          "heading": "Playfair Display"
+        },
+        "layout_archetype": "Split hero with prominent text and complementary imagery",
+        "section_order": [
+          "Top bar",
+          "Header with logo and navigation",
+          "Split hero section"
+        ],
+        "hero_treatment": "Split layout with a large, left-aligned serif heading and descriptive text, complemented by a two-image collage on the right featuring lifestyle and product shots.",
+        "components": [
+          "Top bar with contact info and social links",
+          "Main navigation with dropdowns",
+          "Primary call-to-action button",
+          "Brand logo",
+          "Split content block with text and images"
+        ],
+        "social_proof": {
+          "notes": "No explicit social proof elements like testimonials or ratings are visible on the current screen, though 'Local Heroes' in the navigation might lead to such content.",
+          "types": []
+        },
+        "visual_premium_feel": 4,
+        "visual_hierarchy_notes": "The eye is first drawn to the prominent logo and main navigation, then immediately to the large, bold serif heading in the hero section. The complementary images on the right provide a visual anchor, balancing the text block.",
+        "imagery_treatment": "High-quality, warm-toned photography featuring both lifestyle shots (couple) and detailed product imagery (diamond pendant).",
+        "whitespace_density": "Balanced",
+        "standout_elements": [
+          "Elegant script and ring icon in the brand logo",
+          "Large, sophisticated serif heading in the hero section",
+          "Two-image collage within the hero, balancing lifestyle and product focus"
+        ],
+        "aesthetic_summary": "A clean and elegant design with a focus on high-quality imagery and classic typography, conveying trustworthiness and professionalism.",
+        "analyzer_model": "gemini-2.5-flash",
+        "analysis_source": "gemini"
+      },
+      "analyzer_model": "gemini-2.5-flash",
+      "analysis_source": "gemini",
+      "notes": null,
+      "source": "Selling natural diamonds, engagement rings, and fine jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+      "screenshot_url": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-0dc83257-1d70-4eed-9b62-f5943c0fe1ce.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1787936625&Signature=gmWP42jXjnJ9VzY0jNGBJDybspkyDtcOaPHN1bl%2B1EXEywNiBZ%2B7CB0ioE9df5IznmK4WQVOoTOCbRAF7eJmZlRCqqFXzcay88f6IZbtXKtyqIl2iSoE56uYEZ0OxayYfWLXXhQgfA8thDJI6O1T5t%2F%2BTilIzEGD8IOEjePICY0GPJKWubXNZ34rfC6fwwOnR%2B1ytoP3jaCnMY5%2FuVjRDHElbL7yzSZVywLPEDj6LNetkwnum4PxM825iqx7u1TTjzi2aRJPvfydUm7525ZRNi4sikBOoTI419Fjhg6S8CpjDMVfkiAb3is37mumtNpj9kwdUxpoEKyLCXyTeuEDVg%3D%3D"
+    },
+    {
+      "name": "Boca's Jewelry Experts: Sell Diamonds & Gold",
+      "url": "https://www.jackieabraham.com/sell-your-jewelry-boca-raton",
+      "rank": 5,
+      "is_advertiser": null,
+      "design_system": {
+        "palette": {
+          "neutral": [
+            "#FFFFFF",
+            "#000000",
+            "#CCCCCC",
+            "#4A5568"
+          ],
+          "primary": "#4A2C0F",
+          "secondary": "#FFFFFF"
+        },
+        "fonts": {
+          "body": "Open Sans",
+          "heading": "Playfair Display"
+        },
+        "layout_archetype": "Full-width hero with overlaid content and a contact form.",
+        "section_order": [
+          "Top Header",
+          "Main Navigation",
+          "Hero Section",
+          "Why Sell Your Jewelry section heading"
+        ],
+        "hero_treatment": "Full-width background image with a semi-transparent dark overlay, featuring a large left-aligned text block and a right-aligned contact form.",
+        "components": [
+          "Global Header (with contact info, social links, logo, search, cart)",
+          "Main Navigation Bar (with dropdowns)",
+          "Hero Section (image background, text content, contact form)",
+          "Contact Form (with input fields and submit button)",
+          "Social Media Icons"
+        ],
+        "social_proof": {
+          "notes": "Social media icons for Google My Business and Yelp are present in the header, suggesting external review platforms are utilized. Markdown also indicates dedicated Testimonials and Customer Reviews pages.",
+          "types": [
+            "External Reviews (Google My Business, Yelp)",
+            "Testimonials (implied by navigation)",
+            "Customer Reviews (implied by navigation)"
+          ]
+        },
+        "visual_premium_feel": 3,
+        "visual_hierarchy_notes": "The large, white, serif heading 'Selling Jewelry in Boca Raton' immediately draws the eye, followed by the 'Get Started' form due to its contrasting background and clear call to action. The dark overlay on the hero image ensures text readability.",
+        "imagery_treatment": "Stock photography of a city street with palm trees, desaturated and covered with a dark, semi-transparent blue-grey overlay.",
+        "whitespace_density": "balanced",
+        "standout_elements": [
+          "Elegant script logo",
+          "Full-width hero image with dark overlay and split content area (text and form)",
+          "Use of an elegant serif font for main headings"
+        ],
+        "aesthetic_summary": "The page presents a functional and clean design with an elegant logo and serif headings, though the overall feel is somewhat generic due to stock imagery and standard components.",
+        "analyzer_model": "gemini-2.5-flash",
+        "analysis_source": "gemini"
+      },
+      "analyzer_model": "gemini-2.5-flash",
+      "analysis_source": "gemini",
+      "notes": null,
+      "source": "Selling natural diamonds, engagement rings, and fine jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number.",
+      "screenshot_url": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-c28ff1e4-ab03-43e1-89f7-3e3b370fa12e.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1787936639&Signature=sLhbTagY3bKHzIz7idy%2B3j9FDOAjwTehzM%2BFHBBpbjw8eN49EI%2BU6%2FaVkPm7VE96oLRHLoD%2Fz1xm4KppkFr0vGaBniwl5T%2FkOxN8vPuaX1Td%2BuoDV1O9eFiy1bU%2BktVWK93RqZ1VHAStAFqbMqPzP4rLsFEF9V1o%2FeDf%2FKZ5FgTELAbpnAx2sKMdjhfmIrTsZnDP9FWlvJeam8C8Oz35Z48IuFDF88PoBiGRU1ztia%2FZ%2BqogpKPSlaFla9WsuV8X1MJjHC6SqGdoXl9JSL%2Bkb%2BOXlwdwBIw6f8iLCgjq5lCAC0R0dmvVI2PLq5ewZ62UbtoQhpyA7FCfc9EgfwjZ8g%3D%3D"
+    },
+    {
+      "name": "Diamonds We Buy",
+      "url": "https://blackthorngold.com/what-we-buy/diamonds",
+      "rank": 6,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling natural diamonds, engagement rings, and fine jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Sell Your Luxury Watch | We buy Rolex, Tag & more",
+      "url": "https://www.watchfinder.com/sell-your-watch",
+      "rank": 7,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling Rolex and other accepted Swiss luxury watches Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Trusted Luxury Watch Buyers Nationwide. Sell Your Rolex Watch ...",
+      "url": "https://www.watchbuyers.us/",
+      "rank": 8,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling Rolex and other accepted Swiss luxury watches Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Sell My Watch: We Buy Luxury Watches | SwissWatchExpo",
+      "url": "https://www.swisswatchexpo.com/sell-trade/",
+      "rank": 9,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling Rolex and other accepted Swiss luxury watches Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Trade-in Trade-up - Top Cash Paid, Instant Quote | Bob's Watches",
+      "url": "https://www.bobswatches.com/trade-in-trade-up",
+      "rank": 10,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling Rolex and other accepted Swiss luxury watches Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Precious Metal and Gold Refinery in Tampa, FL - Elemetal",
+      "url": "https://www.elemetal.com/locations/tampa",
+      "rank": 11,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling gold, platinum, and precious-metal jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Sell Gold | Sell Silver | Arnold Jewelers",
+      "url": "https://arnoldjewelers.com/sell-gold-sell-silver/",
+      "rank": 12,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling gold, platinum, and precious-metal jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Sell Gold, Platinum & Silver | Gold Galore Custom Jewelry ...",
+      "url": "https://www.goldgalore.com/sell-gold",
+      "rank": 13,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling gold, platinum, and precious-metal jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Sell Gold, Jewelry & Watches in Tampa - Old Northeast Jewelers",
+      "url": "https://www.oldnortheastjewelers.com/sell-jewelry-watches/",
+      "rank": 14,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Selling gold, platinum, and precious-metal jewelry Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Your Jewelry Equity Loan Questions Answered - Diamond Banc",
+      "url": "https://www.diamondbanc.com/insider-news/your-jewelry-equity-loan-questions-answered/",
+      "rank": 15,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Jewelry equity loans as an alternative to selling Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Pawn Jewelry in Florida - #1 Pawn Shop in Florida | Loans on ...",
+      "url": "https://floridapawnjewelry.com/",
+      "rank": 16,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Jewelry equity loans as an alternative to selling Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Jewelry Loans: How to Borrow Against Jewelry with Confidence",
+      "url": "https://qollateral.com/collateral-resources/jewelry-loans/",
+      "rank": 17,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Jewelry equity loans as an alternative to selling Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Jewelry & Diamond Loans: Use Your Collection as Collateral",
+      "url": "https://borro.com/use-your-jewelry-to-get-a-loan/",
+      "rank": 18,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Jewelry equity loans as an alternative to selling Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Collateral Loans on Jewelry: How They Work and What They Cost",
+      "url": "https://www.floridadiamondcenter.com/learn/collateral-loans-on-jewelry/",
+      "rank": 19,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Jewelry equity loans as an alternative to selling Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "AI Voice Agents for US Real Estate",
+      "url": "https://callquants.us/landing/ai-voice-agent-real-estate-usa",
+      "rank": 20,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Pricing | RealSavvy \u2014 IDX Widget, Websites, Teams & AEO",
+      "url": "https://www.realsavvy.com/pricing",
+      "rank": 21,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "AI Answering for Real Estate Agents in Boca Raton FL",
+      "url": "https://calljolt.com/blog/real-estate/real-estate-ai-answering-boca-raton-fl",
+      "rank": 22,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Appraisal Activity Log | AccuTrade",
+      "url": "https://www.carscommerce.inc/accutrade-appraisal-activity-log/",
+      "rank": 23,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "What is AI Appraiser?",
+      "url": "https://help.kubera.com/article/165-ai-appraiser",
+      "rank": 24,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "AI can improve the pitch but undermine the transaction",
+      "url": "https://hernandorealtors.com/ai-can-improve-the-pitch-but-undermine-the-transaction/",
+      "rank": 25,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "AI Use & Transparency Policy | PBP Real Estate, LLC",
+      "url": "https://www.pbprealestate.com/ai-policy/",
+      "rank": 26,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Customer's embedded AI appraisal widget for an instant initial quote Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Florida's Trade Offices Can Help You Expand Globally",
+      "url": "https://selectflorida.org/export-from-florida/trade-offices/",
+      "rank": 27,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Appointments and local-office service in each of the 15 named markets Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Calendly",
+      "url": "https://calendly.com/southfloridainvestments/360-reports",
+      "rank": 28,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Appointments and local-office service in each of the 15 named markets Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Florida Commercial Real Estate Markets",
+      "url": "https://trinitycre.com/markets/",
+      "rank": 29,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "Appointments and local-office service in each of the 15 named markets Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    },
+    {
+      "name": "Diamond Banc: Premier Jewelry Buyer and Lender ...",
+      "url": "https://www.commercialappeal.com/press-release/story/44640/diamond-banc-premier-jewelry-buyer-and-lender-expands-with-new-services/",
+      "rank": 30,
+      "is_advertiser": null,
+      "design_system": null,
+      "analyzer_model": null,
+      "analysis_source": null,
+      "notes": null,
+      "source": "A premium, no-obligation way to discover what a valuable item may be worth, with two possible outcomes from one inquiry: sell the item or keep it and borrow against it. Lead with the instant quote and local-office convenience, then support the decision with Diamond Banc's 5 out of 5 reputation, 10,000+ combined reviews, A+ BBB rating, experienced experts, and third-generation-jeweler heritage. Fifteen localized paid-traffic routes: Tampa, Orlando, Coral Gables, Aventura, Boca Raton, West Palm Beach, Sarasota, Nashville, Atlanta, Roswell, Scottsdale, Beverly Hills, St. Louis, Columbia, and Kansas City. Each route uses its task-specified city name, URL slug, local-office reference, and source phone number."
+    }
+  ],
+  "suggestions": [
+    {
+      "text": "Layout archetype 'informational page with a two-column hero, followed by profile and map sections.' appears (1 competitor) \u2014 consider it.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Layout archetype 'single column, product-focused landing page.' appears (1 competitor) \u2014 consider it.",
+      "evidence_url": "https://vividdiamonds.com/pages/sell-engagement-ring?srsltid=AfmBOooSYZSswgGiBsCPXFwHZleXtac-GfstnY05yHNxi1YJKtozIJdI"
+    },
+    {
+      "text": "Layout archetype 'full-width hero with text overlay, followed by stacked content sections.' appears (1 competitor) \u2014 consider it.",
+      "evidence_url": "https://meridiandiamonds.com/"
+    },
+    {
+      "text": "Layout archetype 'split hero with prominent text and complementary imagery' appears (1 competitor) \u2014 consider it.",
+      "evidence_url": "https://lcrings.com/?srsltid=AfmBOorqyQQWN_7RrGHxH90fNJ9uHraDTUD6iwTrFHdfIGNu9pNsF9XI"
+    },
+    {
+      "text": "Layout archetype 'full-width hero with overlaid content and a contact form.' appears (1 competitor) \u2014 consider it.",
+      "evidence_url": "https://www.jackieabraham.com/sell-your-jewelry-boca-raton"
+    },
+    {
+      "text": "Section 'top promotional bar' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Section 'header navigation' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Section 'office details (image, address, contact, ctas)' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Section 'directions' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Section 'once inside details' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Section 'director profile' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Section 'interactive map' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://www.circajewels.com/office/boca-raton/"
+    },
+    {
+      "text": "Section 'top header (search, logo, account, cart)' appears (1 competitor) \u2014 evaluate fit.",
+      "evidence_url": "https://vividdiamonds.com/pages/sell-engagement-ring?srsltid=AfmBOooSYZSswgGiBsCPXFwHZleXtac-GfstnY05yHNxi1YJKtozIJdI"
+    }
+  ],
+  "confidence": "medium"
+}

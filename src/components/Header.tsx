@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BRAND, PHONE, PHONE_HREF, QUOTE_ANCHOR } from "@/lib/content";
+import { BRAND, QUOTE_ANCHOR } from "@/lib/content";
+import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 
 export function Header(): React.ReactElement {
+  const { phone, phoneHref } = useMarket();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -40,12 +42,12 @@ export function Header(): React.ReactElement {
         </a>
 
         <a
-          href={PHONE_HREF}
+          href={phoneHref}
           className="inline-flex shrink-0 items-center gap-2 rounded-full border-[1.5px] border-[var(--color-teal-900)] px-3 py-2 text-sm font-semibold text-[var(--color-teal-900)] transition-colors hover:bg-[var(--color-teal-100)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-teal-400)] md:px-5 md:py-2.5"
-          aria-label={`Call ${BRAND.name} at ${PHONE}`}
+          aria-label={`Call ${BRAND.name} at ${phone}`}
         >
           <Icon name="phone" className="h-4 w-4" strokeWidth={0} fill="currentColor" />
-          <span>{PHONE}</span>
+          <span>{phone}</span>
         </a>
       </div>
     </header>

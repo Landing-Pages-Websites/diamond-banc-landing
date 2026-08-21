@@ -1,0 +1,211 @@
+{
+  "profile": "landing-page",
+  "scope": "single-page",
+  "candidate_archetype": "lp-high-ticket-authority",
+  "derived_mood": [
+    "luxe"
+  ],
+  "thin": false,
+  "matched": [
+    {
+      "id": "lapa-ninja-2026-0429",
+      "score": 4.0,
+      "source": {
+        "url": "https://casadisolare.com",
+        "gallery": "lapa-ninja",
+        "harvest_date": "2026-08-04"
+      },
+      "screenshot": {
+        "full": "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0429.webp",
+        "scroll": [
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0429__scroll0.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0429__scroll1.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0429__scroll2.webp"
+        ]
+      },
+      "patterns": [
+        {
+          "kind": "motion",
+          "note": "A simple rounded rectangular shape animates and transforms into the main hero visual (a glowing sphere) upon page load, followed by the navigation appearing."
+        },
+        {
+          "kind": "layout",
+          "note": "The hero section features a single, large, centrally placed 3D rendered object as its primary visual focus, occupying most of the screen with minimal overlay text."
+        },
+        {
+          "kind": "color",
+          "note": "A consistent warm, earthy, and glowing color palette is used, transitioning from a light beige to rich orange, reddish-brown, and bright yellow, creating a luxurious and inviting atmosphere."
+        },
+        {
+          "kind": "type",
+          "note": "The site uses a distinct pairing of an elegant, almost calligraphic display serif for the brand name and a clean, modern sans-serif for navigation and functional text."
+        }
+      ],
+      "technique_notes": [
+        "The site employs a sophisticated preloader animation where a simple geometric shape morphs and expands into the main interactive hero element, likely using CSS keyframes and canvas/WebGL.",
+        "The hero section features a full-screen, immersive 3D environment, likely rendered using WebGL or canvas (three.js), with a prominent, glowing spherical object that appears to be a light source.",
+        "Smooth scrolling is implemented across the page, likely using a library like locomotive-scroll, which would also facilitate scroll-triggered animations for subsequent section reveals."
+      ]
+    },
+    {
+      "id": "lapa-ninja-2026-0189",
+      "score": 4.0,
+      "source": {
+        "url": "https://www.satius.app/",
+        "gallery": "lapa-ninja",
+        "harvest_date": "2026-06-18"
+      },
+      "screenshot": {
+        "full": "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0189.webp",
+        "scroll": [
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0189__scroll0.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0189__scroll1.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0189__scroll2.webp"
+        ]
+      },
+      "patterns": [
+        {
+          "kind": "layout",
+          "note": "Sections alternate between full-width dark backgrounds with light text and lighter backgrounds with dark text, creating distinct visual breaks and guiding the user through content blocks."
+        },
+        {
+          "kind": "type",
+          "note": "Prominent display serif headings are used for aspirational section titles, set in all caps with generous letter spacing, contrasting with a clean sans-serif for body text and smaller labels."
+        },
+        {
+          "kind": "color",
+          "note": "A rich, deep reddish-brown (#521010) serves as the primary background, paired with off-white text and vibrant orange-red accents for emphasis, creating a luxurious and bold aesthetic."
+        },
+        {
+          "kind": "motion",
+          "note": "Content sections are revealed with a subtle fade-in and slight upward translation as they scroll into the viewport, creating a dynamic and engaging reading experience."
+        },
+        {
+          "kind": "section",
+          "note": "Image grid sections are used to visually represent themes, featuring a collage of diverse images under large, evocative headings, breaking up text-heavy content."
+        }
+      ],
+      "technique_notes": [
+        "Scroll-triggered animations are implemented using GSAP and Locomotive Scroll to reveal content sections with a subtle fade-in and upward translation as they enter the viewport, enhancing engagement.",
+        "Full-bleed background images and solid color fills are used for distinct section backdrops, with text overlaid using high contrast for readability.",
+        "Large, thin display serif typography is used for aspirational headings, paired with a clean sans-serif for body text, creating a sophisticated and editorial feel."
+      ]
+    },
+    {
+      "id": "lapa-ninja-2026-0358",
+      "score": 4.0,
+      "source": {
+        "url": "https://lore.world",
+        "gallery": "lapa-ninja",
+        "harvest_date": "2026-08-03"
+      },
+      "screenshot": {
+        "full": "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0358.webp",
+        "scroll": [
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0358__scroll0.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0358__scroll1.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0358__scroll2.webp"
+        ]
+      },
+      "patterns": [
+        {
+          "kind": "layout",
+          "note": "Full-bleed video sections are used as immersive backgrounds for key brand messaging and product showcases, creating a highly visual and sensory experience."
+        },
+        {
+          "kind": "type",
+          "note": "A sophisticated pairing of elegant, high-contrast serif fonts for display and headings with clean, modern sans-serifs for body text and navigation creates a luxurious and editorial feel."
+        },
+        {
+          "kind": "color",
+          "note": "A minimalist palette of black and white is accented by the rich, natural blues and greens derived directly from the full-bleed video content, integrating brand imagery as a core color component."
+        },
+        {
+          "kind": "motion",
+          "note": "The primary navigation bar sticks to the top of the viewport after initial scroll, while the hero video content scrolls out of view, revealing subsequent sections. A secondary full-bleed video section plays as it enters the viewport."
+        },
+        {
+          "kind": "section",
+          "note": "Content is organized into distinct, full-width sections, often featuring large imagery or video, with generous vertical spacing to maintain an airy and uncluttered presentation."
+        }
+      ],
+      "technique_notes": [
+        "The site employs a sticky header that fixes to the top of the screen upon scroll. Full-bleed video elements are used as dynamic backgrounds, with some sections featuring auto-playing videos that reveal as they scroll into the viewport. The overall scroll experience is smooth, suggesting a custom scroll implementation like locomotive-scroll, which allows for precise control over scroll-triggered effects and potentially subtle parallax on background elements."
+      ]
+    },
+    {
+      "id": "lapa-ninja-2026-0590",
+      "score": 4.0,
+      "source": {
+        "url": "https://saraheismanstudio.com",
+        "gallery": "lapa-ninja",
+        "harvest_date": "2026-08-07"
+      },
+      "screenshot": {
+        "full": "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0590.webp",
+        "scroll": [
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0590__scroll0.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0590__scroll1.webp",
+          "https://landing-pages-websites.github.io/inspiration-library/shots/lapa-ninja-2026-0590__scroll2.webp"
+        ]
+      },
+      "patterns": [
+        {
+          "kind": "layout",
+          "note": "Sections frequently use a full-width, single-column layout for text blocks, contrasting with multi-column grids for product displays and category navigation."
+        },
+        {
+          "kind": "type",
+          "note": "A highly condensed, bold sans-serif typeface is used for prominent branding and hero text, creating a strong visual identity that contrasts with a more neutral, legible sans-serif for body copy and navigation."
+        },
+        {
+          "kind": "color",
+          "note": "A sophisticated, muted color palette of off-whites, light grays, and deep navy is used for backgrounds and text, allowing the warm, metallic tones of the jewelry to stand out as the primary accent."
+        },
+        {
+          "kind": "motion",
+          "note": "The hero image features a subtle parallax effect, where the background image scrolls slower than the foreground content, creating a sense of depth as the user scrolls down the page."
+        },
+        {
+          "kind": "section",
+          "note": "The footer is a prominent, full-width section featuring the brand's large, condensed logo, reinforcing brand identity at the page's conclusion."
+        }
+      ],
+      "technique_notes": [
+        "The hero section utilizes a background image that moves at a slower rate than the scroll, creating a subtle parallax effect for the main visual. This can be achieved using GSAP ScrollTrigger or similar JavaScript animation libraries.",
+        "Content sections are revealed through standard vertical scrolling, with no distinct fade-ins or slide-up animations for individual elements, maintaining a clean and direct presentation.",
+        "Typography is structured with a very large, condensed display font for brand elements and headlines, paired with a clean, modern sans-serif for all other text, ensuring clear hierarchy and readability."
+      ]
+    }
+  ],
+  "selection": {
+    "seed": "d570ae9f-9b66-4332-b123-152835174bd0",
+    "role": "",
+    "pool": 2175,
+    "above_threshold": 103,
+    "tied_at_top": 10,
+    "suppressed_tags": [
+      "bold",
+      "editorial",
+      "lp-classic-converter",
+      "luxe",
+      "minimal",
+      "product-aware",
+      "solution-aware"
+    ],
+    "unmapped_tone_words": [
+      "composed",
+      "expert",
+      "modern luxury",
+      "reassuring",
+      "trustworthy"
+    ],
+    "tone_vocabulary_miss": false,
+    "palette_axis_active": true,
+    "threshold_relaxed": false,
+    "shortlist": 40,
+    "pool_same_scope": 1379,
+    "tag_score_top": 4.0,
+    "excluded": []
+  }
+}

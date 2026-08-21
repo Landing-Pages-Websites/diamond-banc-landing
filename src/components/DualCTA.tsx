@@ -1,6 +1,7 @@
 "use client";
 
-import { CTA, PHONE, PHONE_HREF, QUOTE_ANCHOR } from "@/lib/content";
+import { CTA, QUOTE_ANCHOR } from "@/lib/content";
+import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 
 interface DualCTAProps {
@@ -15,6 +16,7 @@ export function DualCTA({
   primaryLabel = CTA.primary,
   onDark = false,
 }: DualCTAProps): React.ReactElement {
+  const { phone, phoneHref } = useMarket();
   const justify = align === "start" ? "justify-start" : "justify-center";
 
   const phoneClasses = onDark
@@ -31,12 +33,12 @@ export function DualCTA({
         <Icon name="arrow" className="w-4 h-4" strokeWidth={2.2} />
       </a>
       <a
-        href={PHONE_HREF}
+        href={phoneHref}
         className={`inline-flex items-center gap-2 border-[1.5px] ${phoneClasses} transition-colors duration-200 rounded-full px-6 py-3.5 font-semibold text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-teal-400)]`}
-        aria-label={`Call Diamond Banc at ${PHONE}`}
+        aria-label={`Call Diamond Banc at ${phone}`}
       >
         <Icon name="phone" className="w-4 h-4" strokeWidth={0} fill="currentColor" />
-        {PHONE}
+        {phone}
       </a>
     </div>
   );

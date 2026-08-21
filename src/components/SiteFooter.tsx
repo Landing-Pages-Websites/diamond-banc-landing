@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
-import { BRAND, CURRENT_YEAR, PHONE, PHONE_HREF } from "@/lib/content";
+import { BRAND, CURRENT_YEAR } from "@/lib/content";
+import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 
 export function SiteFooter(): React.ReactElement {
+  const { phone, phoneHref } = useMarket();
   return (
     <footer className="bg-[var(--color-ink)] text-white/65">
       <div className="mx-auto max-w-7xl px-5 py-12 md:px-8">
@@ -15,12 +19,12 @@ export function SiteFooter(): React.ReactElement {
             className="h-12 w-auto object-contain md:h-14"
           />
           <a
-            href={PHONE_HREF}
+            href={phoneHref}
             className="inline-flex items-center gap-2.5 text-lg font-semibold text-white transition-colors hover:text-[var(--color-teal-400)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-teal-400)] rounded-md"
-            aria-label={`Call ${BRAND.name} at ${PHONE}`}
+            aria-label={`Call ${BRAND.name} at ${phone}`}
           >
             <Icon name="phone" className="h-5 w-5 text-[var(--color-teal-400)]" strokeWidth={0} fill="currentColor" />
-            {PHONE}
+            {phone}
           </a>
         </div>
 

@@ -1,0 +1,29 @@
+{
+  "confidence": "high",
+  "double_down": [
+    "The current live nationwide page is the binding design and content framework.",
+    "The customer-owned appraisal embed and Salesforce routing are already proven and must be reused unchanged.",
+    "Local message match should come from the city name, exact phone, and focused office copy.",
+    "Real Diamond Banc product, shipping, founder, and team photography already in the repo should carry the premium visual story.",
+    "The approved sell-or-borrow balance, 5 out of 5 reputation, 10,000+ combined reviews, A+ BBB proof, and third-generation-jeweler story are the primary persuasion system."
+  ],
+  "avoid": [
+    "Any change to the nationwide root route, its tracking IDs, CTM script, form embed, form success listener, or approved instrumentation.",
+    "AI-generated imagery, generic stock, or city skyline images.",
+    "Pawnshop language, retail purchase language, guaranteed values, guaranteed loan terms, or inaccurate GIA-certified-person language.",
+    "Embedding any number other than the current route's exact task-specified phone in raw source or tel links.",
+    "Em dashes in headings, body copy, metadata, alt text, or aria labels.",
+    "Creating 15 manually duplicated component trees when one typed market configuration and one dynamic route template can preserve consistency."
+  ],
+  "build_directives": [
+    {"section": "architecture", "directive": "Add one typed market configuration covering exactly the 15 task-specified slugs, display names, and phone values, plus a dynamic Next.js route that renders the existing approved component system with route-specific data. Generate static params and route metadata. Keep src/app/page.tsx output unchanged.", "source": "build task input_data.page_differences and existing repository"},
+    {"section": "phone", "directive": "Every visible phone and tel href on each market route must derive from that route's exact task-specified source phone. Preserve 573-875-2265 on the nationwide root. Never embed a runtime CTM tracking pool number in source.", "source": "build task input_data.content_requests and WEB phone-source mandate"},
+    {"section": "hero", "directive": "Localize the H1 with 'Diamond Banc [Market]' and the existing value message, while preserving the current hero art direction, appraisal-card position, copy tone, benefit chips, and real jewelry image.", "source": "build task landing_page_focus and page_differences"},
+    {"section": "form", "directive": "Reuse AppraisalEmbed exactly once per route, including the customer widget base URL and one-shot form_submit success tracking. Do not replace the widget with a MEGA form and do not change Salesforce routing.", "source": "build task form_type, form_already_created, reuse_form_on_all_pages"},
+    {"section": "local-office", "directive": "On localized routes, replace the nationwide all-market LocationMap with a focused local-office section that names the current market, offers local appointment or insured shipping, and uses the exact route phone. Do not add skyline imagery.", "source": "build task page_differences and design_direction"},
+    {"section": "content", "directive": "Preserve the nationwide section order, approved proof, service cards, shipping, expertise, testimonials, FAQ, and real client photography. Localize only the hero, local-office references, final CTA, metadata, and route phone surfaces unless a prop is required for safe reuse.", "source": "build task content_requests: same content framework as existing nationwide page"},
+    {"section": "tracking", "directive": "Preserve GTM-WBLZ2J9, site key ae75ylrmfqweqelx, site ID 75a85d64-2685-47a6-82e4-6010397e3ddb, pixel 1344125387527189, optimizer endpoint, and 572388.tctm.co/t.js byte-identical.", "source": "task input and current production source snapshot"},
+    {"section": "quality", "directive": "Verify all 15 routes return 200, each has unique route metadata and H1, each raw DOM and JavaScript-disabled DOM contains only the exact task phone for that route, all tel links match, root stays 200 and unchanged, no em dash exists under src, and the shared design remains responsive at 390px and 1440px.", "source": "WEB acceptance rules and task route matrix"},
+    {"section": "research", "directive": "Commit build_context.json, brand.json, ai_build_contract.json, recommendations.json, proof.json, content_inventory.json, offer_cro.json, design_direction.json, page_blueprint.json, inspiration.json, and competitors.json under website-lp-build-research-data/d570ae9f-9b66-4332-b123-152835174bd0 in the LP repo.", "source": "AGENTS.md Stage 0 research-artifact contract"}
+  ]
+}
