@@ -2,11 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { R_HERO } from "@/lib/rolex-content";
-import {
-  createGuardState,
-  disposeGuardState,
-  hardenAppraisalForm,
-} from "@/components/rolex/hardenAppraisalForm";
 
 interface MegaTagWindow extends Window {
   __DB_API_BASE?: string;
@@ -40,44 +35,8 @@ function useWidgetSuccessTracking(): void {
   }, []);
 }
 
-// Harden the widget's dynamically injected contact form: normalise the field
-// contract (stable names, required flags, input patterns), enforce validate-first
-// submission, and guard against duplicate submits. A single MutationObserver
-// scoped to #db-appraisal-root re-applies the hardening each time the widget
-// renders its contact stage, without touching the widget service itself.
-function useContactFormHardening(): void {
-  useEffect(() => {
-    const root = document.getElementById("db-appraisal-root");
-    if (!root) return;
-
-    const controller = new AbortController();
-    const state = createGuardState();
-    const run = (): void => hardenAppraisalForm(root, state, controller.signal);
-
-    // Watch for the contact stage being injected (childList/subtree) and for the
-    // submit control's disabled state toggling (attributeFilter). The filter is
-    // deliberately narrow so our own attribute writes (name, pattern, inputmode,
-    // required, method) never retrigger the observer and cause an update loop.
-    const observer = new MutationObserver(run);
-    observer.observe(root, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["disabled", "aria-disabled"],
-    });
-    run();
-
-    return () => {
-      observer.disconnect();
-      controller.abort();
-      disposeGuardState(state);
-    };
-  }, []);
-}
-
 export default function RolexAppraisalEmbed(): React.ReactElement {
   useWidgetSuccessTracking();
-  useContactFormHardening();
 
   useEffect(() => {
     const base = "https://db-appraisal-869331060296.us-east1.run.app";
