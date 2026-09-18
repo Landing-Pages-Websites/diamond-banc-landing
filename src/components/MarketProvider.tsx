@@ -14,6 +14,8 @@ export interface MarketContextValue {
   city: string | null;
   /** City + state label on a localized route, null on the root. */
   display: string | null;
+  /** Route-specific hero value-prop override, null when the route uses `HERO.h1`. */
+  heroValueProp: string | null;
   /** True only on a localized market route. */
   isMarket: boolean;
 }
@@ -23,6 +25,7 @@ const NATIONAL_CONTEXT: MarketContextValue = {
   phoneHref: PHONE_HREF,
   city: null,
   display: null,
+  heroValueProp: null,
   isMarket: false,
 };
 
@@ -43,6 +46,7 @@ export function MarketProvider({ market, children }: MarketProviderProps): React
     phoneHref: market.phoneHref,
     city: market.city,
     display: market.display,
+    heroValueProp: market.heroValueProp ?? null,
     isMarket: true,
   };
   return <MarketContext.Provider value={value}>{children}</MarketContext.Provider>;
