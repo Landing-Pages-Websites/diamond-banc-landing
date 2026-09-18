@@ -21,10 +21,18 @@ export interface Market {
   /**
    * Optional route-specific value-proposition override for the hero H1. When
    * set, the hero keeps its two-line structure but replaces the shared
-   * `HERO.h1` value line with this text and appends " |" after the city line,
-   * aligning the headline with campaign copy on select paid routes.
+   * `HERO.h1` value line with this text, aligning the headline with campaign
+   * copy on select paid routes. The city line separator is controlled
+   * independently by `heroValueSeparator`.
    */
   heroValueProp?: string;
+  /**
+   * Optional separator appended to the city line when `heroValueProp` is set,
+   * e.g. " |" to reproduce the Coral Gables lockup. Defaults to no separator,
+   * so routes may pair a value prop with an unbroken city line. Ignored when
+   * `heroValueProp` is unset.
+   */
+  heroValueSeparator?: string;
   /**
    * Optional route-specific override for the hero supporting paragraph. When
    * set, the hero renders this text in place of the shared `HERO.subhead`,
@@ -38,16 +46,16 @@ export interface Market {
 export const MARKETS: readonly Market[] = [
   { slug: "tampa", city: "Tampa", state: "FL", display: "Tampa, FL", phone: "813-609-4331", phoneHref: "tel:+18136094331" },
   { slug: "orlando", city: "Orlando", state: "FL", display: "Orlando, FL", phone: "407-232-7688", phoneHref: "tel:+14072327688" },
-  { slug: "coral-gables", city: "Coral Gables", state: "FL", display: "Coral Gables, FL", phone: "(786) 605-9593", phoneHref: "tel:+17866059593", heroValueProp: "Sell or Borrow Against Gold, Jewelry, Watches & Diamonds" },
+  { slug: "coral-gables", city: "Coral Gables", state: "FL", display: "Coral Gables, FL", phone: "(786) 605-9593", phoneHref: "tel:+17866059593", heroValueProp: "Sell or Borrow Against Gold, Jewelry, Watches & Diamonds", heroValueSeparator: " |" },
   { slug: "aventura", city: "Aventura", state: "FL", display: "Aventura, FL", phone: "954-323-8475", phoneHref: "tel:+19543238475" },
   { slug: "boca-raton", city: "Boca Raton", state: "FL", display: "Boca Raton, FL", phone: "561-430-5035", phoneHref: "tel:+15614305035" },
   { slug: "west-palm-beach", city: "West Palm Beach", state: "FL", display: "West Palm Beach, FL", phone: "561-899-7575", phoneHref: "tel:+15618997575" },
   { slug: "sarasota", city: "Sarasota", state: "FL", display: "Sarasota, FL", phone: "941-877-5472", phoneHref: "tel:+19418775472", heroSubhead: "Get an instant quote for gold, jewelry, or luxury timepieces. Ship your items to us with free insured shipping, or book an appointment at a local office." },
   { slug: "nashville", city: "Nashville", state: "TN", display: "Nashville, TN", phone: "615-695-7675", phoneHref: "tel:+16156957675" },
   { slug: "atlanta", city: "Atlanta", state: "GA", display: "Atlanta, GA", phone: "404-407-5046", phoneHref: "tel:+14044075046" },
-  { slug: "roswell", city: "Roswell", state: "GA", display: "Roswell, GA", phone: "678-403-6344", phoneHref: "tel:+16784036344", heroValueProp: "Sell or Borrow Against Gold, Jewelry, Watches & Diamonds" },
-  { slug: "scottsdale", city: "Scottsdale", state: "AZ", display: "Scottsdale, AZ", phone: "(602) 878-6698", phoneHref: "tel:+16028786698", heroValueProp: "Sell or Borrow Against Gold, Jewelry & Luxury Timepieces" },
-  { slug: "beverly-hills", city: "Beverly Hills", state: "CA", display: "Beverly Hills, CA", phone: "310-299-9557", phoneHref: "tel:+13102999557" },
+  { slug: "roswell", city: "Roswell", state: "GA", display: "Roswell, GA", phone: "678-403-6344", phoneHref: "tel:+16784036344", heroValueProp: "Sell or Borrow Against Gold, Jewelry, Watches & Diamonds", heroValueSeparator: " |" },
+  { slug: "scottsdale", city: "Scottsdale", state: "AZ", display: "Scottsdale, AZ", phone: "(602) 878-6698", phoneHref: "tel:+16028786698", heroValueProp: "Sell or Borrow Against Gold, Jewelry & Luxury Timepieces", heroValueSeparator: " |" },
+  { slug: "beverly-hills", city: "Beverly Hills", state: "CA", display: "Beverly Hills, CA", phone: "310-299-9557", phoneHref: "tel:+13102999557", heroValueProp: "Sell Gold, Rolex & Jewelry in Beverly Hills." },
   { slug: "st-louis", city: "St. Louis", state: "MO", display: "St. Louis, MO", phone: "314-876-6659", phoneHref: "tel:+13148766659" },
   { slug: "columbia", city: "Columbia", state: "MO", display: "Columbia, MO", phone: "573-875-2265", phoneHref: "tel:+15738752265" },
   { slug: "kansas-city", city: "Kansas City", state: "MO", display: "Kansas City, MO", phone: "816-597-5773", phoneHref: "tel:+18165975773" },

@@ -7,7 +7,7 @@ import { Icon } from "@/components/icons";
 import { HERO, BRAND } from "@/lib/content";
 
 export function Hero(): React.ReactElement {
-  const { phone, phoneHref, city, isMarket, heroValueProp, heroSubhead } = useMarket();
+  const { phone, phoneHref, city, isMarket, heroValueProp, heroValueSeparator, heroSubhead } = useMarket();
   return (
     <section
       id="get-quote"
@@ -37,7 +37,7 @@ export function Hero(): React.ReactElement {
             <h1 className="mt-4 font-display text-[2.45rem] font-semibold leading-[1.05] tracking-[-0.01em] text-white sm:text-5xl lg:text-[4.1rem]">
               <span className="block text-2xl text-[var(--color-gold-soft)] md:text-3xl">
                 Diamond Banc {city}
-                {heroValueProp ? " |" : ""}
+                {heroValueProp ? heroValueSeparator : ""}
               </span>
               <span className="mt-1 block text-[2.45rem] leading-[1.05] sm:text-5xl lg:text-[4.1rem]">
                 {heroValueProp ?? HERO.h1}
