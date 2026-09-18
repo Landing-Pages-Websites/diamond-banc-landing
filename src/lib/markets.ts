@@ -18,6 +18,13 @@ export interface Market {
   phone: string;
   /** tel: href with the E.164 number. */
   phoneHref: string;
+  /**
+   * Optional route-specific value-proposition override for the hero H1. When
+   * set, the hero keeps its two-line structure but replaces the shared
+   * `HERO.h1` value line with this text and appends " |" after the city line,
+   * aligning the headline with campaign copy on select paid routes.
+   */
+  heroValueProp?: string;
 }
 
 // Route matrix, exact values from the build task. Order is the paid-traffic
@@ -25,7 +32,7 @@ export interface Market {
 export const MARKETS: readonly Market[] = [
   { slug: "tampa", city: "Tampa", state: "FL", display: "Tampa, FL", phone: "813-609-4331", phoneHref: "tel:+18136094331" },
   { slug: "orlando", city: "Orlando", state: "FL", display: "Orlando, FL", phone: "407-232-7688", phoneHref: "tel:+14072327688" },
-  { slug: "coral-gables", city: "Coral Gables", state: "FL", display: "Coral Gables, FL", phone: "(786) 605-9593", phoneHref: "tel:+17866059593" },
+  { slug: "coral-gables", city: "Coral Gables", state: "FL", display: "Coral Gables, FL", phone: "(786) 605-9593", phoneHref: "tel:+17866059593", heroValueProp: "Sell or Borrow Against Gold, Jewelry, Watches & Diamonds" },
   { slug: "aventura", city: "Aventura", state: "FL", display: "Aventura, FL", phone: "954-323-8475", phoneHref: "tel:+19543238475" },
   { slug: "boca-raton", city: "Boca Raton", state: "FL", display: "Boca Raton, FL", phone: "561-430-5035", phoneHref: "tel:+15614305035" },
   { slug: "west-palm-beach", city: "West Palm Beach", state: "FL", display: "West Palm Beach, FL", phone: "561-899-7575", phoneHref: "tel:+15618997575" },
