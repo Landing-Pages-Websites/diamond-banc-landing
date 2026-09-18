@@ -46,7 +46,7 @@ export const MARKETS: readonly Market[] = [
   { slug: "nashville", city: "Nashville", state: "TN", display: "Nashville, TN", phone: "615-695-7675", phoneHref: "tel:+16156957675" },
   { slug: "atlanta", city: "Atlanta", state: "GA", display: "Atlanta, GA", phone: "404-407-5046", phoneHref: "tel:+14044075046" },
   { slug: "roswell", city: "Roswell", state: "GA", display: "Roswell, GA", phone: "678-403-6344", phoneHref: "tel:+16784036344" },
-  { slug: "scottsdale", city: "Scottsdale", state: "AZ", display: "Scottsdale, AZ", phone: "(602) 878-6698", phoneHref: "tel:+16028786698" },
+  { slug: "scottsdale", city: "Scottsdale", state: "AZ", display: "Scottsdale, AZ", phone: "(602) 878-6698", phoneHref: "tel:+16028786698", heroValueProp: "Sell or Borrow Against Gold, Jewelry & Luxury Timepieces" },
   { slug: "beverly-hills", city: "Beverly Hills", state: "CA", display: "Beverly Hills, CA", phone: "310-299-9557", phoneHref: "tel:+13102999557" },
   { slug: "st-louis", city: "St. Louis", state: "MO", display: "St. Louis, MO", phone: "314-876-6659", phoneHref: "tel:+13148766659" },
   { slug: "columbia", city: "Columbia", state: "MO", display: "Columbia, MO", phone: "573-875-2265", phoneHref: "tel:+15738752265" },
