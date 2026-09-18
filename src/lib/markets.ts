@@ -58,7 +58,7 @@ export const MARKETS: readonly Market[] = [
   { slug: "beverly-hills", city: "Beverly Hills", state: "CA", display: "Beverly Hills, CA", phone: "310-299-9557", phoneHref: "tel:+13102999557", heroValueProp: "Sell Gold, Rolex & Jewelry in Beverly Hills." },
   { slug: "st-louis", city: "St. Louis", state: "MO", display: "St. Louis, MO", phone: "314-876-6659", phoneHref: "tel:+13148766659" },
   { slug: "columbia", city: "Columbia", state: "MO", display: "Columbia, MO", phone: "573-875-2265", phoneHref: "tel:+15738752265" },
-  { slug: "kansas-city", city: "Kansas City", state: "MO", display: "Kansas City, MO", phone: "816-597-5773", phoneHref: "tel:+18165975773" },
+  { slug: "kansas-city", city: "Kansas City", state: "MO", display: "Kansas City, MO", phone: "816-597-5773", phoneHref: "tel:+18165975773", heroValueProp: "Sell Gold in Kansas City. Find out what your gold is worth." },
 ] as const;
 
 export function getMarket(slug: string): Market | undefined {
