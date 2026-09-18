@@ -25,6 +25,12 @@ export interface Market {
    * aligning the headline with campaign copy on select paid routes.
    */
   heroValueProp?: string;
+  /**
+   * Optional route-specific override for the hero supporting paragraph. When
+   * set, the hero renders this text in place of the shared `HERO.subhead`,
+   * aligning the supporting copy with campaign messaging on select paid routes.
+   */
+  heroSubhead?: string;
 }
 
 // Route matrix, exact values from the build task. Order is the paid-traffic
@@ -36,7 +42,7 @@ export const MARKETS: readonly Market[] = [
   { slug: "aventura", city: "Aventura", state: "FL", display: "Aventura, FL", phone: "954-323-8475", phoneHref: "tel:+19543238475" },
   { slug: "boca-raton", city: "Boca Raton", state: "FL", display: "Boca Raton, FL", phone: "561-430-5035", phoneHref: "tel:+15614305035" },
   { slug: "west-palm-beach", city: "West Palm Beach", state: "FL", display: "West Palm Beach, FL", phone: "561-899-7575", phoneHref: "tel:+15618997575" },
-  { slug: "sarasota", city: "Sarasota", state: "FL", display: "Sarasota, FL", phone: "941-877-5472", phoneHref: "tel:+19418775472" },
+  { slug: "sarasota", city: "Sarasota", state: "FL", display: "Sarasota, FL", phone: "941-877-5472", phoneHref: "tel:+19418775472", heroSubhead: "Get an instant quote for gold, jewelry, or luxury timepieces. Ship your items to us with free insured shipping, or book an appointment at a local office." },
   { slug: "nashville", city: "Nashville", state: "TN", display: "Nashville, TN", phone: "615-695-7675", phoneHref: "tel:+16156957675" },
   { slug: "atlanta", city: "Atlanta", state: "GA", display: "Atlanta, GA", phone: "404-407-5046", phoneHref: "tel:+14044075046" },
   { slug: "roswell", city: "Roswell", state: "GA", display: "Roswell, GA", phone: "678-403-6344", phoneHref: "tel:+16784036344" },

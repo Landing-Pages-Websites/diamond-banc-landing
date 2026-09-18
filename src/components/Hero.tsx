@@ -7,7 +7,7 @@ import { Icon } from "@/components/icons";
 import { HERO, BRAND } from "@/lib/content";
 
 export function Hero(): React.ReactElement {
-  const { phone, phoneHref, city, isMarket, heroValueProp } = useMarket();
+  const { phone, phoneHref, city, isMarket, heroValueProp, heroSubhead } = useMarket();
   return (
     <section
       id="get-quote"
@@ -49,7 +49,7 @@ export function Hero(): React.ReactElement {
             </h1>
           )}
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">
-            {HERO.subhead}
+            {heroSubhead ?? HERO.subhead}
           </p>
         </div>
 
