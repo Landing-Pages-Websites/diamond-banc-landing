@@ -16,6 +16,8 @@ export interface MarketContextValue {
   display: string | null;
   /** Route-specific hero value-prop override, null when the route uses `HERO.h1`. */
   heroValueProp: string | null;
+  /** Route-specific hero supporting-paragraph override, null when the route uses `HERO.subhead`. */
+  heroSubhead: string | null;
   /** True only on a localized market route. */
   isMarket: boolean;
 }
@@ -26,6 +28,7 @@ const NATIONAL_CONTEXT: MarketContextValue = {
   city: null,
   display: null,
   heroValueProp: null,
+  heroSubhead: null,
   isMarket: false,
 };
 
@@ -47,6 +50,7 @@ export function MarketProvider({ market, children }: MarketProviderProps): React
     city: market.city,
     display: market.display,
     heroValueProp: market.heroValueProp ?? null,
+    heroSubhead: market.heroSubhead ?? null,
     isMarket: true,
   };
   return <MarketContext.Provider value={value}>{children}</MarketContext.Provider>;
