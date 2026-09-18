@@ -44,7 +44,7 @@ export interface Market {
 // Route matrix, exact values from the build task. Order is the paid-traffic
 // priority order and is used verbatim for static generation.
 export const MARKETS: readonly Market[] = [
-  { slug: "tampa", city: "Tampa", state: "FL", display: "Tampa, FL", phone: "813-609-4331", phoneHref: "tel:+18136094331" },
+  { slug: "tampa", city: "Tampa", state: "FL", display: "Tampa, FL", phone: "813-609-4331", phoneHref: "tel:+18136094331", heroValueProp: "Sell Gold, Jewelry, and Watches in Tampa." },
   { slug: "orlando", city: "Orlando", state: "FL", display: "Orlando, FL", phone: "407-232-7688", phoneHref: "tel:+14072327688" },
   { slug: "coral-gables", city: "Coral Gables", state: "FL", display: "Coral Gables, FL", phone: "(786) 605-9593", phoneHref: "tel:+17866059593", heroValueProp: "Sell or Borrow Against Gold, Jewelry, Watches & Diamonds", heroValueSeparator: " |" },
   { slug: "aventura", city: "Aventura", state: "FL", display: "Aventura, FL", phone: "954-323-8475", phoneHref: "tel:+19543238475" },
