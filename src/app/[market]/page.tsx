@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { MarketLandingPage } from "@/components/MarketLandingPage";
 import { getMarket, MARKETS } from "@/lib/markets";
 
-// Only the 15 known market slugs are generated; anything else 404s.
+// Only the known market slugs are generated; anything else 404s.
 export const dynamicParams = false;
 
 export function generateStaticParams(): Array<{ market: string }> {
