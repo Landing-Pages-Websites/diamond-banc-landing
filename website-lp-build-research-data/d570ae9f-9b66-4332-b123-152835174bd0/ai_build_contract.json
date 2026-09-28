@@ -8,7 +8,7 @@
   "visual_theme": {
     "archetype": "localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.",
     "copy_framework": "AIDA",
-    "brand_voice": "Premium, composed, specific, and reassuring. Explain a valuable-item transaction in plain language without sounding like a pawnshop, discount buyer, or aggressive lender. Use short direct headings, transparent process copy, and restrained urgency. The brand name is always Diamond Banc.",
+    "brand_voice": "Premium, modern, discreet, confident, and financially conservative. Use direct language for high-intent searchers, with no hype, no pressure, no pawnshop framing, and no unsupported guarantees. Always say Diamond Banc, never Diamond Bank.",
     "rationale": "The customer requested the same nationwide content framework localized by market. Preserving the live page's design system reduces risk to an active paid-traffic asset, keeps customer-approved proof and imagery intact, and isolates the new work to route-aware content and phone values.",
     "section_order": [
       "header",
@@ -52,7 +52,7 @@
     "roles": {
       "background": "#FFFFFF",
       "surface": "#FFFFFF",
-      "text": "#1A1A1A",
+      "text": "#222428",
       "muted": "#5C6066",
       "border": "#E6E2DB",
       "link": "#1C7E86"
@@ -83,6 +83,22 @@
     "scale_steps": {}
   },
   "component_stylings": [
+    {
+      "name": "button",
+      "variants": [
+        "primary",
+        "secondary",
+        "phone"
+      ],
+      "states": {
+        "default": "teal fill or teal border",
+        "hover": "controlled darker teal",
+        "focus": "2px aqua focus ring",
+        "active": "deep teal",
+        "disabled": "muted teal"
+      },
+      "notes": "Use for quote and phone CTAs; never use gold button fills."
+    },
     {
       "name": "Header",
       "variants": [
@@ -121,7 +137,10 @@
       "variants": [
         "compact-light"
       ],
-      "states": {},
+      "states": {
+        "default": "compact proof row",
+        "focus": "visible focus ring on any interactive proof link"
+      },
       "notes": "Four approved proof points"
     },
     {
@@ -140,7 +159,10 @@
       "variants": [
         "market-focused"
       ],
-      "states": {},
+      "states": {
+        "default": "dark local panel",
+        "hover": "subtle teal border on option cards"
+      },
       "notes": "City name, appointment or shipping, exact route phone"
     },
     {
@@ -171,7 +193,10 @@
       "variants": [
         "dark-centered"
       ],
-      "states": {},
+      "states": {
+        "default": "dark centered close",
+        "focus": "visible teal focus ring on actions"
+      },
       "notes": "Localized headline and route-correct CTA"
     }
   ],
@@ -229,18 +254,23 @@
   },
   "dos_donts": {
     "design_dos": [
-      "Inherit the existing Diamond Banc premium dark-ink, teal, gold, and white visual system",
-      "Reuse the current real Diamond Banc jewelry, shipping, founder, and team photography",
-      "Keep the appraisal card above the fold on mobile and desktop",
-      "Localize the hero headline and office language without making all 15 routes visually inconsistent",
-      "Keep all existing section anchors and at least six meaningful sections per route"
+      "Use the established Diamond Banc premium luxury visual system and approved logo assets from the existing LP repo.",
+      "Make San Diego / La Jolla intent unmistakable in the hero and local-office section.",
+      "Reuse the embedded AI appraisal form in the hero and dedicated lower form section without replacing it with a custom lead form.",
+      "Use real approved Diamond Banc imagery and real product-context photography; do not fabricate branded luxury items.",
+      "Use strong teal / aqua brand accents with restrained luxury neutrals and high-contrast typography.",
+      "Keep the phone CTA visible as a styled button with (858) 391-4047, while CTM may swap it at runtime.",
+      "Use clear section anchors, centered dual CTAs, and a form-only floating CTA.",
+      "Make the La Jolla office address and local path prominent without implying every lead must visit in person."
     ],
     "design_donts": [
-      "Do not redesign or modify the live nationwide root route",
-      "Do not generate AI imagery or use generic stock photography",
-      "Do not introduce a generic city skyline as the localization mechanism",
-      "Do not change the GTM, MegaTag, Meta Pixel, CTM, form embed, or form success handler",
-      "Do not add a retail navigation, product catalog, or unrelated outbound links"
+      "Do not overwrite the live root route or any existing market route.",
+      "Do not use generic stock or AI-generated images when approved real assets are available.",
+      "Do not use a gradient-only hero in place of the established real hero image.",
+      "Do not use yellow divider bars, white circle/down-arrow CTA decorations, split screens, clutter, or generic AI effects.",
+      "Do not use em dashes, emojis, retail purchase language, pawnshop language, or unsupported financial promises.",
+      "Do not use GIA Certified wording, unverified review counts, or an unapproved BBB logo asset.",
+      "Do not add navigation links, social exits, or unrelated website links to the paid landing page."
     ],
     "visual_exclusions": [
       "city skylines",
@@ -256,47 +286,31 @@
     ],
     "messaging_guardrails": [
       {
-        "rule": "Use Diamond Banc exactly; never Diamond Bank or Diamond Bacn",
+        "rule": "Always spell the brand Diamond Banc, never Diamond Bank or DiamondBank.",
         "type": "must"
       },
       {
-        "rule": "Keep sell and borrow options at offer parity while leading with high-intent selling language",
+        "rule": "Never imply customers can purchase jewelry, watches, diamonds, or gold from Diamond Banc.",
+        "type": "must_not"
+      },
+      {
+        "rule": "Never use pawnshop language or position the experience as a pawnshop.",
+        "type": "must_not"
+      },
+      {
+        "rule": "Use free appraisal or quote only with no-obligation framing; do not promise a specific value, payout, loan amount, approval, or return.",
         "type": "must"
       },
       {
-        "rule": "Use only the exact market-specific phone number supplied for each route in raw source and tel links",
+        "rule": "Use GIA-accredited gemologists or experienced jewelry experts, never GIA Certified Gemologists.",
         "type": "must"
       },
       {
-        "rule": "Reuse the customer-owned appraisal widget and preserve its Salesforce routing",
-        "type": "must"
-      },
-      {
-        "rule": "Use only verified client-owned photography already in the repo",
-        "type": "must"
-      },
-      {
-        "rule": "Do not use pawnshop language",
+        "rule": "Do not promote Seller's Agent consignment or Retail Partner services on this route.",
         "type": "must_not"
       },
       {
-        "rule": "Do not imply Diamond Banc sells jewelry or watches to consumers",
-        "type": "must_not"
-      },
-      {
-        "rule": "Do not promise guaranteed valuations, guaranteed loan terms, or specific dollar outcomes",
-        "type": "must_not"
-      },
-      {
-        "rule": "Do not call people GIA-certified gemologists",
-        "type": "must_not"
-      },
-      {
-        "rule": "Do not use an em dash in any customer-facing copy or metadata",
-        "type": "must_not"
-      },
-      {
-        "rule": "Preserving the existing nationwide root route, tracking IDs, CTM script, form behavior, and approved copy is required",
+        "rule": "Keep sell intent primary and present borrowing as an alternative option, not as a guaranteed financial outcome.",
         "type": "must"
       }
     ]
@@ -315,7 +329,7 @@
     }
   },
   "agent_prompt_guide": {
-    "instruction_block": "Build a landing-page for Diamond Banc.\nArchetype: localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.. Copy framework: AIDA.\nTheme the ENTIRE build off this client palette \u2014 primary #1C7E86, secondary #222428, accent #BD8D41. Never substitute a generic brand color.\nTypography: headings in Cormorant Garamond, weights 400, 600, and 700, for premium editorial headings, body in Poppins, weights 400, 500, 600, and 700, for body copy, labels, controls, and buttons; honor the typography scale_steps.\nUse the color_roles + states verbatim for surfaces, text, and interactive feedback.\nRender every component across the states given in component_stylings \u2014 do not ship defaults.\nVoice: Premium, composed, specific, and reassuring. Explain a valuable-item transaction in plain language without sounding like a pawnshop, discount buyer, or aggressive lender. Use short direct headings, transparent process copy, and restrained urgency. The brand name is always Diamond Banc..\nHARD EXCLUSIONS (never produce): city skylines; AI-generated jewelry; generic stock people; glassmorphism; neon; gold button fills; retail product grids; pawnshop imagery; countdown timers; Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens..\nWrite real copy from page_blueprint.copy_direction grounded in the content inventory \u2014 never lorem, never invented facts.",
+    "instruction_block": "Build a landing-page for Diamond Banc.\nArchetype: localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.. Copy framework: AIDA.\nTheme the ENTIRE build off this client palette \u2014 primary #1C7E86, secondary #222428, accent #BD8D41. Never substitute a generic brand color.\nTypography: headings in Cormorant Garamond, weights 400, 600, and 700, for premium editorial headings, body in Poppins, weights 400, 500, 600, and 700, for body copy, labels, controls, and buttons; honor the typography scale_steps.\nUse the color_roles + states verbatim for surfaces, text, and interactive feedback.\nRender every component across the states given in component_stylings \u2014 do not ship defaults.\nVoice: Premium, modern, discreet, confident, and financially conservative. Use direct language for high-intent searchers, with no hype, no pressure, no pawnshop framing, and no unsupported guarantees. Always say Diamond Banc, never Diamond Bank..\nHARD EXCLUSIONS (never produce): city skylines; AI-generated jewelry; generic stock people; glassmorphism; neon; gold button fills; retail product grids; pawnshop imagery; countdown timers; Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens..\nWrite real copy from page_blueprint.copy_direction grounded in the content inventory \u2014 never lorem, never invented facts.",
     "non_negotiables": [
       "client-themed palette (no fixed brand color)",
       "all component states rendered",

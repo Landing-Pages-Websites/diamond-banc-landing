@@ -9,6 +9,8 @@
     "accent": "#BD8D41",
     "neutral": ["#FFFFFF", "#F2F0EE", "#E1D9CD", "#5C6066"],
     "roles": {
+      "background": "#FFFFFF",
+      "text": "#222428",
       "ink": "#222428",
       "ink_soft": "#34373C",
       "surface": "#FFFFFF",
@@ -45,15 +47,16 @@
     "grid": "12 columns on desktop, one column on mobile; hero copy spans 6 and form spans 5 with one-column breathing room"
   },
   "components": [
+    {"name": "button", "variants": ["primary", "secondary", "phone"], "states": {"default": "teal fill or teal border", "hover": "controlled darker teal", "focus": "2px aqua focus ring", "active": "deep teal", "disabled": "muted teal"}, "notes": "Use for quote and phone CTAs; never use gold button fills."},
     {"name": "Header", "variants": ["fixed-light"], "states": {"default": "white translucent", "scrolled": "white with border and soft shadow"}, "notes": "Logo and exact route phone only"},
     {"name": "Hero", "variants": ["dark-split"], "states": {"mobile": "form first", "desktop": "copy left and form right"}, "notes": "Real jewelry image and localized H1"},
     {"name": "AppraisalCard", "variants": ["white-raised"], "states": {"loading": "reserved floor", "ready": "customer widget interactive"}, "notes": "Preserve embed code and compact spacing"},
-    {"name": "ProofBar", "variants": ["compact-light"], "states": {}, "notes": "Four approved proof points"},
+    {"name": "ProofBar", "variants": ["compact-light"], "states": {"default": "compact proof row", "focus": "visible focus ring on any interactive proof link"}, "notes": "Four approved proof points"},
     {"name": "OptionCard", "variants": ["sell", "borrow"], "states": {"hover": "subtle border and image emphasis"}, "notes": "Real consultation photos"},
-    {"name": "LocalOffice", "variants": ["market-focused"], "states": {}, "notes": "City name, appointment or shipping, exact route phone"},
+    {"name": "LocalOffice", "variants": ["market-focused"], "states": {"default": "dark local panel", "hover": "subtle teal border on option cards"}, "notes": "City name, appointment or shipping, exact route phone"},
     {"name": "DualCTA", "variants": ["light", "dark"], "states": {"hover": "controlled teal change", "focus": "visible teal ring"}, "notes": "Quote anchor plus exact route phone"},
     {"name": "Faq", "variants": ["accordion"], "states": {"closed": "question row", "open": "answer visible"}, "notes": "Keyboard accessible"},
-    {"name": "FinalCta", "variants": ["dark-centered"], "states": {}, "notes": "Localized headline and route-correct CTA"}
+    {"name": "FinalCta", "variants": ["dark-centered"], "states": {"default": "dark centered close", "focus": "visible teal focus ring on actions"}, "notes": "Localized headline and route-correct CTA"}
   ],
   "sections": {
     "hero": "Localize the H1 and market context only; keep the approved visual and widget hierarchy.",

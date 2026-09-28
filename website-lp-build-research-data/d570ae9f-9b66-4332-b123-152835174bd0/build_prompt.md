@@ -1,29 +1,26 @@
-> **INTENTIONAL FRAMEWORK PRESERVATION:** Do not add standalone problem or agitation sections. The customer explicitly requested the same approved nationwide content framework, localized per market. Preserve that framework and the active nationwide root route.
+> ⚠️ **BLUEPRINT MISSING STANDARD CONVERSION SECTIONS:** problem / agitation. The `landing-page-architect` proven order includes these (objection-handling before the final CTA). Either ADD them or confirm the omission is intentional for this page - don't drop them by accident.
 
 ## Task / scope
-Build the landing page for **Diamond Banc**. Conversion goal: Primary conversion is a successful submission through Diamond Banc's existing embedded AI appraisal widget, which captures name, phone, email, ZIP code, and an item photo and routes natively to Salesforce. Secondary conversion is a qualified phone call to the exact market-specific number supplied in the build task. The nationwide root page must remain unchanged and live throughout the work.
+Build the landing page for **Diamond Banc**. Conversion goal: Generate qualified Google Search and PMax leads through the embedded AI appraisal form, with qualified local phone calls as the secondary conversion path. The page should make the appraisal submission the primary action while preserving Salesforce routing and CTM attribution.
 
-Positioning: A premium, no-obligation way to discover what a valuable item may be worth, with two possible outcomes from one inquiry: sell the item or keep it and borrow against it. Lead with the instant quote and local-office convenience, then support the decision with Diamond Banc's 5 out of 5 reputation, 10,000+ combined reviews, A+ BBB rating, experienced experts, and third-generation-jeweler heritage.
+Positioning: Lead with a free, no-obligation AI appraisal that gives San Diego-area owners a discreet way to understand their options. Present Diamond Banc as a premium, experienced jewelry buyer and lender with a local La Jolla office, an in-person path, and a clear sell-or-borrow choice. Use proof and process clarity to reduce hesitation, without promising a valuation, payout, loan amount, or approval.
 
 Done = the page(s) render per the Design context below, the real copy is used (no invented facts), `npx next build` is green, and the a11y snapshot is clean.
 
 ## Files in scope
-- New dynamic route and route metadata: `src/app/[market]/page.tsx`.
-- New typed route configuration: `src/lib/markets.ts`.
-- New market rendering/context components as needed, for example `src/components/MarketLandingPage.tsx`, `src/components/MarketProvider.tsx`, and `src/components/LocalOffice.tsx`.
-- The smallest optional-prop/context changes required in existing route-sensitive surfaces: `src/components/Header.tsx`, `src/components/Hero.tsx`, `src/components/DualCTA.tsx`, `src/components/FinalCta.tsx`, and `src/components/SiteFooter.tsx`. Existing root defaults and rendered output must remain unchanged.
-- `content-sources.json` only to add the task as the source for 15 route names and phone values; preserve existing claim records.
-- Copy the complete compact research contract from `/var/lib/megaclaw/workspace/website-lp-build-research-data/d570ae9f-9b66-4332-b123-152835174bd0/` into repo path `website-lp-build-research-data/d570ae9f-9b66-4332-b123-152835174bd0/`. Include at least `build_context.json`, `brand.json`, `ai_build_contract.json`, `recommendations.json`, `proof.json`, `content_inventory.json`, `offer_cro.json`, `design_direction.json`, `page_blueprint.json`, `inspiration.json`, `competitors.json`, and `typography.json`.
+- Add the San Diego route at `src/app/[market]/page.tsx` and add only the `san-diego` entry to the typed market configuration in `src/lib/markets.ts`.
+- Update only the smallest route-aware shared components required to render the localized market route: `src/components/MarketLandingPage.tsx`, `src/components/MarketProvider.tsx`, `src/components/LocalOffice.tsx`, `src/components/Hero.tsx`, `src/components/Header.tsx`, `src/components/DualCTA.tsx`, `src/components/FinalCta.tsx`, and `src/components/SiteFooter.tsx`.
+- Add the San Diego office address `4275 Executive Sq, Suite 202, La Jolla, CA 92037` to the localized office surface.
+- Preserve and include the compact research contract under `website-lp-build-research-data/d570ae9f-9b66-4332-b123-152835174bd0/`.
 
 ## Files out of scope
-- `src/app/page.tsx`: active nationwide root route; keep byte-identical.
-- `src/app/layout.tsx`, `src/hooks/useTracking.ts`, `src/components/AppraisalEmbed.tsx`, and `src/components/QueryParamPersistence.tsx`: preserve byte-identical. Tracking IDs, widget embed code, success handler, and attribution persistence are proven production behavior.
-- `src/app/globals.css`, `public/**`, favicon files, logo files, and all existing client-owned photography: preserve byte-identical unless an unavoidable route-layout defect is demonstrated in verification.
-- `package.json`, lockfile, Next.js config, TypeScript config, generated files, dependencies, and build tooling.
-- Do not change or remove any existing root-route copy, proof, testimonials, FAQs, anchors, form behavior, instrumentation, or phone value.
+- `src/app/page.tsx`, all existing market route behavior, and all existing market phone values.
+- `src/app/layout.tsx`, `src/hooks/useTracking.ts`, `src/components/AppraisalEmbed.tsx`, `src/components/QueryParamPersistence.tsx`, `src/app/globals.css`, `public/**`, favicon/logo assets, and existing Diamond Banc photography.
+- Shared `components/ui/**` primitives, the Rolex route, generated files, dependencies, lockfiles, and build tooling.
+- Do not redesign, refactor, or overwrite the live nationwide route or existing localized routes.
 
 ## Acceptance criteria
-- All required sections present: hero and embedded AI appraisal widget, trust bar with 5 out of 5 reputation, 10,000+ reviews, A+ BBB rating, and local-office scale, sell-or-borrow options, four-step process, accepted asset categories, localized office section, shipping and security, expertise and third-generation-jeweler story, real attributed testimonials, FAQ, final CTA, legal footer and floating CTA.
+- All required sections present: Minimal logo and phone header with no navigation, Hero with San Diego / La Jolla intent match and embedded AI appraisal form, Trust bar with Trustpilot, BBB, expert, and heritage proof, Sell or borrow two-option explanation, Services for jewelry, watches / Rolex, diamonds, and gold, Three-step local appraisal process, San Diego office address and local appointment context, Secure shipping / in-person options, Expertise and credibility section, Testimonials or review proof, FAQ addressing sell versus borrow, appraisal, process, and eligibility, Dedicated lower contact form / appraisal section, Final conversion CTA and legal-only footer.
 - Client brand tokens from `color_roles` / `typography_rules` applied via the Tailwind `@theme` block - no generic/off-brand colors or fonts.
 - `dos_donts` (incl. any `visual_exclusions`) and messaging guardrails honored.
 - Real copy from each section's `copy_direction` is used - no invented facts or stats.
@@ -44,7 +41,7 @@ Done = the page(s) render per the Design context below, the real copy is used (n
   "visual_theme": {
     "archetype": "localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.",
     "copy_framework": "AIDA",
-    "brand_voice": "Premium, composed, specific, and reassuring. Explain a valuable-item transaction in plain language without sounding like a pawnshop, discount buyer, or aggressive lender. Use short direct headings, transparent process copy, and restrained urgency. The brand name is always Diamond Banc.",
+    "brand_voice": "Premium, modern, discreet, confident, and financially conservative. Use direct language for high-intent searchers, with no hype, no pressure, no pawnshop framing, and no unsupported guarantees. Always say Diamond Banc, never Diamond Bank.",
     "rationale": "The customer requested the same nationwide content framework localized by market. Preserving the live page's design system reduces risk to an active paid-traffic asset, keeps customer-approved proof and imagery intact, and isolates the new work to route-aware content and phone values.",
     "section_order": [
       "header",
@@ -88,7 +85,7 @@ Done = the page(s) render per the Design context below, the real copy is used (n
     "roles": {
       "background": "#FFFFFF",
       "surface": "#FFFFFF",
-      "text": "#1A1A1A",
+      "text": "#222428",
       "muted": "#5C6066",
       "border": "#E6E2DB",
       "link": "#1C7E86"
@@ -119,6 +116,22 @@ Done = the page(s) render per the Design context below, the real copy is used (n
     "scale_steps": {}
   },
   "component_stylings": [
+    {
+      "name": "button",
+      "variants": [
+        "primary",
+        "secondary",
+        "phone"
+      ],
+      "states": {
+        "default": "teal fill or teal border",
+        "hover": "controlled darker teal",
+        "focus": "2px aqua focus ring",
+        "active": "deep teal",
+        "disabled": "muted teal"
+      },
+      "notes": "Use for quote and phone CTAs; never use gold button fills."
+    },
     {
       "name": "Header",
       "variants": [
@@ -157,7 +170,10 @@ Done = the page(s) render per the Design context below, the real copy is used (n
       "variants": [
         "compact-light"
       ],
-      "states": {},
+      "states": {
+        "default": "compact proof row",
+        "focus": "visible focus ring on any interactive proof link"
+      },
       "notes": "Four approved proof points"
     },
     {
@@ -176,7 +192,10 @@ Done = the page(s) render per the Design context below, the real copy is used (n
       "variants": [
         "market-focused"
       ],
-      "states": {},
+      "states": {
+        "default": "dark local panel",
+        "hover": "subtle teal border on option cards"
+      },
       "notes": "City name, appointment or shipping, exact route phone"
     },
     {
@@ -207,7 +226,10 @@ Done = the page(s) render per the Design context below, the real copy is used (n
       "variants": [
         "dark-centered"
       ],
-      "states": {},
+      "states": {
+        "default": "dark centered close",
+        "focus": "visible teal focus ring on actions"
+      },
       "notes": "Localized headline and route-correct CTA"
     }
   ],
@@ -265,18 +287,23 @@ Done = the page(s) render per the Design context below, the real copy is used (n
   },
   "dos_donts": {
     "design_dos": [
-      "Inherit the existing Diamond Banc premium dark-ink, teal, gold, and white visual system",
-      "Reuse the current real Diamond Banc jewelry, shipping, founder, and team photography",
-      "Keep the appraisal card above the fold on mobile and desktop",
-      "Localize the hero headline and office language without making all 15 routes visually inconsistent",
-      "Keep all existing section anchors and at least six meaningful sections per route"
+      "Use the established Diamond Banc premium luxury visual system and approved logo assets from the existing LP repo.",
+      "Make San Diego / La Jolla intent unmistakable in the hero and local-office section.",
+      "Reuse the embedded AI appraisal form in the hero and dedicated lower form section without replacing it with a custom lead form.",
+      "Use real approved Diamond Banc imagery and real product-context photography; do not fabricate branded luxury items.",
+      "Use strong teal / aqua brand accents with restrained luxury neutrals and high-contrast typography.",
+      "Keep the phone CTA visible as a styled button with (858) 391-4047, while CTM may swap it at runtime.",
+      "Use clear section anchors, centered dual CTAs, and a form-only floating CTA.",
+      "Make the La Jolla office address and local path prominent without implying every lead must visit in person."
     ],
     "design_donts": [
-      "Do not redesign or modify the live nationwide root route",
-      "Do not generate AI imagery or use generic stock photography",
-      "Do not introduce a generic city skyline as the localization mechanism",
-      "Do not change the GTM, MegaTag, Meta Pixel, CTM, form embed, or form success handler",
-      "Do not add a retail navigation, product catalog, or unrelated outbound links"
+      "Do not overwrite the live root route or any existing market route.",
+      "Do not use generic stock or AI-generated images when approved real assets are available.",
+      "Do not use a gradient-only hero in place of the established real hero image.",
+      "Do not use yellow divider bars, white circle/down-arrow CTA decorations, split screens, clutter, or generic AI effects.",
+      "Do not use em dashes, emojis, retail purchase language, pawnshop language, or unsupported financial promises.",
+      "Do not use GIA Certified wording, unverified review counts, or an unapproved BBB logo asset.",
+      "Do not add navigation links, social exits, or unrelated website links to the paid landing page."
     ],
     "visual_exclusions": [
       "city skylines",
@@ -292,47 +319,31 @@ Done = the page(s) render per the Design context below, the real copy is used (n
     ],
     "messaging_guardrails": [
       {
-        "rule": "Use Diamond Banc exactly; never Diamond Bank or Diamond Bacn",
+        "rule": "Always spell the brand Diamond Banc, never Diamond Bank or DiamondBank.",
         "type": "must"
       },
       {
-        "rule": "Keep sell and borrow options at offer parity while leading with high-intent selling language",
+        "rule": "Never imply customers can purchase jewelry, watches, diamonds, or gold from Diamond Banc.",
+        "type": "must_not"
+      },
+      {
+        "rule": "Never use pawnshop language or position the experience as a pawnshop.",
+        "type": "must_not"
+      },
+      {
+        "rule": "Use free appraisal or quote only with no-obligation framing; do not promise a specific value, payout, loan amount, approval, or return.",
         "type": "must"
       },
       {
-        "rule": "Use only the exact market-specific phone number supplied for each route in raw source and tel links",
+        "rule": "Use GIA-accredited gemologists or experienced jewelry experts, never GIA Certified Gemologists.",
         "type": "must"
       },
       {
-        "rule": "Reuse the customer-owned appraisal widget and preserve its Salesforce routing",
-        "type": "must"
-      },
-      {
-        "rule": "Use only verified client-owned photography already in the repo",
-        "type": "must"
-      },
-      {
-        "rule": "Do not use pawnshop language",
+        "rule": "Do not promote Seller's Agent consignment or Retail Partner services on this route.",
         "type": "must_not"
       },
       {
-        "rule": "Do not imply Diamond Banc sells jewelry or watches to consumers",
-        "type": "must_not"
-      },
-      {
-        "rule": "Do not promise guaranteed valuations, guaranteed loan terms, or specific dollar outcomes",
-        "type": "must_not"
-      },
-      {
-        "rule": "Do not call people GIA-certified gemologists",
-        "type": "must_not"
-      },
-      {
-        "rule": "Do not use an em dash in any customer-facing copy or metadata",
-        "type": "must_not"
-      },
-      {
-        "rule": "Preserving the existing nationwide root route, tracking IDs, CTM script, form behavior, and approved copy is required",
+        "rule": "Keep sell intent primary and present borrowing as an alternative option, not as a guaranteed financial outcome.",
         "type": "must"
       }
     ]
@@ -362,7 +373,7 @@ Done = the page(s) render per the Design context below, the real copy is used (n
 
 **Agent guidance:**
 {
-  "instruction_block": "Build a landing-page for Diamond Banc.\nArchetype: localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.. Copy framework: AIDA.\nTheme the ENTIRE build off this client palette \u2014 primary #1C7E86, secondary #222428, accent #BD8D41. Never substitute a generic brand color.\nTypography: headings in Cormorant Garamond, weights 400, 600, and 700, for premium editorial headings, body in Poppins, weights 400, 500, 600, and 700, for body copy, labels, controls, and buttons; honor the typography scale_steps.\nUse the color_roles + states verbatim for surfaces, text, and interactive feedback.\nRender every component across the states given in component_stylings \u2014 do not ship defaults.\nVoice: Premium, composed, specific, and reassuring. Explain a valuable-item transaction in plain language without sounding like a pawnshop, discount buyer, or aggressive lender. Use short direct headings, transparent process copy, and restrained urgency. The brand name is always Diamond Banc..\nHARD EXCLUSIONS (never produce): city skylines; AI-generated jewelry; generic stock people; glassmorphism; neon; gold button fills; retail product grids; pawnshop imagery; countdown timers; Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens..\nWrite real copy from page_blueprint.copy_direction grounded in the content inventory \u2014 never lorem, never invented facts.",
+  "instruction_block": "Build a landing-page for Diamond Banc.\nArchetype: localized-premium-valuation funnel that inherits the live Diamond Banc nationwide page. The design remains editorial luxury, with real client-owned jewelry and expert photography, a dark high-contrast hero, a bright appraisal card, serif display type, controlled teal actions, restrained gold rules, and generous white space. Localization comes from the city name, exact phone, and focused office copy, not city skylines or unrelated local stock.. Copy framework: AIDA.\nTheme the ENTIRE build off this client palette \u2014 primary #1C7E86, secondary #222428, accent #BD8D41. Never substitute a generic brand color.\nTypography: headings in Cormorant Garamond, weights 400, 600, and 700, for premium editorial headings, body in Poppins, weights 400, 500, 600, and 700, for body copy, labels, controls, and buttons; honor the typography scale_steps.\nUse the color_roles + states verbatim for surfaces, text, and interactive feedback.\nRender every component across the states given in component_stylings \u2014 do not ship defaults.\nVoice: Premium, modern, discreet, confident, and financially conservative. Use direct language for high-intent searchers, with no hype, no pressure, no pawnshop framing, and no unsupported guarantees. Always say Diamond Banc, never Diamond Bank..\nHARD EXCLUSIONS (never produce): city skylines; AI-generated jewelry; generic stock people; glassmorphism; neon; gold button fills; retail product grids; pawnshop imagery; countdown timers; Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens..\nWrite real copy from page_blueprint.copy_direction grounded in the content inventory \u2014 never lorem, never invented facts.",
   "non_negotiables": [
     "client-themed palette (no fixed brand color)",
     "all component states rendered",
@@ -462,7 +473,7 @@ _Nav - primary: ['#get-quote']; footer: ['#get-quote', '#faq']_
 ## Integration
 
 ### Form spec (from research - `offer_cro.json`)
-**Preserve the customer-owned embedded widget.** The fields below are informational only. Do NOT create or wire a new React/MEGA form, do NOT add or drop fields, and do NOT alter the widget script, field validation, upload flow, Salesforce routing, or the existing one-shot success listener:
+**Lead-form fields** - wire these exactly (matches the builder's `LeadFormField` contract; do not add/drop fields):
 
 | name | type | required | options |
 |---|---|---|---|
@@ -477,46 +488,14 @@ _Nav - primary: ['#get-quote']; footer: ['#get-quote', '#faq']_
 **Primary CTA:** Get my free quote, scrolling to the existing embedded AI appraisal widget
 **Secondary CTA:** Call the exact task-specified phone number for the current market route
 
-### Tracking / lead-routing (task-owned values, preserve exactly)
+### Tracking / lead-routing (task-owned values)
 - Google traffic: Search and Performance Max.
 - GTM container: `GTM-WBLZ2J9`.
+- No Meta pixel was supplied in this task input. Preserve the existing shared production pixel `1344125387527189` only because the existing layout owns it and the route must not alter shared instrumentation.
 - Mega site key: `ae75ylrmfqweqelx`.
 - Mega site ID: `75a85d64-2685-47a6-82e4-6010397e3ddb`.
-- Existing Meta Pixel: `1344125387527189`. Preserve because it is active on the shared production site, even though this task's declared traffic is Google.
-- CTM: preserve the universal `https://572388.tctm.co/t.js` script. WEB does not provision or replace CTM infrastructure.
+- CTM: preserve the universal `https://572388.tctm.co/t.js` script. Do not provision or replace CTM infrastructure.
 - CRM: the customer-owned appraisal embed routes natively to Salesforce. Do not create a parallel MEGA form, endpoint, or notification path.
-- Form success: preserve the existing `window.MegaTag.trackEvent("form_submit", ...)` and `window.dataLayer.push({ event: "form_submit", ... })` listener byte-identical.
-- Query parameter persistence: preserve the existing component and behavior byte-identical.
-- Phone source rule: each localized route must render only its exact task-specified source number in raw HTML, JavaScript-disabled DOM, visible text, aria labels, and every `tel:` href. CTM may swap at runtime only. Root keeps `573-875-2265`.
-- Route matrix, exact values:
-  - `/tampa`, display `Tampa, FL`: `813-609-4331`, tel `+18136094331`
-  - `/orlando`, display `Orlando, FL`: `407-232-7688`, tel `+14072327688`
-  - `/coral-gables`, display `Coral Gables, FL`: `(786) 605-9593`, tel `+17866059593`
-  - `/aventura`, display `Aventura, FL`: `954-323-8475`, tel `+19543238475`
-  - `/boca-raton`, display `Boca Raton, FL`: `561-430-5035`, tel `+15614305035`
-  - `/west-palm-beach`, display `West Palm Beach, FL`: `561-899-7575`, tel `+15618997575`
-  - `/sarasota`, display `Sarasota, FL`: `941-877-5472`, tel `+19418775472`
-  - `/nashville`, display `Nashville, TN`: `615-695-7675`, tel `+16156957675`
-  - `/atlanta`, display `Atlanta, GA`: `404-407-5046`, tel `+14044075046`
-  - `/roswell`, display `Roswell, GA`: `678-403-6344`, tel `+16784036344`
-  - `/scottsdale`, display `Scottsdale, AZ`: `(602) 878-6698`, tel `+16028786698`
-  - `/beverly-hills`, display `Beverly Hills, CA`: `310-299-9557`, tel `+13102999557`
-  - `/st-louis`, display `St. Louis, MO`: `314-876-6659`, tel `+13148766659`
-  - `/columbia`, display `Columbia, MO`: `573-875-2265`, tel `+15738752265`
-  - `/kansas-city`, display `Kansas City, MO`: `816-597-5773`, tel `+18165975773`
-- Use the `landing-page-tracking` and `landing-page-forms` rules as verification references, but this is an existing customer-owned embedded-form implementation. Preservation beats refactoring.
-- Keep all route pages within the existing Git-linked Vercel project `prj_w0GptW5ExWD1w4WgtuPm8QqAZJVW`, project name `diamond-banc-landing-p6kudpaaxq`, production domain `quote.diamondbanc.com`.
-
-### Route and preservation acceptance, all mandatory
-- Generate exactly the 15 route slugs above. Unknown market slugs must 404.
-- Route H1 should lead with `Diamond Banc {Market}` and retain the approved value message. Use route-specific metadata without em dashes.
-- Use one typed route data source and one shared route template. Do not create 15 copy-pasted page trees.
-- On localized routes, replace the nationwide all-market map with one focused local-office section. Do not change the root LocationMap.
-- Do not claim people are GIA-certified. Use approved `experienced experts` language. Do not add pawnshop or retail-purchase language.
-- No em dash (`U+2014`) anywhere under `src/` or in served HTML. No en dash or double hyphen substitution.
-- Keep all existing root anchors and ensure localized routes have at least six descriptive kebab-case section IDs in the same DOM order.
-- Floating CTA remains form-only. Do not add a phone CTA to the floating bar.
-- Verify root preservation with `git diff` plus a live/preview comparison for key H1, phone, tracking IDs, form embed URL, section order, and anchor list.
-- Verify all 15 routes at 390px and at least representative Tampa, Coral Gables, Nashville, Scottsdale, Beverly Hills, and Kansas City routes at 1440px. No overflow, clipped header phone, or form-card regression.
-- Run build, typecheck, a11y, design review, code review, route matrix tests, raw-source phone tests, and `grep -R -n '—' src` before committing.
-- Commit on the task branch using author `Peter <peter@gomega.ai>`. Do not deploy from the worktree and do not push until controller verification.
+- Source phone: `(858) 391-4047`, tel `tel:+18583914047`. Every visible phone and tel href on `/san-diego` must use this source number; CTM may swap it at runtime.
+- Submission email: none supplied. Do not invent one.
+- Preserve the existing embed success tracking and query-parameter persistence exactly. Use `landing-page-tracking` and `landing-page-forms` as verification references, plus the LP hard rules for centered dual CTAs, form-only floating CTA, favicon, and no navigation exits.
