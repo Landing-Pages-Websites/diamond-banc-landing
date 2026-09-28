@@ -7,7 +7,7 @@ import { Icon } from "@/components/icons";
 import { HERO, BRAND } from "@/lib/content";
 
 export function Hero(): React.ReactElement {
-  const { phone, phoneHref, city, isMarket, heroValueProp, heroValueSeparator, heroSubhead } = useMarket();
+  const { phone, phoneHref, city, isMarket, heroValueProp, heroValueSeparator, heroSubhead, office } = useMarket();
   return (
     <section
       id="get-quote"
@@ -91,6 +91,15 @@ export function Hero(): React.ReactElement {
               <span className="block font-semibold text-white">{phone}</span>
             </span>
           </a>
+
+          {office && (
+            <p className="mt-4 flex items-start gap-2 text-sm leading-relaxed text-white/75">
+              <Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-teal-400)]" />
+              <span>
+                Local office in {office.locality}: {office.street}
+              </span>
+            </p>
+          )}
         </div>
       </div>
     </section>

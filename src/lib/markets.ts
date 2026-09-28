@@ -1,9 +1,19 @@
 // Typed route configuration for Diamond Banc localized market landing pages.
-// One source of truth for the 15 paid-traffic routes: slug, display name, and
+// One source of truth for the paid-traffic routes: slug, display name, and
 // the exact task-specified phone number. Every localized route renders ONLY its
 // own number in raw source, visible text, aria labels, and tel hrefs. CTM may
 // swap at runtime; these are the source-of-record values. The nationwide root
 // route keeps Columbia's 573-875-2265 and is defined outside this matrix.
+
+/** A route's staffed local office, rendered in the hero and LocalOffice. */
+export interface MarketOffice {
+  /** Neighborhood or city the office sits in, e.g. "La Jolla". */
+  locality: string;
+  /** Street line, e.g. "4275 Executive Sq, Suite 202". */
+  street: string;
+  /** Five-digit ZIP; the state comes from the parent market. */
+  zip: string;
+}
 
 export interface Market {
   /** URL slug, kebab-case. */
@@ -39,6 +49,12 @@ export interface Market {
    * aligning the supporting copy with campaign messaging on select paid routes.
    */
   heroSubhead?: string;
+  /**
+   * Optional street address of the route's local office. When set, the hero
+   * names the office and LocalOffice renders the full address; routes without
+   * it keep the generic city-office copy.
+   */
+  office?: MarketOffice;
 }
 
 // Route matrix, exact values from the build task. Order is the paid-traffic
@@ -59,6 +75,7 @@ export const MARKETS: readonly Market[] = [
   { slug: "st-louis", city: "St. Louis", state: "MO", display: "St. Louis, MO", phone: "314-876-6659", phoneHref: "tel:+13148766659" },
   { slug: "columbia", city: "Columbia", state: "MO", display: "Columbia, MO", phone: "573-875-2265", phoneHref: "tel:+15738752265" },
   { slug: "kansas-city", city: "Kansas City", state: "MO", display: "Kansas City, MO", phone: "816-597-5773", phoneHref: "tel:+18165975773", heroValueProp: "Sell Gold in Kansas City. Find out what your gold is worth." },
+  { slug: "san-diego", city: "San Diego", state: "CA", display: "San Diego, CA", phone: "(858) 391-4047", phoneHref: "tel:+18583914047", office: { locality: "La Jolla", street: "4275 Executive Sq, Suite 202", zip: "92037" } },
 ] as const;
 
 export function getMarket(slug: string): Market | undefined {

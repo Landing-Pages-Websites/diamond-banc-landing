@@ -11,16 +11,17 @@ import { BRAND } from "@/lib/content";
 // offer an in-person appointment or free insured shipping, and surface the
 // exact route phone. No skyline or generic city imagery by design.
 export function LocalOffice(): React.ReactElement | null {
-  const { phone, phoneHref, city, display } = useMarket();
+  const { phone, phoneHref, city, display, state, office } = useMarket();
 
   // Market-only section: rendered exclusively inside MarketProvider. Guard so a
   // stray render without a market never prints literal "null" copy.
   if (!city || !display) return null;
+  const officeName = office?.locality ?? city;
 
   const ways: Array<{ icon: React.ComponentProps<typeof Icon>["name"]; title: string; body: string }> = [
     {
       icon: "pin",
-      title: `Visit the ${city} office`,
+      title: `Visit the ${officeName} office`,
       body: `Book an appointment and hand your item across the desk for an in-person valuation with our experienced experts.`,
     },
     {
@@ -52,6 +53,18 @@ export function LocalOffice(): React.ReactElement | null {
               with a free insured label. Either way, your offer comes from the
               same experienced experts.
             </p>
+
+            {office && (
+              <address className="mt-7 border-l-2 border-[var(--color-gold)] pl-4 text-[15px] not-italic leading-relaxed text-white/80">
+                <span className="block text-sm font-medium text-[var(--color-teal-400)]">
+                  Our {office.locality} office
+                </span>
+                <span className="mt-1 block font-semibold text-white">{office.street}</span>
+                <span className="block">
+                  {office.locality}, {state} {office.zip}
+                </span>
+              </address>
+            )}
 
             <a
               href={phoneHref}
