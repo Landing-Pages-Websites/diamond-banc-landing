@@ -96,6 +96,9 @@ const PATHS: Record<string, IconPaths> = {
   plus: <path d="M12 4.5v15m7.5-7.5h-15" />,
 };
 
+// Matches the `h-5 w-5` fallback; w-/h- utilities and caller width/height props override it.
+const DEFAULT_ICON_SIZE = 20;
+
 interface IconProps extends SVGProps<SVGSVGElement> {
   name: keyof typeof PATHS | string;
 }
@@ -109,6 +112,8 @@ export function Icon({ name, className, ...rest }: IconProps): JSX.Element | nul
   // default would override smaller caller sizes (h-4, h-3.5).
   return (
     <svg
+      width={DEFAULT_ICON_SIZE}
+      height={DEFAULT_ICON_SIZE}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
