@@ -4,13 +4,20 @@ import { Reveal } from "@/components/Reveal";
 import { DualCTA } from "@/components/DualCTA";
 import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
-import { BRAND } from "@/lib/content";
+import { LocalProfileCard } from "@/components/LocalProfileCard";
+import { BRAND, type LocalOfficeOverride } from "@/lib/content";
+
+interface LocalOfficeProps {
+  /** Route-specific specialist copy and profile; omit for the generic office layout. */
+  override?: LocalOfficeOverride;
+}
 
 // Localized replacement for the nationwide LocationMap. Turns national trust
 // into a specific nearby-office option for the route's market: name the city,
 // offer an in-person appointment or free insured shipping, and surface the
-// exact route phone. No skyline or generic city imagery by design.
-export function LocalOffice(): React.ReactElement | null {
+// exact route phone. No skyline or generic city imagery by design. Routes with
+// an override swap the generic visit/mail cards for one specialist profile.
+export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactElement | null {
   const { phone, phoneHref, city, display, state, office } = useMarket();
 
   // Market-only section: rendered exclusively inside MarketProvider. Guard so a
@@ -41,18 +48,41 @@ export function LocalOffice(): React.ReactElement | null {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div
+          className={
+            override
+              ? "grid gap-12 md:grid-cols-2 md:items-center lg:gap-16"
+              : "grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
+          }
+        >
           <Reveal>
             <p className="eyebrow text-[var(--color-teal-400)]">Your local office</p>
             <h2 className="mt-3 font-display text-[2.25rem] leading-[1.1] text-white md:text-[2.75rem]">
-              {BRAND.name} {display}
+              {override ? (
+                override.headline
+              ) : (
+                <>
+                  {BRAND.name} {display}
+                </>
+              )}
             </h2>
-            <p className="mt-5 text-[15px] leading-relaxed text-white/75 md:text-base">
-              Serving {city} and the surrounding area, with two easy ways to get
-              your valuation. Come in for an appointment or ship your item to us
-              with a free insured label. Either way, your offer comes from the
-              same experienced experts.
-            </p>
+            {override ? (
+              <>
+                <p className="mt-5 text-[15px] leading-relaxed text-white/75 md:text-base">
+                  {override.intro}
+                </p>
+                <p className="mt-3 text-[15px] leading-relaxed text-white/75 md:text-base">
+                  {override.compactLine}
+                </p>
+              </>
+            ) : (
+              <p className="mt-5 text-[15px] leading-relaxed text-white/75 md:text-base">
+                Serving {city} and the surrounding area, with two easy ways to get
+                your valuation. Come in for an appointment or ship your item to us
+                with a free insured label. Either way, your offer comes from the
+                same experienced experts.
+              </p>
+            )}
 
             {office && (
               <address className="mt-7 border-l-2 border-[var(--color-gold)] pl-4 text-[15px] not-italic leading-relaxed text-white/80">
@@ -82,22 +112,26 @@ export function LocalOffice(): React.ReactElement | null {
           </Reveal>
 
           <Reveal delay={100}>
-            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-              {ways.map((way) => (
-                <li
-                  key={way.title}
-                  className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-[var(--color-ink-soft)]/60 p-6 backdrop-blur-sm"
-                >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.06] text-[var(--color-teal-400)] ring-1 ring-white/10">
-                    <Icon name={way.icon} className="h-6 w-6" />
-                  </span>
-                  <h3 className="font-display text-xl leading-snug text-white">
-                    {way.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-white/70">{way.body}</p>
-                </li>
-              ))}
-            </ul>
+            {override ? (
+              <LocalProfileCard profile={override.profile} />
+            ) : (
+              <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                {ways.map((way) => (
+                  <li
+                    key={way.title}
+                    className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-[var(--color-ink-soft)]/60 p-6 backdrop-blur-sm"
+                  >
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.06] text-[var(--color-teal-400)] ring-1 ring-white/10">
+                      <Icon name={way.icon} className="h-6 w-6" />
+                    </span>
+                    <h3 className="font-display text-xl leading-snug text-white">
+                      {way.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-white/70">{way.body}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
           </Reveal>
         </div>
 

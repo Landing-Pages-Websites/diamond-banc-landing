@@ -17,7 +17,7 @@ import { Faq } from "@/components/Faq";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
-import { TRACKING } from "@/lib/content";
+import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -32,6 +32,11 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     pixelId: TRACKING.pixelId,
   });
 
+  // Routes with a local specialist profile lift #local-office up to sit
+  // directly after #two-options; all other routes keep the original order.
+  const localOverride = LOCAL_OFFICE_OVERRIDES[market.slug];
+  const localOffice = <LocalOffice override={localOverride} />;
+
   return (
     <MarketProvider market={market}>
       <main className="overflow-x-hidden bg-white">
@@ -40,11 +45,12 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <Hero />
         <ProofBar />
         <TwoOptions />
+        {localOverride && localOffice}
         <HowItWorks />
         <WhatWeBuy />
-        <LocalOffice />
+        {!localOverride && localOffice}
         <ShippingSecurity />
-        <Expertise />
+        <Expertise teamOverride={EXPERTISE_TEAM_OVERRIDES[market.slug]} />
         <Reviews />
         <Faq />
         <FinalCta />
