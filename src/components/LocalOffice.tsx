@@ -16,7 +16,8 @@ interface LocalOfficeProps {
 // into a specific nearby-office option for the route's market: name the city,
 // offer an in-person appointment or free insured shipping, and surface the
 // exact route phone. No skyline or generic city imagery by design. Routes with
-// an override swap the generic visit/mail cards for one specialist profile.
+// an override swap the generic visit/mail cards for one specialist profile, or
+// stacked profile rows when the route has a local team.
 export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactElement | null {
   const { phone, phoneHref, city, display, state, office } = useMarket();
 
@@ -24,6 +25,7 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
   // stray render without a market never prints literal "null" copy.
   if (!city || !display) return null;
   const officeName = office?.locality ?? city;
+  const team = override?.profiles;
 
   const ways: Array<{ icon: React.ComponentProps<typeof Icon>["name"]; title: string; body: string }> = [
     {
@@ -50,7 +52,7 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
       <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-8">
         <div
           className={
-            override
+            override && !team
               ? "grid gap-12 md:grid-cols-2 md:items-center lg:gap-16"
               : "grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
           }
@@ -112,7 +114,15 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
           </Reveal>
 
           <Reveal delay={100}>
-            {override ? (
+            {team ? (
+              <ul className="grid gap-5 md:gap-6">
+                {team.map((profile) => (
+                  <li key={profile.name}>
+                    <LocalProfileCard profile={profile} layout="row" />
+                  </li>
+                ))}
+              </ul>
+            ) : override ? (
               <LocalProfileCard profile={override.profile} />
             ) : (
               <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">

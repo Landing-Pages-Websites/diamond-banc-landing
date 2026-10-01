@@ -204,12 +204,18 @@ export interface LocalProfile {
   imageWidths: readonly number[];
 }
 
-export interface LocalOfficeOverride {
+interface LocalOfficeCopy {
   headline: string;
   intro: string;
   compactLine: string;
-  profile: LocalProfile;
 }
+
+/** One specialist renders as a card; several render as stacked profile rows. */
+export type LocalOfficeOverride = LocalOfficeCopy &
+  ({ profile: LocalProfile; profiles?: never } | { profiles: readonly LocalProfile[]; profile?: never });
+
+/** Square derivative widths for stacked profile rows: 96/112 CSS px at 1x and 2x. */
+const ROW_PORTRAIT_WIDTHS = [96, 112, 192, 224] as const;
 
 export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride>> = {
   "boca-raton": {
@@ -226,6 +232,31 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageWidths: [96, 192, 220, 440],
     },
   },
+  "beverly-hills": {
+    headline: "Meet your Beverly Hills team",
+    intro:
+      "Meet Silvea, your Beverly Hills Market Director, and Thuyvi, who supports our California offices.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profiles: [
+      {
+        name: "Silvea Parsamyan",
+        role: "Beverly Hills Market Director",
+        bio: "Silvea leads the Beverly Hills office with more than 20 years of jewelry experience, including helping open five jewelry locations across Los Angeles.",
+        imageAlt: "Silvea Parsamyan",
+        imageBase: "/images/team/silvea-parsamyan",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+      {
+        name: "Thuyvi Tran",
+        role: "Regional & Market Director",
+        bio: "A GIA Graduate Gemologist, Thuyvi supports Diamond Banc's California offices and brings regional expertise to the Beverly Hills team.",
+        imageAlt: "Thuyvi Tran",
+        imageBase: "/images/team/thuyvi-tran",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+    ],
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -237,6 +268,12 @@ export interface ExpertiseTeamOverride {
 
 export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOverride>> = {
   "boca-raton": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  "beverly-hills": {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
