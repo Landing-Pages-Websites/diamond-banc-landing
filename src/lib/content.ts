@@ -275,6 +275,8 @@ export interface ExpertiseTeamOverride {
   teamIntro: string;
   /** Role replacements by roster name; unlisted members keep their shared role. */
   roles: Readonly<Record<string, string>>;
+  /** Roster names hidden on this route; omit to show the full shared roster. */
+  excludeNames?: readonly string[];
 }
 
 export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOverride>> = {
@@ -296,11 +298,20 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
   },
+<<<<<<< ours
   "st-louis": {
+=======
+  // Jodi leads the Tampa team in #local-office, so she is not repeated here.
+  tampa: {
+>>>>>>> theirs
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
+<<<<<<< ours
+=======
+    excludeNames: ["Jodi Hudson"],
+>>>>>>> theirs
   },
 };
 

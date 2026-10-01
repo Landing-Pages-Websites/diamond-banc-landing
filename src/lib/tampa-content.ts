@@ -2,6 +2,8 @@
 // public/images/local-team/tampa; archival originals + crop inventory live in
 // assets/originals/tampa (never served).
 
+export const TAMPA_SLUG = "tampa";
+
 export const TAMPA_OFFICE = {
   eyebrow: "Your local office",
   heading: "Meet your Tampa team",
