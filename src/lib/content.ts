@@ -268,6 +268,20 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageWidths: [96, 192, 220, 440],
     },
   },
+  "san-diego": {
+    headline: "Meet your San Diego specialist",
+    intro: "Get to know Thuyvi Tran, who serves Diamond Banc clients in San Diego.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Thuyvi Tran",
+      role: "Regional & Market Director",
+      bio: "An experienced expert, Thuyvi supports Diamond Banc’s California offices and works directly with San Diego clients on their jewelry needs.",
+      imageAlt: "Thuyvi Tran",
+      imageBase: "/images/team/san-diego/thuyvi-tran",
+      imageWidths: [96, 192, 220, 440],
+    },
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -311,6 +325,12 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
     excludeNames: ["Jodi Hudson"],
+  },
+  "san-diego": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
   },
 };
 
