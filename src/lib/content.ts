@@ -208,7 +208,7 @@ export interface LocalOfficeOverride {
   headline: string;
   intro: string;
   compactLine: string;
-  profile: LocalProfile;
+  profile?: LocalProfile;
 }
 
 export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride>> = {
@@ -240,6 +240,12 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageWidths: [96, 192, 220, 440],
     },
   },
+  "coral-gables": {
+    headline: "Meet your Coral Gables team",
+    intro: "Meet the team serving Diamond Banc clients in Coral Gables.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -247,6 +253,8 @@ export interface ExpertiseTeamOverride {
   teamIntro: string;
   /** Role replacements by roster name; unlisted members keep their shared role. */
   roles: Readonly<Record<string, string>>;
+  /** Names removed from the retained roster for this route. */
+  exclude?: readonly string[];
 }
 
 export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOverride>> = {
@@ -255,12 +263,18 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
-  },
   columbia: {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  "coral-gables": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+    exclude: ["David Fernandez"],
   },
 };
 

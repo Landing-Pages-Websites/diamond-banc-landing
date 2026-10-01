@@ -18,6 +18,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
+import { CORAL_GABLES_TEAM } from "@/lib/coral-gables-team";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -35,7 +36,9 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
   // Routes with a local specialist profile lift #local-office up to sit
   // directly after #two-options; all other routes keep the original order.
   const localOverride = LOCAL_OFFICE_OVERRIDES[market.slug];
-  const localOffice = <LocalOffice override={localOverride} />;
+  const localOffice = market.slug === "coral-gables"
+    ? <LocalOffice override={localOverride} team={CORAL_GABLES_TEAM} />
+    : <LocalOffice override={localOverride} />;
 
   return (
     <MarketProvider market={market}>

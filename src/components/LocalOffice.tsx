@@ -5,11 +5,13 @@ import { DualCTA } from "@/components/DualCTA";
 import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 import { LocalProfileCard } from "@/components/LocalProfileCard";
-import { BRAND, type LocalOfficeOverride } from "@/lib/content";
+import { BRAND, type LocalOfficeOverride, type LocalProfile } from "@/lib/content";
 
 interface LocalOfficeProps {
   /** Route-specific specialist copy and profile; omit for the generic office layout. */
   override?: LocalOfficeOverride;
+  /** Three-person local roster for the Coral Gables route. */
+  team?: readonly LocalProfile[];
 }
 
 // Localized replacement for the nationwide LocationMap. Turns national trust
@@ -17,7 +19,7 @@ interface LocalOfficeProps {
 // offer an in-person appointment or free insured shipping, and surface the
 // exact route phone. No skyline or generic city imagery by design. Routes with
 // an override swap the generic visit/mail cards for one specialist profile.
-export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactElement | null {
+export function LocalOffice({ override, team }: LocalOfficeProps = {}): React.ReactElement | null {
   const { phone, phoneHref, city, display, state, office } = useMarket();
 
   // Market-only section: rendered exclusively inside MarketProvider. Guard so a
@@ -112,7 +114,15 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
           </Reveal>
 
           <Reveal delay={100}>
-            {override ? (
+            {team ? (
+              <ul className="grid gap-5">
+                {team.map((profile) => (
+                  <li key={profile.name}>
+                    <LocalProfileCard profile={profile} compact />
+                  </li>
+                ))}
+              </ul>
+            ) : override?.profile ? (
               <LocalProfileCard profile={override.profile} />
             ) : (
               <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
