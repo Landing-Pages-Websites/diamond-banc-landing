@@ -10,6 +10,7 @@ import { TwoOptions } from "@/components/TwoOptions";
 import { HowItWorks } from "@/components/HowItWorks";
 import { WhatWeBuy } from "@/components/WhatWeBuy";
 import { LocalOffice } from "@/components/LocalOffice";
+import { AtlantaLocalOffice } from "@/components/AtlantaLocalOffice";
 import { ShippingSecurity } from "@/components/ShippingSecurity";
 import { Expertise } from "@/components/Expertise";
 import { Reviews } from "@/components/Reviews";
@@ -18,6 +19,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
+import { ATLANTA_EXPERTISE, ATLANTA_SLUG } from "@/lib/atlanta-content";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -34,6 +36,7 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
 
   // Routes with a local specialist profile lift #local-office up to sit
   // directly after #two-options; all other routes keep the original order.
+  const isAtlanta = market.slug === ATLANTA_SLUG;
   const localOverride = LOCAL_OFFICE_OVERRIDES[market.slug];
   const localOffice = <LocalOffice override={localOverride} />;
 
@@ -45,12 +48,14 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <Hero />
         <ProofBar />
         <TwoOptions />
-        {localOverride && localOffice}
+        {isAtlanta ? <AtlantaLocalOffice /> : localOverride && localOffice}
         <HowItWorks />
         <WhatWeBuy />
-        {!localOverride && localOffice}
+        {!isAtlanta && !localOverride && localOffice}
         <ShippingSecurity />
-        <Expertise teamOverride={EXPERTISE_TEAM_OVERRIDES[market.slug]} />
+        <Expertise
+          teamOverride={isAtlanta ? ATLANTA_EXPERTISE : EXPERTISE_TEAM_OVERRIDES[market.slug]}
+        />
         <Reviews />
         <Faq />
         <FinalCta />
