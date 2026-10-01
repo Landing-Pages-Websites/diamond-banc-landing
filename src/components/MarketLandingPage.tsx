@@ -11,6 +11,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { WhatWeBuy } from "@/components/WhatWeBuy";
 import { LocalOffice } from "@/components/LocalOffice";
 import { AtlantaLocalOffice } from "@/components/AtlantaLocalOffice";
+import { AventuraSpecialist } from "@/components/AventuraSpecialist";
 import { ShippingSecurity } from "@/components/ShippingSecurity";
 import { Expertise } from "@/components/Expertise";
 import { Reviews } from "@/components/Reviews";
@@ -20,6 +21,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
 import { ATLANTA_EXPERTISE, ATLANTA_SLUG } from "@/lib/atlanta-content";
+import { AVENTURA_OFFICE, AVENTURA_ROSTER, AVENTURA_SLUG } from "@/lib/aventura-office";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -37,8 +39,16 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
   // Routes with a local specialist profile lift #local-office up to sit
   // directly after #two-options; all other routes keep the original order.
   const isAtlanta = market.slug === ATLANTA_SLUG;
-  const localOverride = LOCAL_OFFICE_OVERRIDES[market.slug];
-  const localOffice = <LocalOffice override={localOverride} />;
+  // Aventura supplies its own art-directed WebP/JPEG portrait in the aside.
+  const isAventura = market.slug === AVENTURA_SLUG;
+  const localOverride = isAventura ? AVENTURA_OFFICE : LOCAL_OFFICE_OVERRIDES[market.slug];
+  const localOffice = (
+    <LocalOffice
+      override={localOverride}
+      aside={isAventura ? <AventuraSpecialist profile={AVENTURA_OFFICE.profile} /> : undefined}
+    />
+  );
+  const routeTeam = isAventura ? AVENTURA_ROSTER : EXPERTISE_TEAM_OVERRIDES[market.slug];
 
   return (
     <MarketProvider market={market}>
@@ -53,9 +63,7 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <WhatWeBuy />
         {!isAtlanta && !localOverride && localOffice}
         <ShippingSecurity />
-        <Expertise
-          teamOverride={isAtlanta ? ATLANTA_EXPERTISE : EXPERTISE_TEAM_OVERRIDES[market.slug]}
-        />
+        <Expertise teamOverride={isAtlanta ? ATLANTA_EXPERTISE : routeTeam} />
         <Reviews />
         <Faq />
         <FinalCta />
