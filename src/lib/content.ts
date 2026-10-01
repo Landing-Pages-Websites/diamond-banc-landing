@@ -254,6 +254,20 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageWidths: [96, 192, 220, 440],
     },
   },
+  "st-louis": {
+    headline: "Meet your St. Louis specialist",
+    intro: "Get to know Jonathan Willis, who serves Diamond Banc clients in St. Louis.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Jonathan Willis",
+      role: "St. Louis Market Director",
+      bio: "Jonathan brings more than 20 years of experience in luxury jewelry, valuation and client advisory to the St. Louis office.",
+      imageAlt: "Jonathan Willis",
+      imageBase: "/images/team/jonathan-willis",
+      imageWidths: [96, 192, 220, 440],
+    },
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -277,6 +291,12 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     roles: { "Jordan Isaacs": "National Director of Funding" },
   },
   "kansas-city": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  "st-louis": {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
