@@ -20,6 +20,8 @@ import { FloatingCTA } from "@/components/FloatingCTA";
 import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
 import type { Market } from "@/lib/markets";
 
+const EARLY_LOCAL_OFFICE_SLUG = "beverly-hills";
+
 // Shared template for every localized market route. Mirrors the nationwide
 // root page section-for-section, swapping the all-market LocationMap for a
 // focused LocalOffice and wrapping everything in the market context so the
@@ -32,10 +34,10 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     pixelId: TRACKING.pixelId,
   });
 
-  // Routes with a local specialist profile lift #local-office up to sit
-  // directly after #two-options; all other routes keep the original order.
-  const localOverride = LOCAL_OFFICE_OVERRIDES[market.slug];
-  const localOffice = <LocalOffice override={localOverride} />;
+  // Only the Beverly Hills route lifts #local-office up to sit directly after
+  // #two-options; every other route keeps the original order.
+  const localOffice = <LocalOffice override={LOCAL_OFFICE_OVERRIDES[market.slug]} />;
+  const liftLocalOffice = market.slug === EARLY_LOCAL_OFFICE_SLUG;
 
   return (
     <MarketProvider market={market}>
@@ -45,10 +47,10 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <Hero />
         <ProofBar />
         <TwoOptions />
-        {localOverride && localOffice}
+        {liftLocalOffice && localOffice}
         <HowItWorks />
         <WhatWeBuy />
-        {!localOverride && localOffice}
+        {!liftLocalOffice && localOffice}
         <ShippingSecurity />
         <Expertise teamOverride={EXPERTISE_TEAM_OVERRIDES[market.slug]} />
         <Reviews />
