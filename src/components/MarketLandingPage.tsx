@@ -12,6 +12,7 @@ import { WhatWeBuy } from "@/components/WhatWeBuy";
 import { LocalOffice } from "@/components/LocalOffice";
 import { AtlantaLocalOffice } from "@/components/AtlantaLocalOffice";
 import { AventuraSpecialist } from "@/components/AventuraSpecialist";
+import { TampaLocalOffice } from "@/components/TampaLocalOffice";
 import { ShippingSecurity } from "@/components/ShippingSecurity";
 import { Expertise } from "@/components/Expertise";
 import { Reviews } from "@/components/Reviews";
@@ -22,6 +23,7 @@ import { FloatingCTA } from "@/components/FloatingCTA";
 import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
 import { ATLANTA_EXPERTISE, ATLANTA_SLUG } from "@/lib/atlanta-content";
 import { AVENTURA_OFFICE, AVENTURA_ROSTER, AVENTURA_SLUG } from "@/lib/aventura-office";
+import { TAMPA_SLUG } from "@/lib/tampa-content";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -36,10 +38,8 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     pixelId: TRACKING.pixelId,
   });
 
-  // Routes with a local specialist profile lift #local-office up to sit
-  // directly after #two-options; all other routes keep the original order.
   const isAtlanta = market.slug === ATLANTA_SLUG;
-  // Aventura supplies its own art-directed WebP/JPEG portrait in the aside.
+  const isTampa = market.slug === TAMPA_SLUG;
   const isAventura = market.slug === AVENTURA_SLUG;
   const localOverride = isAventura ? AVENTURA_OFFICE : LOCAL_OFFICE_OVERRIDES[market.slug];
   const localOffice = (
@@ -49,6 +49,11 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     />
   );
   const routeTeam = isAventura ? AVENTURA_ROSTER : EXPERTISE_TEAM_OVERRIDES[market.slug];
+  const earlyLocalOffice = isTampa
+    ? <TampaLocalOffice />
+    : isAtlanta
+      ? <AtlantaLocalOffice />
+      : localOverride && localOffice;
 
   return (
     <MarketProvider market={market}>
@@ -58,10 +63,10 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <Hero />
         <ProofBar />
         <TwoOptions />
-        {isAtlanta ? <AtlantaLocalOffice /> : localOverride && localOffice}
+        {earlyLocalOffice}
         <HowItWorks />
         <WhatWeBuy />
-        {!isAtlanta && !localOverride && localOffice}
+        {!earlyLocalOffice && localOffice}
         <ShippingSecurity />
         <Expertise teamOverride={isAtlanta ? ATLANTA_EXPERTISE : routeTeam} />
         <Reviews />

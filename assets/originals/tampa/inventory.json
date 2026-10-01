@@ -1,0 +1,215 @@
+{
+  "note": "Tampa local-team portraits. Originals archival only (not served).",
+  "portraits": [
+    {
+      "slug": "jodi-hudson",
+      "original": "assets/originals/tampa/jodi-hudson.png",
+      "originalSize": [
+        1890,
+        1890
+      ],
+      "originalBytes": 1446636,
+      "originalSha256": "9867f53a4eb16f1692976109d53806d0c94dc544e60d22c71f52173094aa62ce",
+      "crop": [
+        0,
+        0,
+        1890,
+        1890
+      ],
+      "cropSize": [
+        1890,
+        1890
+      ],
+      "derivatives": [
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-96.webp",
+          "width": 96,
+          "height": 96,
+          "bytes": 1962
+        },
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-96.jpg",
+          "width": 96,
+          "height": 96,
+          "bytes": 2979
+        },
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-112.webp",
+          "width": 112,
+          "height": 112,
+          "bytes": 2376
+        },
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-112.jpg",
+          "width": 112,
+          "height": 112,
+          "bytes": 3633
+        },
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4644
+        },
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-192.jpg",
+          "width": 192,
+          "height": 192,
+          "bytes": 7185
+        },
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-224.webp",
+          "width": 224,
+          "height": 224,
+          "bytes": 5678
+        },
+        {
+          "file": "public/images/local-team/tampa/jodi-hudson-224.jpg",
+          "width": 224,
+          "height": 224,
+          "bytes": 8944
+        }
+      ]
+    },
+    {
+      "slug": "tori-rivera",
+      "original": "assets/originals/tampa/tori-rivera.png",
+      "originalSize": [
+        1890,
+        1890
+      ],
+      "originalBytes": 1320194,
+      "originalSha256": "b21f95a5e2a9bd6eb85fb16b5184b30edea536587299a5b2c3abd0ba9ecf7894",
+      "crop": [
+        0,
+        0,
+        1890,
+        1890
+      ],
+      "cropSize": [
+        1890,
+        1890
+      ],
+      "derivatives": [
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-96.webp",
+          "width": 96,
+          "height": 96,
+          "bytes": 1658
+        },
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-96.jpg",
+          "width": 96,
+          "height": 96,
+          "bytes": 2735
+        },
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-112.webp",
+          "width": 112,
+          "height": 112,
+          "bytes": 1982
+        },
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-112.jpg",
+          "width": 112,
+          "height": 112,
+          "bytes": 3300
+        },
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4048
+        },
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-192.jpg",
+          "width": 192,
+          "height": 192,
+          "bytes": 6600
+        },
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-224.webp",
+          "width": 224,
+          "height": 224,
+          "bytes": 4914
+        },
+        {
+          "file": "public/images/local-team/tampa/tori-rivera-224.jpg",
+          "width": 224,
+          "height": 224,
+          "bytes": 8393
+        }
+      ]
+    },
+    {
+      "slug": "kaila-riefesel",
+      "original": "assets/originals/tampa/kaila-riefesel.jpg",
+      "originalSize": [
+        1610,
+        2266
+      ],
+      "originalBytes": 282263,
+      "originalSha256": "7bfe2df136c3bb1a23218767c702de4e9b2e8bb896e44ab80e38f1f2e6e1fed4",
+      "crop": [
+        0,
+        0,
+        1610,
+        1610
+      ],
+      "cropSize": [
+        1610,
+        1610
+      ],
+      "derivatives": [
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-96.webp",
+          "width": 96,
+          "height": 96,
+          "bytes": 2310
+        },
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-96.jpg",
+          "width": 96,
+          "height": 96,
+          "bytes": 3249
+        },
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-112.webp",
+          "width": 112,
+          "height": 112,
+          "bytes": 2884
+        },
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-112.jpg",
+          "width": 112,
+          "height": 112,
+          "bytes": 3967
+        },
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5946
+        },
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-192.jpg",
+          "width": 192,
+          "height": 192,
+          "bytes": 8305
+        },
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-224.webp",
+          "width": 224,
+          "height": 224,
+          "bytes": 7408
+        },
+        {
+          "file": "public/images/local-team/tampa/kaila-riefesel-224.jpg",
+          "width": 224,
+          "height": 224,
+          "bytes": 10438
+        }
+      ]
+    }
+  ]
+}
