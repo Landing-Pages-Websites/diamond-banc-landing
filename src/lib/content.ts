@@ -263,6 +263,7 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
   columbia: {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
