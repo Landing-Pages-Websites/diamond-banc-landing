@@ -10,6 +10,7 @@ import { TwoOptions } from "@/components/TwoOptions";
 import { HowItWorks } from "@/components/HowItWorks";
 import { WhatWeBuy } from "@/components/WhatWeBuy";
 import { LocalOffice } from "@/components/LocalOffice";
+import { AventuraSpecialist } from "@/components/AventuraSpecialist";
 import { ShippingSecurity } from "@/components/ShippingSecurity";
 import { Expertise } from "@/components/Expertise";
 import { Reviews } from "@/components/Reviews";
@@ -18,6 +19,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { TRACKING } from "@/lib/content";
+import { AVENTURA_OFFICE, AVENTURA_ROSTER, AVENTURA_SLUG } from "@/lib/aventura-office";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -31,6 +33,14 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     gtmId: TRACKING.gtmId,
     pixelId: TRACKING.pixelId,
   });
+  // Aventura leads with its local specialist right after the two options and
+  // brands the company roster; every other market keeps the default layout.
+  const isAventura = market.slug === AVENTURA_SLUG;
+  const localOffice = isAventura ? (
+    <LocalOffice {...AVENTURA_OFFICE} aside={<AventuraSpecialist />} twoColumnFrom="md" />
+  ) : (
+    <LocalOffice />
+  );
 
   return (
     <MarketProvider market={market}>
@@ -40,11 +50,13 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <Hero />
         <ProofBar />
         <TwoOptions />
+        {/* One #local-office per page: Aventura renders it here, others below. */}
+        {isAventura && localOffice}
         <HowItWorks />
         <WhatWeBuy />
-        <LocalOffice />
+        {!isAventura && localOffice}
         <ShippingSecurity />
-        <Expertise />
+        <Expertise {...(isAventura ? AVENTURA_ROSTER : {})} />
         <Reviews />
         <Faq />
         <FinalCta />
