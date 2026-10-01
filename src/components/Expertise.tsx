@@ -3,9 +3,19 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { DualCTA } from "@/components/DualCTA";
-import { EXPERTISE } from "@/lib/content";
+import { EXPERTISE, type ExpertiseTeamOverride } from "@/lib/content";
 
-export function Expertise(): React.ReactElement {
+interface ExpertiseProps {
+  /** Route-specific roster heading, intro, and role overrides; omit for the shared copy. */
+  teamOverride?: ExpertiseTeamOverride;
+}
+
+export function Expertise({ teamOverride }: ExpertiseProps = {}): React.ReactElement {
+  const team = EXPERTISE.team.map((member) => ({
+    ...member,
+    role: teamOverride?.roles[member.name] ?? member.role,
+  }));
+
   return (
     <section id="expertise" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -40,14 +50,19 @@ export function Expertise(): React.ReactElement {
           <Reveal>
             <div className="flex items-center gap-4">
               <h3 className="font-display text-2xl text-[var(--color-ink)] md:text-3xl">
-                {EXPERTISE.teamHeading}
+                {teamOverride?.teamHeading ?? EXPERTISE.teamHeading}
               </h3>
               <span className="hr-gold hidden h-px flex-1 sm:block" />
             </div>
+            {teamOverride && (
+              <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[var(--color-muted)] md:text-base">
+                {teamOverride.teamIntro}
+              </p>
+            )}
           </Reveal>
 
           <ul className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
-            {EXPERTISE.team.map((member, i) => (
+            {team.map((member, i) => (
               <Reveal key={member.name} delay={i * 60}>
                 <li className="group h-full overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-cream)] shadow-card transition-all duration-200 hover:-translate-y-1 hover:shadow-card-lg">
                   <div className="relative aspect-square overflow-hidden">
