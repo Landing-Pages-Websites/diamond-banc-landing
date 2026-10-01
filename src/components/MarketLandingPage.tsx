@@ -10,6 +10,7 @@ import { TwoOptions } from "@/components/TwoOptions";
 import { HowItWorks } from "@/components/HowItWorks";
 import { WhatWeBuy } from "@/components/WhatWeBuy";
 import { LocalOffice } from "@/components/LocalOffice";
+import { AtlantaLocalOffice } from "@/components/AtlantaLocalOffice";
 import { ShippingSecurity } from "@/components/ShippingSecurity";
 import { Expertise } from "@/components/Expertise";
 import { Reviews } from "@/components/Reviews";
@@ -18,6 +19,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
+import { ATLANTA_EXPERTISE, ATLANTA_SLUG } from "@/lib/atlanta-content";
 import type { Market } from "@/lib/markets";
 
 const EARLY_LOCAL_OFFICE_SLUG = "beverly-hills";
@@ -34,8 +36,10 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     pixelId: TRACKING.pixelId,
   });
 
-  // Only the Beverly Hills route lifts #local-office up to sit directly after
-  // #two-options; every other route keeps the original order.
+  // Only the Beverly Hills route lifts the shared #local-office up to sit
+  // directly after #two-options; Atlanta renders its own early variant there,
+  // and every other route keeps the original order.
+  const isAtlanta = market.slug === ATLANTA_SLUG;
   const localOffice = <LocalOffice override={LOCAL_OFFICE_OVERRIDES[market.slug]} />;
   const liftLocalOffice = market.slug === EARLY_LOCAL_OFFICE_SLUG;
 
@@ -47,12 +51,14 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <Hero />
         <ProofBar />
         <TwoOptions />
-        {liftLocalOffice && localOffice}
+        {isAtlanta ? <AtlantaLocalOffice /> : liftLocalOffice && localOffice}
         <HowItWorks />
         <WhatWeBuy />
-        {!liftLocalOffice && localOffice}
+        {!isAtlanta && !liftLocalOffice && localOffice}
         <ShippingSecurity />
-        <Expertise teamOverride={EXPERTISE_TEAM_OVERRIDES[market.slug]} />
+        <Expertise
+          teamOverride={isAtlanta ? ATLANTA_EXPERTISE : EXPERTISE_TEAM_OVERRIDES[market.slug]}
+        />
         <Reviews />
         <Faq />
         <FinalCta />

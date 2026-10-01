@@ -271,6 +271,20 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageWidths: [96, 192, 220, 440],
     },
   },
+  "kansas-city": {
+    headline: "Meet your Kansas City specialist",
+    intro: "Get to know Sicily Von Overfelt, who serves Diamond Banc clients in Kansas City.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Sicily Von Overfelt",
+      role: "Missouri Director of Buying & Lending",
+      bio: "Sicily is a GIA Diamonds Graduate who serves Kansas City clients and helps train Diamond Banc's market directors and buyers.",
+      imageAlt: "Sicily Von Overfelt",
+      imageBase: "/images/team/sicily-von-overfelt",
+      imageWidths: [96, 192, 220, 440],
+    },
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -294,6 +308,12 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     roles: { "Jordan Isaacs": "National Director of Funding" },
   },
   columbia: {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  "kansas-city": {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
