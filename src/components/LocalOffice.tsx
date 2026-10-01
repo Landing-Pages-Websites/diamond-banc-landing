@@ -5,11 +5,13 @@ import { DualCTA } from "@/components/DualCTA";
 import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 import { LocalProfileCard } from "@/components/LocalProfileCard";
-import { BRAND, type LocalOfficeOverride } from "@/lib/content";
+import { BRAND, type LocalSectionOverride } from "@/lib/content";
 
 interface LocalOfficeProps {
   /** Route-specific specialist copy and profile; omit for the generic office layout. */
-  override?: LocalOfficeOverride;
+  override?: LocalSectionOverride;
+  /** Replaces the right-column content; defaults to the profile card or visit/mail cards. */
+  aside?: React.ReactNode;
 }
 
 // Localized replacement for the nationwide LocationMap. Turns national trust
@@ -18,14 +20,15 @@ interface LocalOfficeProps {
 // exact route phone. No skyline or generic city imagery by design. Routes with
 // an override swap the generic visit/mail cards for one specialist profile, or
 // stacked profile rows when the route has a local team.
-export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactElement | null {
+export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.ReactElement | null {
   const { phone, phoneHref, city, display, state, office } = useMarket();
 
   // Market-only section: rendered exclusively inside MarketProvider. Guard so a
   // stray render without a market never prints literal "null" copy.
   if (!city || !display) return null;
   const officeName = office?.locality ?? city;
-  const team = override?.profiles;
+  const team = override && "profiles" in override ? override.profiles : undefined;
+  const profile = override && "profile" in override ? override.profile : undefined;
 
   const ways: Array<{ icon: React.ComponentProps<typeof Icon>["name"]; title: string; body: string }> = [
     {
@@ -114,16 +117,16 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
           </Reveal>
 
           <Reveal delay={100}>
-            {team ? (
+            {aside ?? (team ? (
               <ul className="grid gap-5 md:gap-6">
-                {team.map((profile) => (
-                  <li key={profile.name}>
-                    <LocalProfileCard profile={profile} layout="row" />
+                {team.map((member) => (
+                  <li key={member.name}>
+                    <LocalProfileCard profile={member} layout="row" />
                   </li>
                 ))}
               </ul>
-            ) : override ? (
-              <LocalProfileCard profile={override.profile} />
+            ) : profile ? (
+              <LocalProfileCard profile={profile} />
             ) : (
               <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
                 {ways.map((way) => (
@@ -141,7 +144,7 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
                   </li>
                 ))}
               </ul>
-            )}
+            ))}
           </Reveal>
         </div>
 

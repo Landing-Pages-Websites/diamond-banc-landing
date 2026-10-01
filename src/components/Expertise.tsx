@@ -11,10 +11,12 @@ interface ExpertiseProps {
 }
 
 export function Expertise({ teamOverride }: ExpertiseProps = {}): React.ReactElement {
-  const team = EXPERTISE.team.map((member) => ({
-    ...member,
-    role: teamOverride?.roles[member.name] ?? member.role,
-  }));
+  const team = EXPERTISE.team
+    .filter((member) => !teamOverride?.excludeNames?.includes(member.name))
+    .map((member) => ({
+      ...member,
+      role: teamOverride?.roles[member.name] ?? member.role,
+    }));
 
   return (
     <section id="expertise" className="bg-white py-20 md:py-28">

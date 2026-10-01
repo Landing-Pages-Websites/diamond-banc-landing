@@ -204,20 +204,24 @@ export interface LocalProfile {
   imageWidths: readonly number[];
 }
 
-interface LocalOfficeCopy {
+export interface LocalOfficeOverride {
   headline: string;
   intro: string;
   compactLine: string;
+  profile: LocalProfile;
 }
 
-/** One specialist renders as a card; several render as stacked profile rows. */
-export type LocalOfficeOverride = LocalOfficeCopy &
-  ({ profile: LocalProfile; profiles?: never } | { profiles: readonly LocalProfile[]; profile?: never });
+/** Local-team variant: several specialists render as stacked profile rows. */
+export interface LocalTeamOverride extends Omit<LocalOfficeOverride, "profile"> {
+  profiles: readonly LocalProfile[];
+}
+
+export type LocalSectionOverride = LocalOfficeOverride | LocalTeamOverride;
 
 /** Square derivative widths for stacked profile rows: 96/112 CSS px at 1x and 2x. */
 const ROW_PORTRAIT_WIDTHS = [96, 112, 192, 224] as const;
 
-export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride>> = {
+export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverride>> = {
   "boca-raton": {
     headline: "Meet your Boca Raton specialist",
     intro: "Get to know Alex Perdomo, who serves Diamond Banc clients in Boca Raton.",
@@ -285,6 +289,20 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageWidths: [96, 192, 220, 440],
     },
   },
+  "st-louis": {
+    headline: "Meet your St. Louis specialist",
+    intro: "Get to know Jonathan Willis, who serves Diamond Banc clients in St. Louis.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Jonathan Willis",
+      role: "St. Louis Market Director",
+      bio: "Jonathan brings more than 20 years of experience in luxury jewelry, valuation and client advisory to the St. Louis office.",
+      imageAlt: "Jonathan Willis",
+      imageBase: "/images/team/jonathan-willis",
+      imageWidths: [96, 192, 220, 440],
+    },
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -292,6 +310,8 @@ export interface ExpertiseTeamOverride {
   teamIntro: string;
   /** Role replacements by roster name; unlisted members keep their shared role. */
   roles: Readonly<Record<string, string>>;
+  /** Roster names hidden on this route; omit to show the full shared roster. */
+  excludeNames?: readonly string[];
 }
 
 export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOverride>> = {
@@ -318,6 +338,20 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  "st-louis": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  // Jodi leads the Tampa team in #local-office, so she is not repeated here.
+  tampa: {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+    excludeNames: ["Jodi Hudson"],
   },
 };
 
