@@ -257,6 +257,20 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       },
     ],
   },
+  columbia: {
+    headline: "Meet Christine in Columbia",
+    intro: "Get to know Christine Weimer, who serves Diamond Banc clients in Columbia.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Christine Weimer",
+      role: "Transaction Coordinator",
+      bio: "Christine works with Columbia clients as a buyer and lender and coordinates mail-in transactions. Her background includes diamond-grading training through GIA.",
+      imageAlt: "Christine Weimer",
+      imageBase: "/images/team/christine-weimer",
+      imageWidths: [96, 192, 220, 440],
+    },
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -274,6 +288,12 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     roles: { "Jordan Isaacs": "National Director of Funding" },
   },
   "beverly-hills": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  columbia: {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
