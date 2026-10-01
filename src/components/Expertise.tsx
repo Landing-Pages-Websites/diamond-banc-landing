@@ -3,25 +3,17 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { DualCTA } from "@/components/DualCTA";
-import { EXPERTISE } from "@/lib/content";
+import { EXPERTISE, type ExpertiseTeamOverride } from "@/lib/content";
 
 interface ExpertiseProps {
-  /** Overrides the roster heading; defaults to the shared content. */
-  teamHeading?: string;
-  /** Optional line under the roster heading; omitted by default. */
-  teamIntro?: string;
-  /** Per-name role overrides, keyed by roster member name. */
-  roleOverrides?: Readonly<Record<string, string>>;
+  /** Route-specific roster heading, intro, and role overrides; omit for the shared copy. */
+  teamOverride?: ExpertiseTeamOverride;
 }
 
-export function Expertise({
-  teamHeading = EXPERTISE.teamHeading,
-  teamIntro,
-  roleOverrides = {},
-}: ExpertiseProps): React.ReactElement {
+export function Expertise({ teamOverride }: ExpertiseProps = {}): React.ReactElement {
   const team = EXPERTISE.team.map((member) => ({
     ...member,
-    role: roleOverrides[member.name] ?? member.role,
+    role: teamOverride?.roles[member.name] ?? member.role,
   }));
 
   return (
@@ -58,13 +50,13 @@ export function Expertise({
           <Reveal>
             <div className="flex items-center gap-4">
               <h3 className="font-display text-2xl text-[var(--color-ink)] md:text-3xl">
-                {teamHeading}
+                {teamOverride?.teamHeading ?? EXPERTISE.teamHeading}
               </h3>
               <span className="hr-gold hidden h-px flex-1 sm:block" />
             </div>
-            {teamIntro && (
+            {teamOverride && (
               <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[var(--color-muted)] md:text-base">
-                {teamIntro}
+                {teamOverride.teamIntro}
               </p>
             )}
           </Reveal>

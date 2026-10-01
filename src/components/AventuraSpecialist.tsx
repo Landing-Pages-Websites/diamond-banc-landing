@@ -1,4 +1,5 @@
-import { AVENTURA_SPECIALIST, portraitSrcSet } from "@/lib/aventura-office";
+import type { LocalProfile } from "@/lib/content";
+import { PORTRAIT_SIZE, portraitSrcSet } from "@/lib/aventura-office";
 
 const DESKTOP_MEDIA = "(min-width: 768px)";
 // Modern format first; JPEG is the fallback for browsers without WebP.
@@ -10,19 +11,33 @@ const FORMATS = [
 // Ethan Andino's profile card for the /aventura #local-office section. The
 // portrait is art-directed: 96px beside the text on mobile, 220px above it from
 // 768px up, each with a 2x WebP source and a JPEG fallback.
-export function AventuraSpecialist(): React.ReactElement {
-  const { name, role, bio, portrait, mobileSize, desktopSize } = AVENTURA_SPECIALIST;
+export function AventuraSpecialist({ profile }: { profile: LocalProfile }): React.ReactElement {
+  const { name, role, bio, imageAlt, imageBase: portrait } = profile;
+  const { mobile: mobileSize, desktop: desktopSize } = PORTRAIT_SIZE;
 
   return (
     <article className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-[var(--color-ink-soft)]/60 p-5 backdrop-blur-sm min-[360px]:flex-row min-[360px]:items-start sm:p-6 md:flex-col md:gap-6 md:p-8">
       <picture className="shrink-0">
         {FORMATS.flatMap(({ ext, type }) => [
-          <source key={`${ext}-desktop`} type={type} media={DESKTOP_MEDIA} srcSet={portraitSrcSet(portrait, desktopSize, ext)} width={desktopSize} height={desktopSize} />,
-          <source key={`${ext}-mobile`} type={type} srcSet={portraitSrcSet(portrait, mobileSize, ext)} width={mobileSize} height={mobileSize} />,
+          <source
+            key={`${ext}-desktop`}
+            type={type}
+            media={DESKTOP_MEDIA}
+            srcSet={portraitSrcSet(portrait, desktopSize, ext)}
+            width={desktopSize}
+            height={desktopSize}
+          />,
+          <source
+            key={`${ext}-mobile`}
+            type={type}
+            srcSet={portraitSrcSet(portrait, mobileSize, ext)}
+            width={mobileSize}
+            height={mobileSize}
+          />,
         ])}
         <img
           src={`${portrait}-${desktopSize}.jpg`}
-          alt={name}
+          alt={imageAlt}
           width={desktopSize}
           height={desktopSize}
           loading="lazy"

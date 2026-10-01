@@ -4,37 +4,22 @@ import { Reveal } from "@/components/Reveal";
 import { DualCTA } from "@/components/DualCTA";
 import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
-import { BRAND } from "@/lib/content";
-
-const GRID_CLASSES = {
-  lg: "grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16",
-  md: "grid gap-12 md:grid-cols-2 md:items-center md:gap-10 lg:gap-16",
-} as const;
+import { LocalProfileCard } from "@/components/LocalProfileCard";
+import { BRAND, type LocalOfficeOverride } from "@/lib/content";
 
 interface LocalOfficeProps {
-  /** Replaces the default "{brand} {city, state}" heading. */
-  heading?: string;
-  /** Replaces the default two-ways intro paragraph. */
-  intro?: string;
-  /** Optional accented line under the intro. */
-  note?: string;
-  /** Replaces the default visit/mail-in cards in the right column. */
+  /** Route-specific specialist copy and profile; omit for the generic office layout. */
+  override?: LocalOfficeOverride;
+  /** Replaces the right-column content; defaults to the profile card or visit/mail cards. */
   aside?: React.ReactNode;
-  /** Breakpoint where the section splits into two columns. */
-  twoColumnFrom?: keyof typeof GRID_CLASSES;
 }
 
 // Localized replacement for the nationwide LocationMap. Turns national trust
 // into a specific nearby-office option for the route's market: name the city,
 // offer an in-person appointment or free insured shipping, and surface the
-// exact route phone. No skyline or generic city imagery by design.
-export function LocalOffice({
-  heading,
-  intro,
-  note,
-  aside,
-  twoColumnFrom = "lg",
-}: LocalOfficeProps): React.ReactElement | null {
+// exact route phone. No skyline or generic city imagery by design. Routes with
+// an override swap the generic visit/mail cards for one specialist profile.
+export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.ReactElement | null {
   const { phone, phoneHref, city, display, state, office } = useMarket();
 
   // Market-only section: rendered exclusively inside MarketProvider. Guard so a
@@ -65,26 +50,39 @@ export function LocalOffice({
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-8">
-        <div className={GRID_CLASSES[twoColumnFrom]}>
+        <div
+          className={
+            override
+              ? "grid gap-12 md:grid-cols-2 md:items-center lg:gap-16"
+              : "grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
+          }
+        >
           <Reveal>
             <p className="eyebrow text-[var(--color-teal-400)]">Your local office</p>
             <h2 className="mt-3 font-display text-[2.25rem] leading-[1.1] text-white md:text-[2.75rem]">
-              {heading ?? <>{BRAND.name} {display}</>}
-            </h2>
-            <p className="mt-5 text-[15px] leading-relaxed text-white/75 md:text-base">
-              {intro ?? (
+              {override ? (
+                override.headline
+              ) : (
                 <>
-                  Serving {city} and the surrounding area, with two easy ways to get
-                  your valuation. Come in for an appointment or ship your item to us
-                  with a free insured label. Either way, your offer comes from the
-                  same experienced experts.
+                  {BRAND.name} {display}
                 </>
               )}
-            </p>
-
-            {note && (
-              <p className="mt-4 border-l-2 border-[var(--color-gold)] pl-4 text-sm leading-relaxed text-white/70 md:text-[15px]">
-                {note}
+            </h2>
+            {override ? (
+              <>
+                <p className="mt-5 text-[15px] leading-relaxed text-white/75 md:text-base">
+                  {override.intro}
+                </p>
+                <p className="mt-3 text-[15px] leading-relaxed text-white/75 md:text-base">
+                  {override.compactLine}
+                </p>
+              </>
+            ) : (
+              <p className="mt-5 text-[15px] leading-relaxed text-white/75 md:text-base">
+                Serving {city} and the surrounding area, with two easy ways to get
+                your valuation. Come in for an appointment or ship your item to us
+                with a free insured label. Either way, your offer comes from the
+                same experienced experts.
               </p>
             )}
 
@@ -116,7 +114,9 @@ export function LocalOffice({
           </Reveal>
 
           <Reveal delay={100}>
-            {aside ?? (
+            {aside ?? (override ? (
+              <LocalProfileCard profile={override.profile} />
+            ) : (
               <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
                 {ways.map((way) => (
                   <li
@@ -133,7 +133,7 @@ export function LocalOffice({
                   </li>
                 ))}
               </ul>
-            )}
+            ))}
           </Reveal>
         </div>
 

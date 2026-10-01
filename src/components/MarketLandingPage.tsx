@@ -18,7 +18,7 @@ import { Faq } from "@/components/Faq";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
-import { TRACKING } from "@/lib/content";
+import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/lib/content";
 import { AVENTURA_OFFICE, AVENTURA_ROSTER, AVENTURA_SLUG } from "@/lib/aventura-office";
 import type { Market } from "@/lib/markets";
 
@@ -33,13 +33,17 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     gtmId: TRACKING.gtmId,
     pixelId: TRACKING.pixelId,
   });
-  // Aventura leads with its local specialist right after the two options and
-  // brands the company roster; every other market keeps the default layout.
+
+  // Routes with a local specialist profile lift #local-office up to sit
+  // directly after #two-options; all other routes keep the original order.
+  // Aventura supplies its own art-directed WebP/JPEG portrait in the aside.
   const isAventura = market.slug === AVENTURA_SLUG;
-  const localOffice = isAventura ? (
-    <LocalOffice {...AVENTURA_OFFICE} aside={<AventuraSpecialist />} twoColumnFrom="md" />
-  ) : (
-    <LocalOffice />
+  const localOverride = isAventura ? AVENTURA_OFFICE : LOCAL_OFFICE_OVERRIDES[market.slug];
+  const localOffice = (
+    <LocalOffice
+      override={localOverride}
+      aside={isAventura ? <AventuraSpecialist profile={AVENTURA_OFFICE.profile} /> : undefined}
+    />
   );
 
   return (
@@ -50,13 +54,14 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
         <Hero />
         <ProofBar />
         <TwoOptions />
-        {/* One #local-office per page: Aventura renders it here, others below. */}
-        {isAventura && localOffice}
+        {localOverride && localOffice}
         <HowItWorks />
         <WhatWeBuy />
-        {!isAventura && localOffice}
+        {!localOverride && localOffice}
         <ShippingSecurity />
-        <Expertise {...(isAventura ? AVENTURA_ROSTER : {})} />
+        <Expertise
+          teamOverride={isAventura ? AVENTURA_ROSTER : EXPERTISE_TEAM_OVERRIDES[market.slug]}
+        />
         <Reviews />
         <Faq />
         <FinalCta />

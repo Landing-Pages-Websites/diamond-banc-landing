@@ -188,6 +188,62 @@ export const EXPERTISE = {
   ],
 };
 
+// ─── Route-specific team overrides, keyed by market slug ───
+// Only the routes listed here change; every other route (and the root) keeps
+// the shared LocalOffice and EXPERTISE output untouched.
+
+/** A local specialist shown in a route's #local-office profile column. */
+export interface LocalProfile {
+  name: string;
+  role: string;
+  bio: string;
+  imageAlt: string;
+  /** Path prefix for pre-sized derivatives: `${imageBase}-${width}.{avif,webp,jpg}`. */
+  imageBase: string;
+  /** Pixel widths of the square derivatives available for `imageBase`. */
+  imageWidths: readonly number[];
+}
+
+export interface LocalOfficeOverride {
+  headline: string;
+  intro: string;
+  compactLine: string;
+  profile: LocalProfile;
+}
+
+export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride>> = {
+  "boca-raton": {
+    headline: "Meet your Boca Raton specialist",
+    intro: "Get to know Alex Perdomo, who serves Diamond Banc clients in Boca Raton.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Alex Perdomo",
+      role: "Boca Raton Market Director",
+      bio: "Alex brings more than 20 years of experience in luxury jewelry and watches to the Boca Raton office. He speaks English and Spanish.",
+      imageAlt: "Alex Perdomo",
+      imageBase: "/images/team/alex-perdomo",
+      imageWidths: [96, 192, 220, 440],
+    },
+  },
+};
+
+export interface ExpertiseTeamOverride {
+  teamHeading: string;
+  teamIntro: string;
+  /** Role replacements by roster name; unlisted members keep their shared role. */
+  roles: Readonly<Record<string, string>>;
+}
+
+export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOverride>> = {
+  "boca-raton": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+};
+
 // ─── Reviews / aggregate proof (#reviews) ───
 export const REVIEWS = {
   eyebrow: "The reputation behind the offer",
