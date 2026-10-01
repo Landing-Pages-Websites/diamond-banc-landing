@@ -13,6 +13,7 @@ import { LocalOffice } from "@/components/LocalOffice";
 import { AtlantaLocalOffice } from "@/components/AtlantaLocalOffice";
 import { AventuraSpecialist } from "@/components/AventuraSpecialist";
 import { TampaLocalOffice } from "@/components/TampaLocalOffice";
+import { SarasotaLocalOffice } from "@/components/SarasotaLocalOffice";
 import { ShippingSecurity } from "@/components/ShippingSecurity";
 import { Expertise } from "@/components/Expertise";
 import { Reviews } from "@/components/Reviews";
@@ -24,6 +25,7 @@ import { EXPERTISE_TEAM_OVERRIDES, LOCAL_OFFICE_OVERRIDES, TRACKING } from "@/li
 import { ATLANTA_EXPERTISE, ATLANTA_SLUG } from "@/lib/atlanta-content";
 import { AVENTURA_OFFICE, AVENTURA_ROSTER, AVENTURA_SLUG } from "@/lib/aventura-office";
 import { TAMPA_SLUG } from "@/lib/tampa-content";
+import { SARASOTA_EXPERTISE, SARASOTA_SLUG } from "@/lib/sarasota-content";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -41,6 +43,7 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
   const isAtlanta = market.slug === ATLANTA_SLUG;
   const isTampa = market.slug === TAMPA_SLUG;
   const isAventura = market.slug === AVENTURA_SLUG;
+  const isSarasota = market.slug === SARASOTA_SLUG;
   const localOverride = isAventura ? AVENTURA_OFFICE : LOCAL_OFFICE_OVERRIDES[market.slug];
   const localOffice = (
     <LocalOffice
@@ -48,12 +51,18 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
       aside={isAventura ? <AventuraSpecialist profile={AVENTURA_OFFICE.profile} /> : undefined}
     />
   );
-  const routeTeam = isAventura ? AVENTURA_ROSTER : EXPERTISE_TEAM_OVERRIDES[market.slug];
+  const routeTeam = isAventura
+    ? AVENTURA_ROSTER
+    : isSarasota
+      ? SARASOTA_EXPERTISE
+      : EXPERTISE_TEAM_OVERRIDES[market.slug];
   const earlyLocalOffice = isTampa
     ? <TampaLocalOffice />
-    : isAtlanta
-      ? <AtlantaLocalOffice />
-      : localOverride && localOffice;
+    : isSarasota
+      ? <SarasotaLocalOffice />
+      : isAtlanta
+        ? <AtlantaLocalOffice />
+        : localOverride && localOffice;
 
   return (
     <MarketProvider market={market}>
