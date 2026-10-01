@@ -10,6 +10,8 @@ import { BRAND, type LocalOfficeOverride } from "@/lib/content";
 interface LocalOfficeProps {
   /** Route-specific specialist copy and profile; omit for the generic office layout. */
   override?: LocalOfficeOverride;
+  /** Replaces the right-column content; defaults to the profile card or visit/mail cards. */
+  aside?: React.ReactNode;
 }
 
 // Localized replacement for the nationwide LocationMap. Turns national trust
@@ -17,7 +19,7 @@ interface LocalOfficeProps {
 // offer an in-person appointment or free insured shipping, and surface the
 // exact route phone. No skyline or generic city imagery by design. Routes with
 // an override swap the generic visit/mail cards for one specialist profile.
-export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactElement | null {
+export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.ReactElement | null {
   const { phone, phoneHref, city, display, state, office } = useMarket();
 
   // Market-only section: rendered exclusively inside MarketProvider. Guard so a
@@ -112,7 +114,7 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
           </Reveal>
 
           <Reveal delay={100}>
-            {override ? (
+            {aside ?? (override ? (
               <LocalProfileCard profile={override.profile} />
             ) : (
               <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
@@ -131,7 +133,7 @@ export function LocalOffice({ override }: LocalOfficeProps = {}): React.ReactEle
                   </li>
                 ))}
               </ul>
-            )}
+            ))}
           </Reveal>
         </div>
 
