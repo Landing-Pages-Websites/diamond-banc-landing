@@ -282,6 +282,20 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageWidths: [96, 192, 220, 440],
     },
   },
+  roswell: {
+    headline: "Meet your Roswell specialist",
+    intro: "Get to know Jae Back, who serves Diamond Banc clients in Roswell.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Jae Back",
+      role: "Georgia Director of Buying & Lending",
+      bio: "Jae brings more than 27 years of jewelry and watch leadership experience to his work with Georgia clients. He speaks English and Korean.",
+      imageAlt: "Jae Back",
+      imageBase: "/images/team/jae-back",
+      imageWidths: [96, 192, 220, 440],
+    },
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -327,6 +341,12 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     excludeNames: ["Jodi Hudson"],
   },
   "san-diego": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  roswell: {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
