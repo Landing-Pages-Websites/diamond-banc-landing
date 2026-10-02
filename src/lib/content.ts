@@ -211,7 +211,17 @@ export interface LocalOfficeOverride {
   profile: LocalProfile;
 }
 
-export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride>> = {
+/** Local-team variant: several specialists render as stacked profile rows. */
+export interface LocalTeamOverride extends Omit<LocalOfficeOverride, "profile"> {
+  profiles: readonly LocalProfile[];
+}
+
+export type LocalSectionOverride = LocalOfficeOverride | LocalTeamOverride;
+
+/** Square derivative widths for stacked profile rows: 96/112 CSS px at 1x and 2x. */
+const ROW_PORTRAIT_WIDTHS = [96, 112, 192, 224] as const;
+
+export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverride>> = {
   "boca-raton": {
     headline: "Meet your Boca Raton specialist",
     intro: "Get to know Alex Perdomo, who serves Diamond Banc clients in Boca Raton.",
@@ -225,6 +235,31 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalOfficeOverride
       imageBase: "/images/team/alex-perdomo",
       imageWidths: [96, 192, 220, 440],
     },
+  },
+  "beverly-hills": {
+    headline: "Meet your Beverly Hills team",
+    intro:
+      "Meet Silvea, your Beverly Hills Market Director, and Thuyvi, who supports our California offices.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profiles: [
+      {
+        name: "Silvea Parsamyan",
+        role: "Beverly Hills Market Director",
+        bio: "Silvea leads the Beverly Hills office with more than 20 years of jewelry experience, including helping open five jewelry locations across Los Angeles.",
+        imageAlt: "Silvea Parsamyan",
+        imageBase: "/images/team/silvea-parsamyan",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+      {
+        name: "Thuyvi Tran",
+        role: "Regional & Market Director",
+        bio: "A GIA Graduate Gemologist, Thuyvi supports Diamond Banc's California offices and brings regional expertise to the Beverly Hills team.",
+        imageAlt: "Thuyvi Tran",
+        imageBase: "/images/team/thuyvi-tran",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+    ],
   },
   columbia: {
     headline: "Meet Christine in Columbia",
@@ -309,6 +344,12 @@ export interface ExpertiseTeamOverride {
 
 export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOverride>> = {
   "boca-raton": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  "beverly-hills": {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",

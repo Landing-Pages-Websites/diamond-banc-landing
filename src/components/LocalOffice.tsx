@@ -5,11 +5,11 @@ import { DualCTA } from "@/components/DualCTA";
 import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 import { LocalProfileCard } from "@/components/LocalProfileCard";
-import { BRAND, type LocalOfficeOverride } from "@/lib/content";
+import { BRAND, type LocalSectionOverride } from "@/lib/content";
 
 interface LocalOfficeProps {
   /** Route-specific specialist copy and profile; omit for the generic office layout. */
-  override?: LocalOfficeOverride;
+  override?: LocalSectionOverride;
   /** Replaces the right-column content; defaults to the profile card or visit/mail cards. */
   aside?: React.ReactNode;
 }
@@ -18,7 +18,8 @@ interface LocalOfficeProps {
 // into a specific nearby-office option for the route's market: name the city,
 // offer an in-person appointment or free insured shipping, and surface the
 // exact route phone. No skyline or generic city imagery by design. Routes with
-// an override swap the generic visit/mail cards for one specialist profile.
+// an override swap the generic visit/mail cards for one specialist profile, or
+// stacked profile rows when the route has a local team.
 export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.ReactElement | null {
   const { phone, phoneHref, city, display, state, office } = useMarket();
 
@@ -26,6 +27,8 @@ export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.R
   // stray render without a market never prints literal "null" copy.
   if (!city || !display) return null;
   const officeName = office?.locality ?? city;
+  const team = override && "profiles" in override ? override.profiles : undefined;
+  const profile = override && "profile" in override ? override.profile : undefined;
 
   const ways: Array<{ icon: React.ComponentProps<typeof Icon>["name"]; title: string; body: string }> = [
     {
@@ -52,7 +55,7 @@ export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.R
       <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-8">
         <div
           className={
-            override
+            override && !team
               ? "grid gap-12 md:grid-cols-2 md:items-center lg:gap-16"
               : "grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
           }
@@ -114,8 +117,16 @@ export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.R
           </Reveal>
 
           <Reveal delay={100}>
-            {aside ?? (override ? (
-              <LocalProfileCard profile={override.profile} />
+            {aside ?? (team ? (
+              <ul className="grid gap-5 md:gap-6">
+                {team.map((member) => (
+                  <li key={member.name}>
+                    <LocalProfileCard profile={member} layout="row" />
+                  </li>
+                ))}
+              </ul>
+            ) : profile ? (
+              <LocalProfileCard profile={profile} />
             ) : (
               <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
                 {ways.map((way) => (
