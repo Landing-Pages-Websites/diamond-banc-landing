@@ -71,7 +71,7 @@ export function LocalProfileCard({
       <div className="flex flex-wrap items-center gap-x-5 gap-y-4 md:block">
         <Portrait profile={profile} layout="card" />
         <div className="min-w-0 flex-1 basis-40 md:mt-6">
-          <p className="font-display text-2xl leading-tight text-white">{profile.name}</p>
+          <h3 className="font-display text-2xl leading-tight text-white">{profile.name}</h3>
           <p className="mt-1 text-sm font-medium text-[var(--color-teal-400)]">{profile.role}</p>
         </div>
       </div>
