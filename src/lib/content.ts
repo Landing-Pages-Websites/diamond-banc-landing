@@ -214,12 +214,14 @@ export interface LocalOfficeOverride {
 /** Local-team variant: several specialists render as stacked profile rows. */
 export interface LocalTeamOverride extends Omit<LocalOfficeOverride, "profile"> {
   profiles: readonly LocalProfile[];
+  /** Split into two columns from md (768px) instead of lg, with a wider profile column on tablet. */
+  splitFromMd?: boolean;
 }
 
 export type LocalSectionOverride = LocalOfficeOverride | LocalTeamOverride;
 
 /** Square derivative widths for stacked profile rows: 96/112 CSS px at 1x and 2x. */
-const ROW_PORTRAIT_WIDTHS = [96, 112, 192, 224] as const;
+export const ROW_PORTRAIT_WIDTHS = [96, 112, 192, 224] as const;
 
 export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverride>> = {
   "boca-raton": {

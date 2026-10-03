@@ -5,7 +5,20 @@ import { DualCTA } from "@/components/DualCTA";
 import { useMarket } from "@/components/MarketProvider";
 import { Icon } from "@/components/icons";
 import { LocalProfileCard } from "@/components/LocalProfileCard";
-import { BRAND, type LocalSectionOverride } from "@/lib/content";
+import { BRAND, type LocalSectionOverride, type LocalTeamOverride } from "@/lib/content";
+
+const GRID = {
+  single: "grid gap-12 md:grid-cols-2 md:items-center lg:gap-16",
+  // Tablet gives the profile rows the wider column so bios stay readable.
+  teamFromMd:
+    "grid gap-12 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center lg:grid-cols-2 lg:gap-16",
+  default: "grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16",
+} as const;
+
+function gridClass(override?: LocalSectionOverride, teamOverride?: LocalTeamOverride): string {
+  if (teamOverride?.splitFromMd) return GRID.teamFromMd;
+  return override && !teamOverride ? GRID.single : GRID.default;
+}
 
 interface LocalOfficeProps {
   /** Route-specific specialist copy and profile; omit for the generic office layout. */
@@ -27,7 +40,8 @@ export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.R
   // stray render without a market never prints literal "null" copy.
   if (!city || !display) return null;
   const officeName = office?.locality ?? city;
-  const team = override && "profiles" in override ? override.profiles : undefined;
+  const teamOverride = override && "profiles" in override ? override : undefined;
+  const team = teamOverride?.profiles;
   const profile = override && "profile" in override ? override.profile : undefined;
 
   const ways: Array<{ icon: React.ComponentProps<typeof Icon>["name"]; title: string; body: string }> = [
@@ -53,13 +67,7 @@ export function LocalOffice({ override, aside }: LocalOfficeProps = {}): React.R
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-8">
-        <div
-          className={
-            override && !team
-              ? "grid gap-12 md:grid-cols-2 md:items-center lg:gap-16"
-              : "grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16"
-          }
-        >
+        <div className={gridClass(override, teamOverride)}>
           <Reveal>
             <p className="eyebrow text-[var(--color-teal-400)]">Your local office</p>
             <h2 className="mt-3 font-display text-[2.25rem] leading-[1.1] text-white md:text-[2.75rem]">

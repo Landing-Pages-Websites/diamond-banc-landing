@@ -26,6 +26,7 @@ import { ATLANTA_EXPERTISE, ATLANTA_SLUG } from "@/lib/atlanta-content";
 import { AVENTURA_OFFICE, AVENTURA_ROSTER, AVENTURA_SLUG } from "@/lib/aventura-office";
 import { TAMPA_SLUG } from "@/lib/tampa-content";
 import { SARASOTA_EXPERTISE, SARASOTA_SLUG } from "@/lib/sarasota-content";
+import { NASHVILLE_EXPERTISE, NASHVILLE_LOCAL_OFFICE, NASHVILLE_SLUG } from "@/lib/nashville-content";
 import type { Market } from "@/lib/markets";
 
 // Shared template for every localized market route. Mirrors the nationwide
@@ -44,7 +45,12 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
   const isTampa = market.slug === TAMPA_SLUG;
   const isAventura = market.slug === AVENTURA_SLUG;
   const isSarasota = market.slug === SARASOTA_SLUG;
-  const localOverride = isAventura ? AVENTURA_OFFICE : LOCAL_OFFICE_OVERRIDES[market.slug];
+  const isNashville = market.slug === NASHVILLE_SLUG;
+  const localOverride = isAventura
+    ? AVENTURA_OFFICE
+    : isNashville
+      ? NASHVILLE_LOCAL_OFFICE
+      : LOCAL_OFFICE_OVERRIDES[market.slug];
   const localOffice = (
     <LocalOffice
       override={localOverride}
@@ -55,7 +61,9 @@ export function MarketLandingPage({ market }: { market: Market }): React.ReactEl
     ? AVENTURA_ROSTER
     : isSarasota
       ? SARASOTA_EXPERTISE
-      : EXPERTISE_TEAM_OVERRIDES[market.slug];
+      : isNashville
+        ? NASHVILLE_EXPERTISE
+        : EXPERTISE_TEAM_OVERRIDES[market.slug];
   const earlyLocalOffice = isTampa
     ? <TampaLocalOffice />
     : isSarasota
