@@ -22,7 +22,8 @@ function buildSrcSet(profile: LocalProfile, ext: string): string {
 }
 
 function Portrait({ profile, layout }: { profile: LocalProfile; layout: ProfileLayout }): React.ReactElement {
-  const { sizes, desktopPx, className } = PORTRAIT[layout];
+  const { sizes: defaultSizes, desktopPx, className } = PORTRAIT[layout];
+  const sizes = profile.imageSizes ?? defaultSizes;
   return (
     <picture className="block shrink-0">
       <source type="image/avif" srcSet={buildSrcSet(profile, "avif")} sizes={sizes} />
