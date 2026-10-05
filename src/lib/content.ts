@@ -333,6 +333,39 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverrid
       imageWidths: [96, 192, 220, 440],
     },
   },
+  "coral-gables": {
+    headline: "Meet your Coral Gables team",
+    intro: "Meet the team serving Diamond Banc clients in Coral Gables.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profiles: [
+      {
+        name: "David Fernandez",
+        role: "Regional Director, Miami Market",
+        bio: "David leads Diamond Banc's Miami region, drawing on luxury-watch experience to help clients evaluate their options. He speaks English and Spanish.",
+        imageAlt: "David Fernandez",
+        imageBase: "/images/team/coral-gables/david-fernandez",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+      {
+        name: "Rafael Pastora-Nash",
+        role: "Miami Buyer & Lender",
+        bio: "Rafael combines a banking background with training in diamond grading and jewelry evaluation in his work as a Miami buyer and lender.",
+        imageAlt: "Rafael Pastora-Nash",
+        imageBase: "/images/team/coral-gables/rafael-pastora-nash",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+      {
+        name: "Stephanie Sainz",
+        role: "Client Benefit Agent – Miami Markets",
+        bio: "Stephanie supports the Miami team with a background in finance, client service, sales and operations.",
+        imageAlt: "Stephanie Sainz",
+        imageBase: "/images/team/coral-gables/stephanie-sainz",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+    ],
+    splitFromMd: true,
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -394,6 +427,13 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  "coral-gables": {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+    excludeNames: ["David Fernandez"],
   },
 };
 
