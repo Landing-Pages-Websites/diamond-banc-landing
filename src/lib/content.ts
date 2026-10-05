@@ -332,6 +332,19 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverrid
       imageBase: "/images/team/jae-back",
       imageWidths: [96, 192, 220, 440],
     },
+  },  scottsdale: {
+    headline: "Meet your Scottsdale specialist",
+    intro: "Get to know Miguel Ramirez, who serves Diamond Banc clients in Scottsdale.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    profile: {
+      name: "Miguel Ramirez",
+      role: "Scottsdale Market Director",
+      bio: "Miguel brings experience in luxury goods and financial services to his work with Scottsdale clients considering selling or borrowing against their jewelry.",
+      imageAlt: "Miguel Ramirez",
+      imageBase: "/images/team/scottsdale/miguel-ramirez",
+      imageWidths: [96, 192, 220, 440],
+    },
   },
 };
 
@@ -390,6 +403,11 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     roles: { "Jordan Isaacs": "National Director of Funding" },
   },
   roswell: {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+  },  scottsdale: {
     teamHeading: "Backed by the Diamond Banc team",
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
