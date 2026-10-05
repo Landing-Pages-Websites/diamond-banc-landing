@@ -346,6 +346,31 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverrid
       imageWidths: [96, 192, 220, 440],
     },
   },
+  orlando: {
+    headline: "Meet your Orlando team",
+    intro: "Meet the team serving Diamond Banc clients in Orlando.",
+    compactLine:
+      "Visit by appointment, or request a quote online. Prefer to mail your item? Free insured shipping is also available.",
+    splitFromMd: true,
+    profiles: [
+      {
+        name: "Deena Maali",
+        role: "Orlando Market Director",
+        bio: "Born and raised in Orlando, Deena leads the local office with more than ten years of experience in fine jewelry and luxury watches.",
+        imageAlt: "Deena Maali",
+        imageBase: "/images/team/orlando/deena-maali",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+      {
+        name: "Roberto Polanco",
+        role: "Client Benefit Agent",
+        bio: "Roberto supports Orlando clients with more than a decade of luxury-watch and sales experience at Diamonds International.",
+        imageAlt: "Roberto Polanco",
+        imageBase: "/images/team/orlando/roberto-polanco",
+        imageWidths: ROW_PORTRAIT_WIDTHS,
+      },
+    ],
+  },
 };
 
 export interface ExpertiseTeamOverride {
@@ -412,6 +437,14 @@ export const EXPERTISE_TEAM_OVERRIDES: Readonly<Record<string, ExpertiseTeamOver
     teamIntro:
       "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
     roles: { "Jordan Isaacs": "National Director of Funding" },
+  },
+  // Deena leads the Orlando team in #local-office, so she is not repeated here.
+  orlando: {
+    teamHeading: "Backed by the Diamond Banc team",
+    teamIntro:
+      "Our local offices are supported by Diamond Banc's broader team of leaders and specialists.",
+    roles: { "Jordan Isaacs": "National Director of Funding" },
+    excludeNames: ["Deena Maali"],
   },
 };
 
