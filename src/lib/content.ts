@@ -202,6 +202,8 @@ export interface LocalProfile {
   imageBase: string;
   /** Pixel widths of the square derivatives available for `imageBase`. */
   imageWidths: readonly number[];
+  /** Optional source-size contract for route-specific high-density delivery. */
+  imageSizes?: string;
 }
 
 export interface LocalOfficeOverride {
@@ -384,6 +386,7 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverrid
         imageAlt: "David Fernandez",
         imageBase: "/images/team/coral-gables/david-fernandez",
         imageWidths: ROW_PORTRAIT_WIDTHS,
+        imageSizes: "(min-width: 768px) 224px, 192px",
       },
       {
         name: "Rafael Pastora-Nash",
@@ -392,14 +395,16 @@ export const LOCAL_OFFICE_OVERRIDES: Readonly<Record<string, LocalSectionOverrid
         imageAlt: "Rafael Pastora-Nash",
         imageBase: "/images/team/coral-gables/rafael-pastora-nash",
         imageWidths: ROW_PORTRAIT_WIDTHS,
+        imageSizes: "(min-width: 768px) 224px, 192px",
       },
       {
         name: "Stephanie Sainz",
-        role: "Client Benefit Agent – Miami Markets",
+        role: "Client Benefit Agent - Miami Markets",
         bio: "Stephanie supports the Miami team with a background in finance, client service, sales and operations.",
         imageAlt: "Stephanie Sainz",
         imageBase: "/images/team/coral-gables/stephanie-sainz",
         imageWidths: ROW_PORTRAIT_WIDTHS,
+        imageSizes: "(min-width: 768px) 224px, 192px",
       },
     ],
     splitFromMd: true,
